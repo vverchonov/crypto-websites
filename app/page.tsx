@@ -4,7 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Cat } from "./components/cat";
 import { Links } from "./components/links";
-import { CopyButton } from "./components/copy-button";
+import { CopyCa } from "./components/copy-ca";
 import { motion } from "framer-motion";
 import { ToastContainer } from "react-toastify";
 import { useRef } from "react";
@@ -40,12 +40,9 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-4 text-center z-50 mt-auto p-12 items-center">
           <h1 className="mt-auto text-8xl uppercase font-bold select-none">
-            Da Puss cat
+            Da Puss
           </h1>
-          <p className="text-center z-50 text-xl cursor-pointer flex flex-row gap-4 align-center select-none">
-            CA:Coming
-            <CopyButton copyLink="test" />
-          </p>
+          <CopyCa copyLink="test" />
         </div>
         <div
           className="absolute top-0 z-0"
