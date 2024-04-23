@@ -42,10 +42,13 @@ export default function Home() {
           <h1 className="mt-auto text-8xl uppercase font-bold select-none">
             Da Puss cat
           </h1>
-          <p className="text-center z-50 text-xl cursor-pointer flex flex-row gap-4 align-center select-none">
+          <label
+            htmlFor="copyButton"
+            className="text-center z-50 text-xl cursor-pointer flex flex-row gap-4 align-center select-none"
+          >
             CA:3jfFHek23if2f2wWFw23r2aDAWwAef23t
             <CopyButton copyLink="test" />
-          </p>
+          </label>
         </div>
         <div
           className="absolute top-0 z-0"

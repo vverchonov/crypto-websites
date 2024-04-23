@@ -1,14 +1,15 @@
 "use client";
 import { useTexture } from "@react-three/drei";
 import { useFrame, useLoader } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
+import { distance } from "framer-motion";
+import { useEffect, useMemo, useRef } from "react";
 import { Mesh } from "three";
-import { OBJLoader } from "three/examples/jsm/Addons.js";
+import { FBXLoader, OBJLoader } from "three/examples/jsm/Addons.js";
 
 export const Cat = (props: any) => {
   const catRef = useRef();
-  const obj = useLoader(OBJLoader, "./mesh.obj");
-  const texture = useTexture("./albedo.png");
+  const obj = useLoader(OBJLoader, "./cat.obj");
+  const texture = useTexture("./texture.jpeg");
 
   const geometry = useMemo(() => {
     let g;
@@ -22,19 +23,25 @@ export const Cat = (props: any) => {
   }, [obj]);
 
   useFrame((state, delta) => {
+    // //@ts-ignore
+    // catRef.current.rotation.y += 0.005;
     //@ts-ignore
-    catRef.current.rotation.y += 0.005;
-    //@ts-ignore
-    catRef.current.rotation.x -= 0.005;
+    // catRef.current.rotation.x -= 0.005;
   });
+
+  // useEffect(() => {
+  //   //@ts-ignore
+  //   catRef.current.rotation.x -= 90;
+  // }, []);
 
   return (
     <>
       <mesh
+        position={[0, -1.5, 0]}
         onClick={props.play}
         ref={catRef as any}
         geometry={geometry}
-        scale={3}
+        scale={5}
       >
         <meshPhysicalMaterial map={texture} />
       </mesh>
