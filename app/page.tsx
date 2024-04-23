@@ -43,7 +43,7 @@ export default function Home() {
             Da Puss cat
           </h1>
           <p className="text-center z-50 text-xl cursor-pointer flex flex-row gap-4 align-center select-none">
-            CA:3jfFHek23if2f2wWFw23r2aDAWwAef23t
+            CA:Coming
             <CopyButton copyLink="test" />
           </p>
         </div>
