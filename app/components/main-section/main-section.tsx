@@ -1,31 +1,48 @@
-import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { Cat } from "./cat";
 import { Links } from "./links";
 import { CopyCa } from "./copy-ca";
 import { ToastContainer } from "react-toastify";
 
 export const MainSection = (props: any) => {
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="min-h-screen relative w-full flex justify-center items-center">
+            <div className="absolute top-0">
+                <img src="/bluetop.png" alt="header" />
+            </div>
             <ToastContainer />
-            <div className="flex w-full h-fit p-12 justify-center z-50">
-                <Links />
-            </div>
-            <div className="flex flex-col gap-4 text-center z-50 mt-auto p-12 items-center">
-                <h1 className="mt-auto text-8xl uppercase font-bold select-none">
-                    Da Puss
-                </h1>
-                <CopyCa copyLink="test" />
-            </div>
-            <div
-                className="absolute top-0 z-0"
-                style={{ width: "100%", height: "100vh" }}>
-                <Canvas className="z-0">
-                    <OrbitControls enablePan={false} enableZoom={false} />
-                    <ambientLight />
-                    <Cat play={props.play} />
-                </Canvas>
+            <div className="w-8/12 flex flex-row justify-center items-center gap-6">
+                <div className="object-cover w-auto h-full">
+                    <video
+                        src="/alien.mp4"
+                        autoPlay
+                        loop
+                        controls={false}
+                        className="rounded-2xl"></video>
+                </div>
+                <div className="flex flex-col gap-6 text-center items-center justify-between w-[55%] relative">
+                    <div className="absolute transform translate-1/2 z-50">
+                        <img className="w-12" src="/alien-main.png"></img>
+                    </div>
+                    <div className="flex w-full justify-center">
+                        <Links />
+                    </div>
+                    <div className="flex w-[80%] transform -rotate-[16deg] flex-grow">
+                        <svg
+                            viewBox="0 0 180 90"
+                            fill="#ffb700"
+                            className="w-full h-full"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="90" cy="45" rx="90" ry="45" />
+                        </svg>
+                    </div>
+                    <h1 className="flex mt-auto text-xl uppercase font-bold">
+                        In 2023 I animated some silly IKEA aliens! This series
+                        of animations went very viral. The project is not in
+                        association with IKEA, but they did reach out with
+                        approval!
+                    </h1>
+                    <CopyCa copyLink="test" />
+                </div>
+                <div></div>
             </div>
         </div>
     );

@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  /* background-image: url("./back.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-  background-color: lightcoral;
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: rgb(255, 255, 255);
+    }
 }
