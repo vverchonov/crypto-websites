@@ -5,7 +5,7 @@ import { useMemo, useRef } from "react";
 import { Mesh } from "three";
 import { OBJLoader } from "three/examples/jsm/Addons.js";
 
-export const Cat = () => {
+export const Cat = (props: any) => {
   const catRef = useRef();
   const obj = useLoader(OBJLoader, "./mesh.obj");
   const texture = useTexture("./albedo.png");
@@ -29,8 +29,15 @@ export const Cat = () => {
   });
 
   return (
-    <mesh ref={catRef as any} geometry={geometry} scale={3}>
-      <meshPhysicalMaterial map={texture} />
-    </mesh>
+    <>
+      <mesh
+        onClick={props.play}
+        ref={catRef as any}
+        geometry={geometry}
+        scale={3}
+      >
+        <meshPhysicalMaterial map={texture} />
+      </mesh>
+    </>
   );
 };

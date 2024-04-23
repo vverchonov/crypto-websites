@@ -6,8 +6,19 @@ import { Cat } from "./components/cat";
 import { Links } from "./components/links";
 import { CopyButton } from "./components/copy-button";
 import { motion } from "framer-motion";
+import { ToastContainer } from "react-toastify";
+import { useRef } from "react";
 
 export default function Home() {
+  const audioRef = useRef();
+
+  const play = (ref: any) => {
+    if (audioRef.current) {
+      //@ts-ignore
+      audioRef.current.play();
+    }
+  };
+
   return (
     <motion.div
       initial={{
@@ -22,6 +33,8 @@ export default function Home() {
       viewport={{ once: true }}
     >
       <main className="flex flex-col w-100 min-h-screen z-50">
+        <audio ref={audioRef as any} src="./meow.mp3" />
+        <ToastContainer />
         <div className="flex w-full h-fit p-12 justify-center z-50">
           <Links />
         </div>
@@ -41,7 +54,7 @@ export default function Home() {
           <Canvas className="z-0">
             <OrbitControls enablePan={false} enableZoom={false} />
             <ambientLight />
-            <Cat />
+            <Cat play={play} />
           </Canvas>
         </div>
       </main>
