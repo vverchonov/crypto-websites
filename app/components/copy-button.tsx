@@ -1,3 +1,4 @@
+"use client";
 import { Bounce, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 type Props = {
