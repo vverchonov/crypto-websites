@@ -13,8 +13,10 @@ export default function Home() {
         <Links />
       </div>
       <div className="flex flex-col gap-4 text-center z-50 mt-auto p-12 items-center">
-        <h1 className="mt-auto text-8xl uppercase font-bold">Da Puss cat</h1>
-        <p className="text-center z-50 text-xl cursor-pointer flex flex-row gap-4 align-center">
+        <h1 className="mt-auto text-8xl uppercase font-bold select-none">
+          Da Puss cat
+        </h1>
+        <p className="text-center z-50 text-xl cursor-pointer flex flex-row gap-4 align-center select-none">
           CA:3jfFHek23if2f2wWFw23r2aDAWwAef23t
           <CopyButton copyLink="test" />
         </p>
@@ -24,7 +26,7 @@ export default function Home() {
         style={{ width: "100%", height: "100vh" }}
       >
         <Canvas className="z-0">
-          <OrbitControls enableZoom={false} />
+          <OrbitControls enablePan={false} enableZoom={false} />
           <ambientLight />
           <Cat />
         </Canvas>
