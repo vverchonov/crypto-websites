@@ -1,5 +1,5 @@
 const buttonClass =
-  "w-full bg-black text-white font-bold py-4 px-4 cursor-pointer rounded-full flex flex-row content-center items-center transform transition duration-500 hover:scale-105";
+  "w-full bg-black select-none text-white font-bold py-4 px-4 cursor-pointer rounded-full flex flex-row content-center items-center transform transition duration-500 hover:scale-105";
 
 const imgClass = "w-12 h-12 fill-white";
 
