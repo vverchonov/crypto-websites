@@ -4,6 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Cat } from "./components/cat";
 import { Links } from "./components/links";
+import { CopyButton } from "./components/copy-button";
 
 export default function Home() {
   return (
@@ -11,10 +12,11 @@ export default function Home() {
       <div className="flex w-full h-fit p-12 justify-center z-50">
         <Links />
       </div>
-      <div className="flex flex-col gap-4 text-center z-50 mt-auto p-12">
+      <div className="flex flex-col gap-4 text-center z-50 mt-auto p-12 items-center">
         <h1 className="mt-auto text-8xl uppercase font-bold">Da Puss cat</h1>
-        <p className="text z-50 text-xl">
+        <p className="text-center z-50 text-xl cursor-pointer flex flex-row gap-4 align-center">
           CA:3jfFHek23if2f2wWFw23r2aDAWwAef23t
+          <CopyButton copyLink="test" />
         </p>
       </div>
       <div
