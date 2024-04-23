@@ -9,7 +9,7 @@ import { FBXLoader, OBJLoader } from "three/examples/jsm/Addons.js";
 export const Cat = (props: any) => {
   const catRef = useRef();
   const obj = useLoader(OBJLoader, "./cat.obj");
-  const texture = useTexture("./texture.jpeg");
+  const texture = useTexture("./texture.jpg");
 
   const geometry = useMemo(() => {
     let g;
@@ -23,7 +23,7 @@ export const Cat = (props: any) => {
   }, [obj]);
 
   useFrame((state, delta) => {
-    // //@ts-ignore
+    //@ts-ignore
     // catRef.current.rotation.y += 0.005;
     //@ts-ignore
     // catRef.current.rotation.x -= 0.005;
