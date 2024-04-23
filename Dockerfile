@@ -1,22 +1,22 @@
-FROM node:16-alpine
-
-# Set working directory
-
-ENV NODE_ENV=production
-# Copy package.json and package-lock.json (if available)
+# Build Stage
+FROM node:alpine as builder
+WORKDIR /app
 COPY package*.json ./
-
+RUN npm install
+COPY . .
 RUN npm run build
-# Copy the built application files
+
+# Serve Stage
+FROM node:16-alpine
+ENV NODE_ENV=production
+COPY package*.json ./
 
 COPY ./.next ./.next
 COPY ./next.config.js ./next.config.js
 COPY ./public ./public
 COPY ./.next/static ./_next/static
 COPY ./node_modules ./node_modules
-# Expose the desired port (e.g., 3000)
 
 EXPOSE 3000
 
-# Start the Node.js server
 CMD ["npm", "run", "start"]
