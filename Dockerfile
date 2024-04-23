@@ -1,22 +1,22 @@
-# Build Stage
-FROM node:alpine as builder
-WORKDIR /app
+FROM node:16-alpine
+
+# Set working directory
+
+ENV NODE_ENV=production
+# Copy package.json and package-lock.json (if available)
 COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
 
-# Serve Stage
-FROM node:alpine as runner
-WORKDIR /app
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./package.json
-FROM nginx:alpine
-COPY nginx.conf /etc/nginx/nginx.conf
-RUN apk add --no-cache nodejs npm
-COPY --from=runner /app /usr/share/nginx/html
 
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# Copy the built application files
+
+COPY ./.next ./.next
+COPY ./next.config.js ./next.config.js
+COPY ./public ./public
+COPY ./.next/static ./_next/static
+COPY ./node_modules ./node_modules
+# Expose the desired port (e.g., 3000)
+
+EXPOSE 3000
+
+# Start the Node.js server
+CMD ["npm", "run", "start"]
