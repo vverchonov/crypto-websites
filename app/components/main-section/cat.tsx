@@ -8,7 +8,7 @@ import { FBXLoader, OBJLoader } from "three/examples/jsm/Addons.js";
 
 export const Cat = (props: any) => {
   const catRef = useRef();
-  const obj = useLoader(OBJLoader, "./cat.obj");
+  const obj = useLoader(OBJLoader, "./test.obj");
   const texture = useTexture("./texture.jpg");
 
   const geometry = useMemo(() => {
