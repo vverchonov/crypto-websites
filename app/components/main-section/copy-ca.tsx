@@ -5,31 +5,32 @@ import { CopyIcon } from "../icons/copy-icon";
 import { CA } from "@/app/urls";
 
 type Props = {
-    copyLink: string;
+  copyLink: string;
 };
 
 export const CopyCa = (props: Props) => {
-    const onCopy = () => {
-        navigator.clipboard.writeText(props.copyLink);
-        toast.success("Link copied to clipboard!", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-            transition: Bounce,
-        });
-    };
+  const onCopy = () => {
+    navigator.clipboard.writeText(props.copyLink);
+    toast.success("Link copied to clipboard!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
+  };
 
-    return (
-        <button
-            onClick={onCopy}
-            className="text-center text-xl cursor-pointer flex flex-row gap-4 align-center select-none">
-            CA: {CA}
-            <CopyIcon />
-        </button>
-    );
+  return (
+    <button
+      onClick={onCopy}
+      className="text-center text-xl cursor-pointer flex flex-row gap-4 align-center select-none"
+    >
+      CA: {CA}
+      <CopyIcon />
+    </button>
+  );
 };
