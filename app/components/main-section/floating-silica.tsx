@@ -1,15 +1,12 @@
 import { easeInOut, motion } from "framer-motion";
 
-type Props = {
-  itemClass: string;
-  imageClass: string;
-};
-
-export const FloatingSilica = (props: Props) => {
+export const FloatingSilica = (props: any) => {
   return (
-    <div className={props.itemClass}>
+    <motion.div
+      style={{ y: props.y }}
+      className={"absolute w-full p-8 z-0 " + props.itemClass}
+    >
       <motion.div
-        className="w-full p-8 z-0"
         initial={{
           transform: "translateZ(2px) translateY(2px) rotate(0deg)",
         }}
@@ -29,6 +26,6 @@ export const FloatingSilica = (props: Props) => {
           src="./block1/silica.webp"
         />
       </motion.div>
-    </div>
+    </motion.div>
   );
 };

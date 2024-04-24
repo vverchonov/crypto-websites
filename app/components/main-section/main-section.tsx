@@ -17,7 +17,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
 export const MainSection = (props: any) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 100);
+  const y = useParallax(scrollYProgress, 150);
 
   return (
     <div className="flex min-h-screen w-full relative">
@@ -28,7 +28,8 @@ export const MainSection = (props: any) => {
       <div className="flex flex-col justify-center align-center items-center p-28">
         <div className="flex flex-col md:flex-row h-full w-full justify-center align-center gap-6 items-center relative">
           <FloatingSilica
-            itemClass="absolute left-0 top-48"
+            y={y}
+            itemClass="left-0 top-48"
             imageClass="rotate(124deg)"
           />
           <div className="object-scale-down w-full md:w-1/4 p-6">
@@ -41,14 +42,16 @@ export const MainSection = (props: any) => {
             ></video>
           </div>
           <div className="flex flex-col h-full gap-6 text-center items-center justify-between relative w-1/2 p-6">
-            <FloatingAlien y={y} customTranslate={"-translate-y-[30%]"} />
             <FloatingSilica
-              itemClass="absolute left-0 -top-32"
-              imageClass="rotate(12deg)"
-            />
-            <FloatingSilica
-              itemClass="absolute right-0 top-64"
+              y={y}
+              itemClass="right-0 top-32"
               imageClass="rotate(36deg)"
+            />
+            <FloatingAlien y={y} customTranslate={"-translate-y-[50%]"} />
+            <FloatingSilica
+              y={y}
+              itemClass="left-0 -top-32"
+              imageClass="rotate(12deg)"
             />
 
             <Circle customClass={"mt-40"} />

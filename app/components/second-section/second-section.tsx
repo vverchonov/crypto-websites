@@ -31,7 +31,7 @@ export const SecondSection = (props: any) => {
             <FloatingAlien
               customClass={"img-hor"}
               y={y}
-              customTranslate={"translate-y-[110%]"}
+              customTranslate={"translate-y-[80%]"}
             />
             <div className="relative w-full justify-center">
               <div className="mx-auto w-2/4 text-center">

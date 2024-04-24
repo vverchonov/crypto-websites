@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const FloatingBanana = (props: any) => {
   return (
-    <div>
+    <>
       <motion.div
         style={{ y: props.y }}
         className=" p-8 absolute right-0 w-fit top-7 z-0"
@@ -27,6 +27,6 @@ export const FloatingBanana = (props: any) => {
           />
         </motion.div>
       </motion.div>
-    </div>
+    </>
   );
 };
