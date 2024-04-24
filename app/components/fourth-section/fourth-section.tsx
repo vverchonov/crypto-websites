@@ -1,6 +1,3 @@
-import { FloatingCow } from "./floating-cow";
-import { FloatingPlanet } from "./floating-planet";
-
 export const FourthSection = (props: any) => {
   return (
     <div className="flex min-h-screen w-full relative bg-[#1B2327] blurred-border overflow-x-clip">
@@ -21,7 +18,11 @@ export const FourthSection = (props: any) => {
           <button className="button2 absolute">Prev</button>
         </div>
       </div>
-      <FloatingPlanet />
+      <img
+        src="/block4/planet.png"
+        alt="planet"
+        className="w-[10%] absolute top-0 left-0 transform translate-x-1/4 translate-y-1/2"
+      ></img>
       <img
         src="/block4/sticker1.png"
         alt="sticker1"
@@ -32,7 +33,11 @@ export const FourthSection = (props: any) => {
         alt="sticker1"
         className="w-[15%] absolute top-0 right-0 transform -translate-x-[60%] translate-y-[10%]"
       ></img>
-      <FloatingCow />
+      <img
+        src="/block4/cow.png"
+        alt="sticker1"
+        className="w-[15%] absolute bottom-28 right-0 transform -translate-x-[60%] -translate-y-[50%]"
+      ></img>
     </div>
   );
 };
