@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { FloatingAlien } from "../common/floating-alien";
+import { FloatingAlien } from "../common/floating-items/floating-alien";
 import { FloatingBanana } from "../common/floating-items/floating-banana";
 import { FloatingDildo } from "../common/floating-items/floating-dildo";
 import { FloatingDrink } from "../common/floating-items/floating-drink";
@@ -9,7 +9,7 @@ import { Circle } from "../common/circle";
 
 import { MotionValue, useScroll, useTransform } from "framer-motion";
 
-function useParallax(value: MotionValue<number>, distance: number) {
+export function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [distance, -distance]);
 }
 
@@ -21,7 +21,7 @@ export const SecondSection = (props: any) => {
   return (
     <div className="flex flex-col bg-white min-h-screen w-full p-28 max-w-screen-2xl">
       <div className="flex flex-col justify-center align-center items-center">
-        <div className="flex flex-col md:flex-row h-full w-full  border-black">
+        <div className="flex flex-col md:flex-row h-full w-full border-black">
           <div className="flex flex-col w-full md:w-1/2 items-center relative">
             <div className="relative ms-auto">
               <img className="z-40 relative" src="./block2/text.webp" />

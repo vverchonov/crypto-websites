@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Links } from "./links";
 import { CopyCa } from "./copy-ca";
 import { ToastContainer } from "react-toastify";
-import { FloatingAlien } from "../common/floating-alien";
+import { FloatingAlien } from "../common/floating-items/floating-alien";
 import { FloatingSilica } from "./floating-silica";
 import { Circle } from "../common/circle";
 
