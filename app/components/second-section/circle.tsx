@@ -1,6 +1,6 @@
 export const Circle = () => {
   return (
-    <div className="absolute w-[20%] transform -rotate-[160deg]">
+    <div className="absolute bottom-0 left-32 w-[50%] z-0 transform -rotate-[160deg]">
       <svg
         viewBox="0 0 180 90"
         fill="#ffb700"
