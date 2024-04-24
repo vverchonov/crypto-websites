@@ -17,8 +17,8 @@ export const ThirdSection = (props: any) => {
   };
 
   return (
-    <div className="relative flex-col bg-white min-h-screen w-full p-28 px-64 max-w-screen-2xl">
-      <div className="relative justify-center w-full pt-0 h-1/4 relative">
+    <div className="relative flex-col bg-white min-h-screen w-full pt-28 px-64 max-w-screen-2xl mb-24">
+      <div className="relative justify-center w-full pt-0 h-1/4">
         <p className="text-3xl font-bold text-center mb-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
