@@ -4,7 +4,7 @@ export const FloatingSilica = (props: any) => {
   return (
     <motion.div
       style={{ y: props.y }}
-      className={"absolute w-full p-8 z-0 " + props.itemClass}
+      className={"absolute p-8 z-0 " + props.itemClass}
     >
       <motion.div
         initial={{
