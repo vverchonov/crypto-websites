@@ -19,3 +19,35 @@ body {
 .img-hor {
   transform: rotateY(180deg);
 }
+
+.blurred-border::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  left: -20px;
+  height: 80px;
+  width: 120%;
+  overflow-y: hidden;
+  background: inherit;
+  box-shadow: 0 2px 8px rgba(229, 231, 235, 0.5);
+  filter: blur(12px);
+  z-index: -1;
+}
+
+.screen-content {
+  top: 12%;
+  left: 40%;
+  width: 20%;
+  height: 35%;
+}
+
+.button1 {
+  top: 63%;
+  left: 55%;
+}
+
+.button2 {
+  top: 63%;
+  left: 50%;
+}

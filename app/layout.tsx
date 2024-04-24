@@ -42,7 +42,7 @@ export default function RootLayout({
         />
         <meta name="twitter:image" content="https://dapuss.com/header.png" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className + " scroll-smooth"}>{children}</body>
     </html>
   );
 }
