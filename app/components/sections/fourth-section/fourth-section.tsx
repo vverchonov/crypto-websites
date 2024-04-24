@@ -3,7 +3,7 @@ import { FloatingPlanet } from "./floating-planet";
 
 export const FourthSection = (props: any) => {
   return (
-    <div className="flex min-h-screen w-full relative bg-[#1B2327] blurred-border overflow-x-clip">
+    <div className="flex min-h-screen w-full relative bg-[#1B2327] blurred-border-top overflow-x-clip">
       <img
         src="/block4/table.png"
         alt="table"
@@ -23,14 +23,14 @@ export const FourthSection = (props: any) => {
       </div>
       <FloatingPlanet />
       <img
-        src="/block4/sticker1.png"
+        src="/sticker.png"
         alt="sticker1"
         className="w-[15%] absolute top-0 left-0 transform translate-x-[70%] translate-y-[60%]"
       ></img>
       <img
-        src="/block4/sticker2.png"
+        src="/sticker.png"
         alt="sticker1"
-        className="w-[15%] absolute top-0 right-0 transform -translate-x-[60%] translate-y-[10%]"
+        className="w-[15%] absolute top-0 right-24 transform -translate-x-[50%] translate-y-[10%] img-hor"
       ></img>
       <FloatingCow />
     </div>
