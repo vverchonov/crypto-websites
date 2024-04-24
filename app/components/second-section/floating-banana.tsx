@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 export const FloatingBanana = (props: any) => {
     return (
-        <>
+        <div>
             <motion.div
-                // style={{ y: props.y }}
+                style={{ y: props.y }}
                 className=" p-8 absolute right-0 w-fit top-7 z-0"
                 initial={{
                     transform: "translateZ(2px) translateY(2px) rotate(0deg)",
@@ -23,6 +23,6 @@ export const FloatingBanana = (props: any) => {
                     src="./block2/banana.webp"
                 />
             </motion.div>
-        </>
+        </div>
     );
 };

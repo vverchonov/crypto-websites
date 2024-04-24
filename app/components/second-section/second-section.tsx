@@ -19,10 +19,10 @@ export const SecondSection = (props: any) => {
     const y = useParallax(scrollYProgress, 100);
 
     return (
-        <div className="flex flex-col bg-white min-h-screen w-full p-28 max-w-screen-2xl">
+        <div className="flex flex-col min-h-screen w-full p-28 max-w-screen-2xl">
             <div className="flex flex-col justify-center align-center items-center">
-                <div className="flex flex-col md:flex-row h-full w-full  border-black">
-                    <div className="flex flex-col w-full md:w-1/2 relative items-center">
+                <div className="flex flex-col md:flex-row h-full w-full">
+                    <div className="flex flex-col w-full md:w-1/2 items-center relative">
                         <div className="relative ms-auto">
                             <img
                                 className="z-40 relative"
@@ -30,8 +30,8 @@ export const SecondSection = (props: any) => {
                             />
                             <FloatingBanana y={y} />
                         </div>
-                        <FloatingAlien y={y} />
                         <Circle />
+                        <FloatingAlien />
                         <div className="relative w-full pt-16 justify-center">
                             <div className="mx-auto w-2/4 text-center">
                                 <p className="text-2xl">
