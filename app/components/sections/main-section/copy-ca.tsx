@@ -1,7 +1,7 @@
 "use client";
 import { Bounce, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { CopyIcon } from "../icons/copy-icon";
+import { CopyIcon } from "../../icons/copy-icon";
 import { CA } from "@/app/urls";
 
 type Props = {

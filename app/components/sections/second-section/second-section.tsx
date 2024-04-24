@@ -1,11 +1,11 @@
 "use client";
 
 import { useRef } from "react";
-import { FloatingAlien } from "../common/floating-items/floating-alien";
-import { FloatingBanana } from "../common/floating-items/floating-banana";
-import { FloatingDildo } from "../common/floating-items/floating-dildo";
-import { FloatingDrink } from "../common/floating-items/floating-drink";
-import { Circle } from "../common/circle";
+import { FloatingAlien } from "../../common/floating-items/floating-alien";
+import { FloatingBanana } from "../../common/floating-items/floating-banana";
+import { FloatingDildo } from "../../common/floating-items/floating-dildo";
+import { FloatingDrink } from "../../common/floating-items/floating-drink";
+import { Circle } from "../../common/circle";
 
 import { MotionValue, useScroll, useTransform } from "framer-motion";
 

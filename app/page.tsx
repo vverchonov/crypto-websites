@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { MainSection } from "./components/main-section/main-section";
-import { SecondSection } from "./components/second-section/second-section";
+import { MainSection } from "./components/sections/main-section/main-section";
+import { SecondSection } from "./components/sections/second-section/second-section";
 import { FooterSection } from "./components/footer-section";
-import { ThirdSection } from "./components/third-section/third-section";
-import { FourthSection } from "./components/fourth-section/fourth-section";
+import { ThirdSection } from "./components/sections/third-section/third-section";
+import { FourthSection } from "./components/sections/fourth-section/fourth-section";
 
 export default function Home() {
   const audioRef = useRef();

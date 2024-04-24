@@ -1,10 +1,10 @@
-import { DevIcon } from "../icons/dev-icon";
-import { RaydiumIcon } from "../icons/raydium-icon";
-import { TgIcon } from "../icons/tg-icon";
-import { XIcon } from "../icons/x-icon";
-import { JupiterIcon } from "../icons/jupiter-icon";
-import { DexscreenerIcon } from "../icons/dexscreener-icon";
-import { DextoolsIcon } from "../icons/dextools-icon";
+import { DevIcon } from "../../icons/dev-icon";
+import { RaydiumIcon } from "../../icons/raydium-icon";
+import { TgIcon } from "../../icons/tg-icon";
+import { XIcon } from "../../icons/x-icon";
+import { JupiterIcon } from "../../icons/jupiter-icon";
+import { DexscreenerIcon } from "../../icons/dexscreener-icon";
+import { DextoolsIcon } from "../../icons/dextools-icon";
 import {
   DEXSCREENER,
   JUPITER,

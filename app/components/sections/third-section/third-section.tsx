@@ -4,8 +4,8 @@ import { useParallax } from "../second-section/second-section";
 import { useScroll } from "framer-motion";
 import { FloatingSharkboy } from "./floating-sharkboy";
 import { FloatingSharkgirl } from "./floating-sharkgirl";
-import { FloatingMeteor } from "../common/floating-items/floating-meteor";
-import { FloatingGun } from "../common/floating-items/floating-gun";
+import { FloatingMeteor } from "../../common/floating-items/floating-meteor";
+import { FloatingGun } from "../../common/floating-items/floating-gun";
 
 export const ThirdSection = (props: any) => {
   const ref = useRef(null);
