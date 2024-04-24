@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Circle } from "./circle";
+import { Circle } from "../common/circle";
 
 export const FloatingItems = (props: any) => {
   return (
@@ -29,7 +29,7 @@ export const FloatingItems = (props: any) => {
           />
         </motion.div>
       </motion.div>
-      <Circle />
+      <Circle class={"img-hor"} />
     </div>
   );
 };
