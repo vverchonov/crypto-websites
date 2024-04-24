@@ -55,3 +55,10 @@ body {
 .seventh-block {
   background-color: black;
 }
+
+.block6 {
+  width: 100%;
+  background-image: url("../public/block6/6background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
