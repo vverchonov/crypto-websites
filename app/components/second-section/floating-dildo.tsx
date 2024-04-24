@@ -1,9 +1,10 @@
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
-export const FloatingDildo = () => {
+export const FloatingDildo = (props: any) => {
   return (
     <>
       <motion.div
+        // style={{ y: props.y }}
         className=" p-8 absolute left-0 bottom-0 w-fit top-7 z-0"
         initial={{
           transform: "translateZ(2px) translateY(2px) rotate(0deg)",
@@ -15,7 +16,7 @@ export const FloatingDildo = () => {
           repeat: Infinity,
           repeatType: "mirror",
           duration: 1,
-          ease: easeInOut,
+          ease: "easeInOut",
         }}
       >
         <img

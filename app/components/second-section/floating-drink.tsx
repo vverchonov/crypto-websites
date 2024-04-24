@@ -1,8 +1,9 @@
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
-export const FloatingDrink = () => {
+export const FloatingDrink = (props: any) => {
   return (
     <motion.div
+      //   style={{ y: props.y }}
       className="w-full flex justify-center p-8 absolute top-20"
       initial={{
         transform: "translateZ(2px) translateY(2px) rotate(0deg)",
@@ -14,7 +15,7 @@ export const FloatingDrink = () => {
         repeat: Infinity,
         repeatType: "mirror",
         duration: 1,
-        ease: easeInOut,
+        ease: "easeInOut",
       }}
     >
       <img

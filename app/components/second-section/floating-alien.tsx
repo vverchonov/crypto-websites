@@ -1,10 +1,11 @@
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Circle } from "./circle";
 
-export const FloatingItems = () => {
+export const FloatingItems = (props: any) => {
   return (
     <div className="relative">
       <motion.div
+        // style={{ y: props.y }}
         className="w-full flex justify-center p-8 z-40 relative"
         initial={{
           transform: "translateZ(8px) translateY(-2px) translateX(0px)",
@@ -16,7 +17,7 @@ export const FloatingItems = () => {
           repeat: Infinity,
           repeatType: "mirror",
           duration: 2,
-          ease: easeInOut,
+          ease: "easeInOut",
         }}
       >
         <img

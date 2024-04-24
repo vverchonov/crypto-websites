@@ -1,10 +1,10 @@
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const FloatingBanana = (props: any) => {
   return (
     <>
       <motion.div
-        style={{ y: props.y }}
+        // style={{ y: props.y }}
         className=" p-8 absolute right-0 w-fit top-7 z-0"
         initial={{
           transform: "translateZ(2px) translateY(2px) rotate(0deg)",
@@ -16,7 +16,7 @@ export const FloatingBanana = (props: any) => {
           repeat: Infinity,
           repeatType: "mirror",
           duration: 3,
-          ease: easeInOut,
+          ease: "easeInOut",
         }}
       >
         <img

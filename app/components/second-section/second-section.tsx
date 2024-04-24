@@ -6,15 +6,16 @@ import { FloatingBanana } from "./floating-banana";
 import { FloatingDildo } from "./floating-dildo";
 import { FloatingDrink } from "./floating-drink";
 
-import { useScroll, useTransform } from "framer-motion";
+import { MotionValue, useScroll, useTransform } from "framer-motion";
+
+function useParallax(value: MotionValue<number>, distance: number) {
+  return useTransform(value, [0, 1], [-distance, distance]);
+}
 
 export const SecondSection = (props: any) => {
-  const ref = useRef();
-  const { scrollYProgress } = useScroll();
-
-  const testY = useTransform(scrollYProgress, [0, 100], ["0%", "200%"]);
-
-  console.log(testY);
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useParallax(scrollYProgress, 100);
 
   return (
     <div className="flex flex-col bg-white min-h-screen w-full p-28 max-w-screen-2xl">
@@ -23,9 +24,9 @@ export const SecondSection = (props: any) => {
           <div className="flex flex-col w-full md:w-1/2  items-center">
             <div className="relative ms-auto">
               <img className="z-40 relative" src="./block2/text.webp" />
-              <FloatingBanana y={testY} />
+              <FloatingBanana y={y} />
             </div>
-            <FloatingItems />
+            <FloatingItems y={y} />
             <div className="relative w-full pt-16 justify-center">
               <div className="mx-auto w-2/4 text-center">
                 <p className="text-2xl">
@@ -33,19 +34,19 @@ export const SecondSection = (props: any) => {
                   ''GAMBACAT''!
                 </p>
               </div>
-              <FloatingDildo />
+              <FloatingDildo y={y} />
             </div>
           </div>
           <div className="relative w-full md:w-1/2 p-8 ps-24">
             <div className="ms-auto rounded">
               <video
-                className="w-2/4 mt-12 rounded-lg border"
+                className="w-3/4 mt-12 rounded-lg border"
                 controls={false}
                 autoPlay
                 loop
                 src="./block2/dancing.mp4"
               />
-              <FloatingDrink />
+              <FloatingDrink y={y} />
             </div>
           </div>
         </div>
