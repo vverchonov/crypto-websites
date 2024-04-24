@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { MainSection } from "./components/main-section/main-section";
 import { SecondSection } from "./components/second-section/second-section";
 import { FooterSection } from "./components/footer-section";
+import { ThirdSection } from "./components/third-section/third-section";
 
 export default function Home() {
   const audioRef = useRef();
@@ -30,9 +31,10 @@ export default function Home() {
       viewport={{ once: true }}
     >
       <main className="relative flex flex-col items-center">
-        <audio hidden ref={audioRef as any} src="./meow.mp3" />
+        {/* <audio hidden ref={audioRef as any} src="./meow.mp3" /> */}
         <MainSection play={() => play(audioRef)} />
         <SecondSection />
+        <ThirdSection />
       </main>
       <FooterSection />
     </motion.div>

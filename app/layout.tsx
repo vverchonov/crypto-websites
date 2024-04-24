@@ -6,8 +6,8 @@ import { Head } from "next/document";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DA PUSS",
-  description: "The best cat site on the internet!",
+  title: "Alien",
+  description: "The cutest alien on the internet!",
 };
 
 export default function RootLayout({
@@ -18,7 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
+          as="style"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Da Puss" />
         <meta property="og:url" content="https://dapuss.com/" />

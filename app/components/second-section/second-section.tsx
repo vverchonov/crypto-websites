@@ -10,13 +10,13 @@ import { Circle } from "../common/circle";
 import { MotionValue, useScroll, useTransform } from "framer-motion";
 
 function useParallax(value: MotionValue<number>, distance: number) {
-  return useTransform(value, [0, 1], [-distance, distance]);
+  return useTransform(value, [0, 1], [distance, -distance]);
 }
 
 export const SecondSection = (props: any) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 100);
+  const y = useParallax(scrollYProgress, 150);
 
   return (
     <div className="flex flex-col bg-white min-h-screen w-full p-28 max-w-screen-2xl">
@@ -28,21 +28,24 @@ export const SecondSection = (props: any) => {
               <FloatingBanana y={y} />
             </div>
             <Circle customClass={"img-hor mt-40"} />
-            <FloatingAlien customClass={"img-hor"} y={y} />
-            <div className="relative w-full pt-16 justify-center">
+            <FloatingAlien
+              customClass={"img-hor"}
+              y={y}
+              customTranslate={"translate-y-[110%]"}
+            />
+            <div className="relative w-full justify-center">
               <div className="mx-auto w-2/4 text-center">
-                <p className="text-2xl">
-                  These animations use the same 3D to 2d pipeline as
-                  ''GAMBACAT''!
+                <p className="text-2xl font-bold">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
               </div>
               <FloatingDildo y={y} />
             </div>
           </div>
           <div className="relative w-full md:w-1/2 p-8 ps-24">
-            <div className="ms-auto rounded">
+            <div className="ms-auto">
               <video
-                className="w-3/4 mt-12 rounded-lg border"
+                className="w-3/4 mt-12 rounded-2xl"
                 controls={false}
                 autoPlay
                 loop
