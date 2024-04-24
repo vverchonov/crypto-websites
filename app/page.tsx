@@ -7,6 +7,7 @@ import { SecondSection } from "./components/sections/second-section/second-secti
 import { FooterSection } from "./components/footer-section";
 import { ThirdSection } from "./components/sections/third-section/third-section";
 import { FourthSection } from "./components/sections/fourth-section/fourth-section";
+import { SeventhSection } from "./components/sections/seventh-section/seventh-section";
 
 export default function Home() {
   const audioRef = useRef();
@@ -37,6 +38,7 @@ export default function Home() {
         <SecondSection />
         <ThirdSection />
         <FourthSection />
+        <SeventhSection />
       </main>
       <FooterSection />
     </motion.div>
