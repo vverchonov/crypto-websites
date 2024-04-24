@@ -5,9 +5,9 @@ import { FloatingAlien } from "../common/floating-alien";
 import { FloatingBanana } from "./floating-banana";
 import { FloatingDildo } from "./floating-dildo";
 import { FloatingDrink } from "./floating-drink";
+import { Circle } from "../common/circle";
 
 import { MotionValue, useScroll, useTransform } from "framer-motion";
-import { Circle } from "../common/circle";
 
 function useParallax(value: MotionValue<number>, distance: number) {
     return useTransform(value, [0, 1], [-distance, distance]);
@@ -19,9 +19,9 @@ export const SecondSection = (props: any) => {
     const y = useParallax(scrollYProgress, 100);
 
     return (
-        <div className="flex flex-col min-h-screen w-full p-28 max-w-screen-2xl">
+        <div className="flex flex-col bg-white min-h-screen w-full p-28 max-w-screen-2xl">
             <div className="flex flex-col justify-center align-center items-center">
-                <div className="flex flex-col md:flex-row h-full w-full">
+                <div className="flex flex-col md:flex-row h-full w-full  border-black">
                     <div className="flex flex-col w-full md:w-1/2 items-center relative">
                         <div className="relative ms-auto">
                             <img
@@ -31,7 +31,7 @@ export const SecondSection = (props: any) => {
                             <FloatingBanana y={y} />
                         </div>
                         <Circle />
-                        <FloatingAlien />
+                        <FloatingAlien y={y} />
                         <div className="relative w-full pt-16 justify-center">
                             <div className="mx-auto w-2/4 text-center">
                                 <p className="text-2xl">

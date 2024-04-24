@@ -17,7 +17,7 @@ export const FloatingAlien = (props: any) => {
                     repeat: Infinity,
                     repeatType: "mirror",
                     duration: 2,
-                    ease: easeInOut,
+                    ease: "easeInOut",
                 }}>
                 <img className="w-1/3 drop-shadow-2xl" src="./alien.png" />
             </motion.div>
