@@ -17,7 +17,7 @@ export const FloatingSilica = (props: any) => {
           repeat: Infinity,
           repeatType: "mirror",
           duration: 3,
-          ease: easeInOut,
+          ease: "easeInOut",
         }}
       >
         <img
