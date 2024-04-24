@@ -25,24 +25,24 @@ export const MainSection = (props: any) => {
         <img src="/block1/bluetop.png" alt="header" />
       </div>
       <ToastContainer />
-      <div className="flex flex-col justify-center align-center items-center p-28">
-        <div className="flex flex-col md:flex-row h-full w-full justify-center align-center gap-6 items-center relative">
+      <div className="flex flex-col justify-center align-center items-center p-4 lg:p-28">
+        <div className="flex flex-col lg:flex-row h-full w-full justify-center align-center gap-6 items-center relative">
           <FloatingSilica
             y={y}
             itemClass="left-0 top-48"
             imageClass="rotate(124deg)"
           />
-          <div className="object-scale-down w-full md:w-1/4 p-6">
+          <div className="object-scale-down flex justify-center w-full lg:w-1/4 p-6">
             <video
               src="/block1/alien.mp4"
               preload="auto"
               autoPlay
               loop
               controls={false}
-              className="rounded-2xl w-full h-full"
+              className="rounded-2xl w-2/3 lg:w-full h-full"
             ></video>
           </div>
-          <div className="flex flex-col h-full gap-6 text-center items-center justify-between relative w-1/2 p-6">
+          <div className="flex flex-col h-full gap-6 text-center items-center justify-between relative w-full lg:w-1/2 p-6">
             <FloatingSilica
               y={y}
               itemClass="right-0 top-32"

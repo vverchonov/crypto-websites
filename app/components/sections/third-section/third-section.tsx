@@ -17,7 +17,7 @@ export const ThirdSection = (props: any) => {
   };
 
   return (
-    <div className="relative flex-col bg-white min-h-screen w-full pt-28 px-64 max-w-screen-2xl mb-24">
+    <div className="relative flex-col bg-white min-h-screen w-full p-4 pt-28 lg:px-64 max-w-screen-2xl mb-24">
       <div className="relative justify-center w-full pt-0 h-1/4">
         <p className="text-3xl font-bold text-center mb-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -28,12 +28,12 @@ export const ThirdSection = (props: any) => {
           src="./block3/photo-button.png"
         />
       </div>
-      <div className="flex flex-row gap-16 justify-center">
+      <div className="flex flex-col items-center lg:flex-row gap-16 justify-center">
         <FloatingSharkgirl y={y} />
         <FloatingSharkboy y={y} />
-        <img className="w-1/3" src="./block3/image.png" />
-        <img className="w-1/3" src="./block3/image.png" />
-        <img className="w-1/3" src="./block3/image.png" />
+        <img className="w-2/3 lg:w-1/3" src="./block3/image.png" />
+        <img className="w-2/3 lg:w-1/3" src="./block3/image.png" />
+        <img className="w-2/3 lg:w-1/3" src="./block3/image.png" />
         <FloatingGun />
       </div>
       <div className="relative h-1/3">

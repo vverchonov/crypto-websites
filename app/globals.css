@@ -77,3 +77,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.dex {
+  height: 80vh;
+}
