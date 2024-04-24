@@ -4,11 +4,11 @@ export const FloatingDrink = (props: any) => {
   return (
     <>
       <motion.div
-        className="flex justify-center p-8 absolute top-20 w-full"
+        className="flex justify-center p-8 absolute top-0 right-0 lg:top-20"
         style={{ y: props.y }}
       >
         <motion.div
-          className="flex w-full lg:justify-center"
+          className="flex lg:justify-center"
           initial={{
             transform: "translateZ(2px) translateY(2px) rotate(0deg)",
           }}

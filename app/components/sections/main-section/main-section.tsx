@@ -32,7 +32,7 @@ export const MainSection = (props: any) => {
             itemClass="left-0 top-48"
             imageClass="rotate(124deg)"
           />
-          <div className="object-scale-down flex justify-center w-full lg:w-1/4 p-6">
+          <div className="object-scale-down flex md:justify-center w-full lg:w-1/4 p-6">
             <video
               src="/block1/alien.mp4"
               preload="auto"

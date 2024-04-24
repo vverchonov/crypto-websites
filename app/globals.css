@@ -81,3 +81,35 @@ body {
 .dex {
   height: 80vh;
 }
+
+.img1 {
+  transform: rotate(-15deg);
+}
+
+.img2 {
+  transform: rotate(12deg);
+}
+
+.img3 {
+  transform: rotate(5deg);
+}
+
+.img4 {
+  transform: rotate(-12deg);
+}
+
+.img5-holder {
+  margin-bottom: e15vh;
+}
+
+.img5 {
+  transform: rotate(-8deg);
+}
+
+.img6-holder {
+  margin-bottom: 10vh;
+}
+
+.img6 {
+  transform: rotate(5deg);
+}

@@ -1,12 +1,9 @@
 import { motion } from "framer-motion";
 
-export const FloatingSharkboy = (props: any) => {
+export const FloatingBigUfo = (props: any) => {
   return (
     <>
-      <motion.div
-        style={{ y: props.y }}
-        className="absolute left-0 bot-0 lg:top-0 w-fit z-0 ps-16"
-      >
+      <motion.div style={{ y: props.y }} className="w-full">
         <motion.div
           initial={{
             transform: "translateZ(2px) translateY(2px) rotate(0deg)",
@@ -21,10 +18,7 @@ export const FloatingSharkboy = (props: any) => {
             ease: "easeInOut",
           }}
         >
-          <img
-            className="w-72 drop-shadow-xl z-0"
-            src="./block3/shark_male.png"
-          />
+          <img className="w-full" src="./block6/ufo.png" />
         </motion.div>
       </motion.div>
     </>

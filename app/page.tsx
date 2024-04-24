@@ -12,15 +12,6 @@ import { SixthSection } from "./components/sections/sixth-section/sixth-section"
 import { FifthSection } from "./components/sections/fifth-section/fifth-section";
 
 export default function Home() {
-  const audioRef = useRef();
-
-  const play = (ref: any) => {
-    if (audioRef.current) {
-      //@ts-ignore
-      audioRef.current.play();
-    }
-  };
-
   return (
     <motion.div
       initial={{
@@ -36,13 +27,13 @@ export default function Home() {
     >
       <main className="relative flex flex-col items-center">
         {/* <audio hidden ref={audioRef as any} src="./meow.mp3" /> */}
-        <MainSection play={() => play(audioRef)} />
+        <MainSection />
         <SecondSection />
         <ThirdSection />
         <FourthSection />
-        <FifthSection />
-        <SixthSection />
-        <SeventhSection />
+        {/* <FifthSection /> */}
+        {/* <SixthSection /> */}
+        {/* <SeventhSection /> */}
       </main>
       <FooterSection />
     </motion.div>

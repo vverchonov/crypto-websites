@@ -9,7 +9,7 @@ import { Circle } from "../../common/circle";
 
 import { MotionValue, useScroll, useTransform } from "framer-motion";
 
-export function useParallax(value: MotionValue<number>, distance: number) {
+function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [distance, -distance]);
 }
 
@@ -42,13 +42,13 @@ export const SecondSection = (props: any) => {
               <FloatingDildo y={y} />
             </div>
           </div>
-          <div className="relative w-full w-full lg:w-1/2 p-8 ps-24">
+          <div className="relative w-full w-full lg:w-1/2 p-4 lg:ps-24">
             <div className="ms-auto flex justify-center">
               <video
                 className="w-3/4 mt-12 rounded-2xl"
                 controls={false}
-                autoPlay
-                loop
+                autoPlay={true}
+                loop={true}
                 src="./block2/dancing.mp4"
               />
               <FloatingDrink y={y} />
