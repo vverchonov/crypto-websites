@@ -35,6 +35,7 @@ export const MainSection = (props: any) => {
           <div className="object-scale-down w-full md:w-1/4 p-6">
             <video
               src="/block1/alien.mp4"
+              preload="auto"
               autoPlay
               loop
               controls={false}
