@@ -1,11 +1,15 @@
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
-export const FloatingBanana = (props: any) => {
+type Props = {
+    itemClass: string;
+    imageClass: string;
+};
+
+export const FloatingSilica = (props: Props) => {
     return (
-        <>
+        <div className={props.itemClass}>
             <motion.div
-                // style={{ y: props.y }}
-                className=" p-8 absolute right-0 w-fit top-7 z-0"
+                className="w-full p-8 z-0"
                 initial={{
                     transform: "translateZ(2px) translateY(2px) rotate(0deg)",
                 }}
@@ -16,13 +20,14 @@ export const FloatingBanana = (props: any) => {
                     repeat: Infinity,
                     repeatType: "mirror",
                     duration: 3,
-                    ease: "easeInOut",
+                    ease: easeInOut,
                 }}>
                 <img
-                    className="w-28 rotate-45 drop-shadow-xl z-0"
-                    src="./block2/banana.webp"
+                    className="w-28 drop-shadow-xl z-0"
+                    style={{ transform: props.imageClass }}
+                    src="./block1/silica.webp"
                 />
             </motion.div>
-        </>
+        </div>
     );
 };
