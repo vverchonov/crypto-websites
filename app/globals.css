@@ -46,11 +46,31 @@ body {
   z-index: 20;
 }
 
+.button-style {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
 .screen-content {
   top: 12%;
   left: 40%;
   width: 20%;
   height: 36%;
+}
+
+.slide-enter {
+  transform: translateX(100%);
+}
+
+.slide-enter-active {
+  transform: translateX(0%);
+}
+
+.slide-exit {
+  transform: translateX(0%);
+}
+
+.slide-exit-active {
+  transform: translateX(-100%);
 }
 
 .crt {
@@ -84,10 +104,6 @@ body {
 .button3 {
   bottom: 12%;
   right: 37.5%;
-}
-
-.seventh-block {
-  background-color: black;
 }
 
 .block6 {

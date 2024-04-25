@@ -2,7 +2,7 @@ export const Circle = (props: any) => {
   return (
     <div
       className={
-        "flex w-[55%] transform translate-y-1/4 -rotate-[16deg] grow " +
+        "flex transform translate-y-1/4 -rotate-[16deg] grow " +
         props.customClass
       }
     >

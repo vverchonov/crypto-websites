@@ -2,11 +2,12 @@ import { useState } from "react";
 import { AppearWrapper } from "../../common/appear-wrapper";
 import { FloatingCow } from "../../common/floating-items/floating-cow";
 import { FloatingPlanet } from "../../common/floating-items/floating-planet";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 export const FourthSection = (props: any) => {
   const { y } = props;
 
-  const [off, setOff] = useState(false);
+  const [off, setOff] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -17,10 +18,12 @@ export const FourthSection = (props: any) => {
   ];
 
   const nextSlide = () => {
+    if (off) return;
     setCurrentSlide((currentSlide + 1) % slides.length);
   };
 
   const prevSlide = () => {
+    if (off) return;
     setCurrentSlide(
       (prevSlide) => (prevSlide - 1 + slides.length) % slides.length
     );
@@ -41,11 +44,27 @@ export const FourthSection = (props: any) => {
             <div className="screen-content absolute z-10 scan-bar">
               <div className="bg-blue-600 h-[20px] w-full"></div>
             </div>
-            <img
-              className="screen-content absolute"
-              src={off ? "/block4/m5.png" : slides[currentSlide]}
-              alt="Screen Content"
-            />
+            {off ? (
+              <img
+                className="screen-content absolute"
+                src="/block4/m5.png"
+                alt="Screen Content"
+              />
+            ) : (
+              <TransitionGroup className="screen-content absolute overflow-hidden">
+                <CSSTransition
+                  key={currentSlide}
+                  timeout={300}
+                  classNames="slide"
+                >
+                  <img
+                    className="w-full absolute transition-transform duration-300 ease-in-out"
+                    src={slides[currentSlide]}
+                    alt="Screen Content"
+                  />
+                </CSSTransition>
+              </TransitionGroup>
+            )}
             <button
               className="button1 absolute z-40 p-8 w-6 h-6"
               onClick={nextSlide}

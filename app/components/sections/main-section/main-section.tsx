@@ -11,10 +11,10 @@ import { AppearWrapper } from "../../common/appear-wrapper";
 import { useMoveOnScrollHook } from "../../useMoveOnScrollHook";
 
 export const MainSection = (props: any) => {
-  const { y, ref } = useMoveOnScrollHook({ val: 150 });
+  const { y, ref } = useMoveOnScrollHook(150);
 
   return (
-    <div ref={ref} className="flex min-h-screen w-full relative">
+    <div className="flex min-h-screen w-full relative">
       <AppearWrapper>
         <div className="absolute top-0">
           <img src="/block1/bluetop.png" alt="header" />
@@ -44,15 +44,15 @@ export const MainSection = (props: any) => {
                 itemClass="right-0 top-32"
                 imageClass="rotate(36deg)"
               />
-              <FloatingAlien y={y} customTranslate={"-translate-y-[50%]"} />
+              <FloatingAlien y={y} customTranslate={"-translate-y-[40%]"} />
               <FloatingSilica
                 y={y}
                 itemClass="left-0 -top-32"
                 imageClass="rotate(12deg)"
               />
 
-              <Circle customClass={"mt-40"} />
-              <h1 className="flex text-xl uppercase font-bold mt-24 select-none">
+              <Circle customClass={"mt-40 w-[45%]"} />
+              <h1 className="flex text-xl uppercase font-bold mt-24" ref={ref}>
                 In 2023 I animated some silly IKEA aliens! This series of
                 animations went very viral. The project is not in association
                 with IKEA, but they did reach out with approval!

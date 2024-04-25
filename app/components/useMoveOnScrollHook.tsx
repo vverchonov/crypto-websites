@@ -2,13 +2,13 @@ import { MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 function useParallax(value: MotionValue<number>, distance: number) {
-  return useTransform(value, [0, 1], [distance, -distance]);
+  return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-export const useMoveOnScrollHook = (props?: any) => {
+export const useMoveOnScrollHook = (offset: number) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 100);
+  const y = useParallax(scrollYProgress, offset);
 
   return { ref, y };
 };

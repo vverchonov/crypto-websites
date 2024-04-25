@@ -10,7 +10,7 @@ import { AppearWrapper } from "../../common/appear-wrapper";
 import { useMoveOnScrollHook } from "../../useMoveOnScrollHook";
 
 export const SecondSection = (props: any) => {
-  const { y, ref } = useMoveOnScrollHook();
+  const { y, ref } = useMoveOnScrollHook(100);
 
   return (
     <div className="flex flex-col bg-white min-h-screen w-full p-4 lg:p-28 max-w-screen-2xl">
@@ -26,7 +26,7 @@ export const SecondSection = (props: any) => {
                 />
                 <FloatingBanana y={y} />
               </div>
-              <Circle customClass={"img-hor mt-64"} />
+              <Circle customClass={"img-hor mt-64 w-[55%]"} />
               <FloatingAlien
                 customClass={"img-hor"}
                 y={y}

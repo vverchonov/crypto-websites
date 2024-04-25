@@ -7,7 +7,7 @@ export const AppearWrapper = (props: any) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 3 }}
+      transition={{ duration: 1.5 }}
     >
       {props.children}
     </motion.div>

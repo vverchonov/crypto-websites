@@ -8,7 +8,7 @@ import { AppearWrapper } from "../../common/appear-wrapper";
 import { useMoveOnScrollHook } from "../../useMoveOnScrollHook";
 
 export const ThirdSection = (props: any) => {
-  const { y, ref } = useMoveOnScrollHook();
+  const { y, ref } = useMoveOnScrollHook(100);
   const onPhotoClick = () => {
     alert("cheese! TEMP");
   };
@@ -22,7 +22,7 @@ export const ThirdSection = (props: any) => {
           </p>
           <img
             onClick={onPhotoClick}
-            className=" w-5/12 md:w-4/12 lg:w-3/12 pb-8 cursor-pointer mx-auto select-none"
+            className=" w-5/12 md:w-4/12 lg:w-2/12 pb-8 cursor-pointer mx-auto"
             src="./block3/photo-button.png"
           />
         </div>

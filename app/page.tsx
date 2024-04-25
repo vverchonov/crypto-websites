@@ -17,33 +17,23 @@ function useParallax(value: MotionValue<number>, distance: number) {
 }
 
 export default function Home() {
-  const [showBanner, setShowBanner] = useState(false);
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 150);
-
-  useEffect(() => {
-    let timer1 = setTimeout(() => setShowBanner(false), 5 * 1000);
-    return () => {
-      clearTimeout(timer1);
-    };
-  }, []);
+  const [showBanner, setShowBanner] = useState(true);
 
   return (
     <>
       {/* <audio hidden ref={audioRef as any} src="./meow.mp3" /> */}
       {showBanner ? (
-        <Banner />
+        <Banner close={setShowBanner} />
       ) : (
         <>
           <main className="relative flex flex-col items-center">
-            <MainSection y={y} />
-            <SecondSection y={y} />
-            <ThirdSection y={y} />
-            <FourthSection y={y} />
-            <FifthSection y={y} />
-            <SixthSection y={y} />
-            <SeventhSection y={y} />
+            <MainSection />
+            <SecondSection />
+            <ThirdSection />
+            <FourthSection />
+            <FifthSection />
+            <SixthSection />
+            <SeventhSection />
           </main>
           <FooterSection />
         </>
