@@ -23,7 +23,7 @@ export const FloatingAlien = (props: any) => {
         >
           <img
             className={"w-1/3 drop-shadow-2xl " + props.customClass}
-            src="./alien.png"
+            src="./alien.webp"
           />
         </motion.div>
       </motion.div>

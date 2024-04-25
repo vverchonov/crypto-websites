@@ -18,7 +18,7 @@ export const FloatingBigUfo = (props: any) => {
             ease: "easeInOut",
           }}
         >
-          <img className="w-full" src="./block6/ufo.png" />
+          <img className="w-full" src="./block6/ufo.webp" />
         </motion.div>
       </motion.div>
     </>

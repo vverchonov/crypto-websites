@@ -23,7 +23,7 @@ export const FloatingMeteor = (props: any) => {
         >
           <img
             className="w-36 rotate-45 drop-shadow-xl z-0"
-            src="./block3/meteor.png"
+            src="./block3/meteor.webp"
           />
         </motion.div>
       </motion.div>

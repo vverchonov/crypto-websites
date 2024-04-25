@@ -21,7 +21,7 @@ export const FloatingSilica = (props: any) => {
         }}
       >
         <img
-          className="w-20 md:w-28 drop-shadow-xl z-0"
+          className="w-20 md:w-32 drop-shadow-xl z-0"
           style={{ transform: props.imageClass }}
           src="./block1/silica.webp"
         />

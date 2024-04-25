@@ -5,7 +5,7 @@ export const FloatingCow = (props: any) => {
     <>
       <motion.div
         style={{ y: props.y }}
-        className="absolute right-[18%] bottom-[45%] w-fit z-0 pe-16 select-none"
+        className="absolute right-[18%] top-[30%] lg:bottom-[45%] w-fit z-0 pe-16 select-none"
       >
         <motion.div
           initial={{
@@ -21,7 +21,10 @@ export const FloatingCow = (props: any) => {
             ease: "easeInOut",
           }}
         >
-          <img className="w-64 drop-shadow-xl z-0" src="./block4/cow.png" />
+          <img
+            className="w-40 lg:w-64 drop-shadow-xl z-0"
+            src="./block4/cow.webp"
+          />
         </motion.div>
       </motion.div>
     </>

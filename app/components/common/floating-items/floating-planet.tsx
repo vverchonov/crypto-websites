@@ -21,7 +21,10 @@ export const FloatingPlanet = (props: any) => {
             ease: "easeInOut",
           }}
         >
-          <img className="w-64 drop-shadow-xl z-0" src="./block4/planet.png" />
+          <img
+            className="w-40 lg:w-64 drop-shadow-xl z-0"
+            src="./block4/planet.webp"
+          />
         </motion.div>
       </motion.div>
     </>

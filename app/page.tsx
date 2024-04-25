@@ -21,7 +21,6 @@ export default function Home() {
 
   return (
     <>
-      {/* <audio hidden ref={audioRef as any} src="./meow.mp3" /> */}
       {showBanner ? (
         <Banner close={setShowBanner} />
       ) : (

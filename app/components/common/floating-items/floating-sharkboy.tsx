@@ -5,7 +5,7 @@ export const FloatingSharkboy = (props: any) => {
     <>
       <motion.div
         style={{ y: props.y }}
-        className="absolute left-0 top-64 w-fit z-0 md:ps-16 select-none "
+        className="absolute left-0 top-48 w-fit z-0 md:ps-16 select-none "
       >
         <motion.div
           className="w-fit"
@@ -24,7 +24,7 @@ export const FloatingSharkboy = (props: any) => {
         >
           <img
             className="w-24 md:w-48 lg:w-64 drop-shadow-xl z-0"
-            src="./block3/shark_male.png"
+            src="./block3/shark_male.webp"
           />
         </motion.div>
       </motion.div>

@@ -6,7 +6,7 @@ export const Banner = (props: any) => {
   useEffect(() => {
     let timer = setTimeout(() => {
       setIsButtonEnabled(true);
-    }, 2 * 1000);
+    }, 1 * 1000);
 
     return () => {
       clearTimeout(timer);

@@ -23,7 +23,7 @@ export const ThirdSection = (props: any) => {
           <img
             onClick={onPhotoClick}
             className=" w-5/12 md:w-4/12 lg:w-2/12 pb-8 cursor-pointer mx-auto"
-            src="./block3/photo-button.png"
+            src="./block3/photo-button.webp"
           />
         </div>
         <div className="flex flex-col items-center lg:flex-row gap-16 justify-center">
@@ -31,15 +31,15 @@ export const ThirdSection = (props: any) => {
           <FloatingSharkboy y={y} />
           <img
             className="w-full md:w-2/3 lg:w-1/3 select-none"
-            src="./block3/image.png"
+            src="./block3/image.webp"
           />
           <img
             className="w-full md:w-2/3 lg:w-1/3 select-none"
-            src="./block3/image.png"
+            src="./block3/image.webp"
           />
           <img
             className="w-full md:w-2/3 lg:w-1/3 select-none"
-            src="./block3/image.png"
+            src="./block3/image.webp"
           />
           <FloatingGun y={y} />
         </div>

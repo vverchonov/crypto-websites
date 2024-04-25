@@ -50,27 +50,76 @@ body {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.screen-content {
+.pc-content {
   top: 12%;
-  left: 40%;
-  width: 20%;
+  left: 15%;
+  width: 70%;
   height: 36%;
 }
 
-.slide-enter {
+.next-btn {
+  top: 56%;
+  left: 57%;
+}
+
+.prev-btn {
+  top: 56%;
+  left: 43%;
+}
+
+.on-btn {
+  bottom: 12%;
+  right: 8%;
+}
+
+@media (min-width: 1024px) {
+  .pc-content {
+    top: 12%;
+    left: 40%;
+    width: 20%;
+    height: 36%;
+  }
+
+  .next-btn {
+    top: 59.5%;
+    left: 53.5%;
+  }
+
+  .prev-btn {
+    top: 59.5%;
+    left: 49.5%;
+  }
+
+  .on-btn {
+    bottom: 12%;
+    right: 37.5%;
+  }
+}
+
+.slide-right-enter {
   transform: translateX(100%);
 }
-
-.slide-enter-active {
-  transform: translateX(0%);
+.slide-right-enter-active {
+  transform: translateX(0);
 }
-
-.slide-exit {
-  transform: translateX(0%);
+.slide-right-exit {
+  transform: translateX(0);
 }
-
-.slide-exit-active {
+.slide-right-exit-active {
   transform: translateX(-100%);
+}
+
+.slide-left-enter {
+  transform: translateX(-100%);
+}
+.slide-left-enter-active {
+  transform: translateX(0);
+}
+.slide-left-exit {
+  transform: translateX(0);
+}
+.slide-left-exit-active {
+  transform: translateX(100%);
 }
 
 .crt {
@@ -91,24 +140,9 @@ body {
   }
 }
 
-.button1 {
-  top: 59.5%;
-  left: 53.5%;
-}
-
-.button2 {
-  top: 59.5%;
-  left: 49.5%;
-}
-
-.button3 {
-  bottom: 12%;
-  right: 37.5%;
-}
-
 .block6 {
   width: 100%;
-  background-image: url("../public/block6/space.jpg");
+  background-image: url("../public/block6/space.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -23,7 +23,7 @@ export const FloatingGun = (props: any) => {
         >
           <img
             className="w-24 lg:w-36 rotate-45 drop-shadow-xl z-0"
-            src="./block3/gun.png"
+            src="./block3/gun.webp"
           />
         </motion.div>
       </motion.div>

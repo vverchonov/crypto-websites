@@ -34,7 +34,7 @@ export const SecondSection = (props: any) => {
               />
               <div className="relative w-full justify-center">
                 <div className="mx-auto lg:w-2/4 text-center">
-                  <p className="text-2xl font-bold select-none">
+                  <p className="text-2xl font-bold">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   </p>
                 </div>

@@ -13,7 +13,7 @@ export const FifthSection = (props: any) => {
             <div className="w-9/12 lg:w-[30%]">
               <img
                 id={"stick1"}
-                src="./block5/note1.png"
+                src="./block5/note1.webp"
                 alt="path2"
                 className="select-none"
               ></img>
@@ -21,7 +21,7 @@ export const FifthSection = (props: any) => {
             <div className="w-9/12 lg:w-[40%] ms-auto stick1">
               <img
                 id={"stick2"}
-                src="./block5/note2.png"
+                src="./block5/note2.webp"
                 alt="path2"
                 className="select-none"
               ></img>
@@ -31,7 +31,7 @@ export const FifthSection = (props: any) => {
             <div className="w-9/12 lg:w-[25%] flex">
               <img
                 id={"stick3"}
-                src="./block5/note3.png"
+                src="./block5/note3.webp"
                 alt="path2"
                 className="mt-auto select-none"
               ></img>
@@ -39,7 +39,7 @@ export const FifthSection = (props: any) => {
             <div className="w-9/12 lg:w-[25%]">
               <img
                 id={"stick4"}
-                src="./block5/note4.png"
+                src="./block5/note4.webp"
                 alt="path2"
                 className="stick2 select-none"
               ></img>
@@ -48,7 +48,7 @@ export const FifthSection = (props: any) => {
               {" "}
               <img
                 id={"stick5"}
-                src="./block5/note5.png"
+                src="./block5/note5.webp"
                 alt="path2"
                 className="stick3 select-none"
               ></img>

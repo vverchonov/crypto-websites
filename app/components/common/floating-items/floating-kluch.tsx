@@ -26,7 +26,7 @@ export const FloatingKluch = (props: any) => {
         >
           <img
             className={"w-1/12 drop-shadow-2xl " + props.customClass}
-            src="./block6/kluch.png"
+            src="./block6/kluch.webp"
           />
         </motion.div>
       </motion.div>

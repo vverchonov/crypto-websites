@@ -11,13 +11,13 @@ import { AppearWrapper } from "../../common/appear-wrapper";
 import { useMoveOnScrollHook } from "../../useMoveOnScrollHook";
 
 export const MainSection = (props: any) => {
-  const { y, ref } = useMoveOnScrollHook(150);
+  const { y, ref } = useMoveOnScrollHook(100);
 
   return (
     <div className="flex min-h-screen w-full relative">
       <AppearWrapper>
         <div className="absolute top-0">
-          <img src="/block1/bluetop.png" alt="header" />
+          <img src="/block1/bluetop.webp" alt="header" />
         </div>
         <ToastContainer />
         <div className="flex flex-col justify-center align-center items-center p-4 lg:p-28">
