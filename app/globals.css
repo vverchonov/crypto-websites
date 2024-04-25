@@ -13,11 +13,13 @@ body {
 }
 
 .mirror-y {
-  transform: rotateY(180deg);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .mirror-x {
-  transform: rotateX(180deg);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
 }
 
 .blurred-border-top::before {

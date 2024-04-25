@@ -52,7 +52,7 @@ export const FifthSection = (props: any) => {
                 className="rotate-[-2deg] select-none hover:scale-110  transition-all duration-500"
               ></img>
             </div>
-            <div className="w-6/12 hidden lg:inline lg:w-[10%] -translate-y-[25%] hidden ">
+            <div className="w-6/12 lg:inline lg:w-[10%] -translate-y-[25%] hidden ">
               <img
                 id={"arrow4"}
                 src="./block5/arrow4.webp"
@@ -78,7 +78,7 @@ export const FifthSection = (props: any) => {
             </div>
           </div>
           <div className="flex flex-col lg:flex-row  justify-center align-center items-center md:mt-24">
-            <div className="w-9/12 lg:w-[25%] flex justify-center">
+            <div className="w-9/12 lg:w-[30%] flex justify-center">
               <img
                 id={"stick5"}
                 src="./block5/note5.webp"
