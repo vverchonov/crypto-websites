@@ -39,7 +39,9 @@ export const SecondSection = (props: any) => {
               <div className="relative w-full justify-center">
                 <div className="mx-auto lg:w-2/4 text-center">
                   <p className="text-2xl font-bold text-center">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    "This meme isn't used that much wah wah it's not a real
+                    meme" The real meme is you not buying generational wealth
+                    token before its too late.
                   </p>
                 </div>
                 <FloatingDildo y={y} />

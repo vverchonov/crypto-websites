@@ -34,17 +34,17 @@ export const ThirdSection = (props: any) => {
           <FloatingSharkgirl y={y} />
           <FloatingSharkboy y={y} />
           <img
-            className="w-full md:w-2/3 lg:w-1/3 select-none"
+            className="w-full md:w-2/3 lg:w-1/3 select-none rounded-lg "
             src="./block3/1.webp"
             alt="image1"
           />
           <img
-            className="w-full md:w-2/3 lg:w-1/3 select-none"
+            className="w-full md:w-2/3 lg:w-1/3 select-none rounded-lg "
             src="./block3/2.webp"
             alt="image2"
           />
           <img
-            className="w-full md:w-2/3 lg:w-1/3 select-none"
+            className="w-full md:w-2/3 lg:w-1/3 select-none rounded-lg "
             src="./block3/3.webp"
             alt="image3"
           />
