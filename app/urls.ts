@@ -11,4 +11,4 @@ export const RAYDIUM =
 export const JUPITER =
   "https://jup.ag/swap/4inoptdokTnnH5cU64CP64WQbeV6gdFUVmiokPfwzbsL-SOL";
 export const DEXTOOLS =
-  "https://www.dextools.io/app/en/solana/pair-explorer/ERCD6qtvn4sWhmNBLyPXfoKghjFRM3gxAYKxNzcw9a5x?t=1713314960171";
+  "https://www.dextools.io/app/en/solana/pair-explorer/ANvvhmTshfyVMDNiXX58Lq6XG3xqq9ZbnbYoo6W1exAc?t=1714085912157";

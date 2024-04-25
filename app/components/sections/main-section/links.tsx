@@ -38,9 +38,9 @@ export const Links = () => {
       <a target="_blank" href={DEXSCREENER} className={buttonClass}>
         <DexscreenerIcon iconClass={iconClass} />
       </a>
-      {/* <a target="_blank" href={DEXTOOLS} className={buttonClass}>
+      <a target="_blank" href={DEXTOOLS} className={buttonClass}>
         <DextoolsIcon iconClass={iconClass} />
-      </a> */}
+      </a>
     </div>
   );
 };
