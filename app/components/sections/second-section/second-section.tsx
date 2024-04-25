@@ -42,6 +42,7 @@ export const SecondSection = (props: any) => {
                   className="w-3/4 mt-12 rounded-2xl"
                   controls={false}
                   autoPlay={true}
+                  muted
                   loop={true}
                   src="./block2/dancing.mp4"
                 />

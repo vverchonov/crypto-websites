@@ -31,6 +31,7 @@ export const MainSection = (props: any) => {
                 src="/block1/alien.mp4"
                 preload="auto"
                 autoPlay
+                muted
                 loop
                 controls={false}
                 className="rounded-2xl w-2/3 lg:w-full h-full"

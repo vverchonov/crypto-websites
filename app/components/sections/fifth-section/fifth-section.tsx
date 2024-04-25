@@ -3,7 +3,7 @@ import { AppearWrapper } from "../../common/appear-wrapper";
 export const FifthSection = (props: any) => {
   const { y } = props;
   return (
-    <div className="flex min-h-screen w-full relative bg-[#1B2327] overflow-x-clip blurred-border-bottom p-4 lg:p-28">
+    <div className="flex min-h-screen w-full relative bg-[#1B2327] justify-center overflow-x-clip blurred-border-bottom p-4 lg:p-28">
       <AppearWrapper>
         <p className="text-4xl md:text-7xl text-center font-bold uppercase text-white pt-16 pb-16">
           how to buy
@@ -13,7 +13,7 @@ export const FifthSection = (props: any) => {
             <div className="w-11/12 lg:w-5/12">
               <img
                 id={"stick1"}
-                src="/sticker.png"
+                src="./block5/note1.png"
                 alt="path2"
                 className=""
               ></img>
@@ -21,7 +21,7 @@ export const FifthSection = (props: any) => {
             <div className="w-11/12 lg:w-5/12 ms-auto stick1">
               <img
                 id={"stick2"}
-                src="/sticker.png"
+                src="./block5/note2.png"
                 alt="path2"
                 className=""
               ></img>
@@ -31,7 +31,7 @@ export const FifthSection = (props: any) => {
             <div className="w-11/12 lg:w-4/12 lg:h-64 flex">
               <img
                 id={"stick3"}
-                src="/sticker.png"
+                src="./block5/note3.png"
                 alt="path2"
                 className="mt-auto"
               ></img>
@@ -39,7 +39,7 @@ export const FifthSection = (props: any) => {
             <div className="w-11/12 lg:w-4/12">
               <img
                 id={"stick4"}
-                src="/sticker.png"
+                src="./block5/note4.png"
                 alt="path2"
                 className="stick2"
               ></img>
@@ -47,7 +47,7 @@ export const FifthSection = (props: any) => {
             <div className="w-11/12 lg:w-4/12">
               <img
                 id={"stick5"}
-                src="/sticker.png"
+                src="./block5/note5.png"
                 alt="path2"
                 className="stick3"
               ></img>

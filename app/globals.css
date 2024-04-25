@@ -119,9 +119,15 @@ body {
 }
 
 .stick2 {
-  transform: rotate(10deg);
+  transform: rotate(-2deg);
 }
 
 .stick3 {
-  transform: rotate(18deg);
+  transform: rotate(0deg);
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: black;
 }
