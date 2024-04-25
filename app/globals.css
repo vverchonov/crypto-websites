@@ -16,6 +16,10 @@ body {
   transform: rotateY(180deg);
 }
 
+.mirror-x {
+  transform: rotateX(180deg);
+}
+
 .blurred-border-top::before {
   content: "";
   position: absolute;

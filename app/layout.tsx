@@ -35,6 +35,8 @@ export default function RootLayout({
           content="cutest alien on the internet!"
         />
         <meta name="twitter:image" content="https://alolien.com/header.png" />
+        <link rel="preload" as="image" href="/block4/table.webp" />
+        <link rel="preload" as="image" href="/block4/pc.webp" />
       </head>
       <body className={inter.className + " scroll-smooth"}>{children}</body>
     </html>

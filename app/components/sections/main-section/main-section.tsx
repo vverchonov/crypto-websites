@@ -49,14 +49,14 @@ export const MainSection = (props: any) => {
                 itemClass="right-0 top-32"
                 imageClass="rotate(36deg)"
               />
-              <FloatingAlien y={y} customTranslate={"-translate-y-[10%]"} />
+              <FloatingAlien y={y} customTranslate={"translate-y-[10%]"} />
               <FloatingSilica
                 y={y}
                 itemClass="left-0 -top-32"
                 imageClass="rotate(12deg)"
               />
 
-              <Circle customClass={"mt-40 w-[45%]"} fill="#ffb700" />
+              <Circle customClass={"mt-64 w-[45%]"} fill="#ffb700" />
               <h1 className="flex text-xl uppercase font-bold mt-24" ref={ref}>
                 In 2023 I animated some silly IKEA aliens! This series of
                 animations went very viral. The project is not in association

@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef, useState } from "react";
 import { AppearWrapper } from "../../common/appear-wrapper";
 import { FloatingCow } from "../../common/floating-items/floating-cow";
@@ -81,18 +83,20 @@ export const FourthSection = (props: any) => {
     <div className="flex min-h-screen w-full relative bg-[#1B2327] blurred-border-top overflow-x-clip">
       <audio hidden ref={audioPcRef as any} src="" />
       <audio hidden ref={audioClickRef as any} src="/block4/click.mp3" />
-      <img
-        src="/block4/table.webp"
-        alt="table"
-        className="w-full absolute bottom-0"
-      />
       <AppearWrapper>
+        <img
+          src="/block4/table.webp"
+          alt="table"
+          className="w-full absolute bottom-0"
+          fetchPriority="high"
+        />
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-[5%] lg:-translate-y-[25%] z-50 w-full select-none">
           <div className="relative flex items-center justify-center">
             <img
               src="/block4/pc.webp"
               alt="pc"
               className="w-full lg:w-[30%] z-30"
+              fetchPriority="high"
             ></img>
             <div className="pc-content absolute crt z-20"></div>
             <div className="pc-content absolute z-10 scan-bar">
