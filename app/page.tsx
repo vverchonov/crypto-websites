@@ -17,7 +17,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
 }
 
 export default function Home() {
-  const [showBanner, setShowBanner] = useState(false);
+  const [showBanner, setShowBanner] = useState(true);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 150);
