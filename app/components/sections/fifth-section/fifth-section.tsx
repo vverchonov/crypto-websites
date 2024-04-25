@@ -57,7 +57,7 @@ export const FifthSection = (props: any) => {
                 id={"arrow4"}
                 src="./block5/arrow4.webp"
                 alt="arrow4"
-                className="select-none rotate-[160deg]"
+                className="select-none rotate-[0deg]"
               ></img>
             </div>
             <div className="w-9/12 lg:w-[25%] flex justify-center">

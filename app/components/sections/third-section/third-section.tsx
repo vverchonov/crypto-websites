@@ -20,11 +20,13 @@ export const ThirdSection = (props: any) => {
           <img
             className="w-5/12 md:w-4/12 lg:w-6/12 pb-8 mx-auto"
             src="./block3/header.webp"
+            alt="header"
           />
           <img
             onClick={onPhotoClick}
-            className=" w-5/12 md:w-4/12 lg:w-2/12 pb-8 cursor-pointer mx-auto"
+            className=" w-5/12 md:w-4/12 lg:w-2/12 pb-8 cursor-pointer mx-auto hover:scale-110 transition-all duration-300"
             src="./block3/photo-button.webp"
+            alt="photo"
           />
         </div>
         <div className="flex flex-col items-center lg:flex-row gap-16 justify-center">
@@ -33,14 +35,17 @@ export const ThirdSection = (props: any) => {
           <img
             className="w-full md:w-2/3 lg:w-1/3 select-none"
             src="./block3/image.webp"
+            alt="image1"
           />
           <img
             className="w-full md:w-2/3 lg:w-1/3 select-none"
             src="./block3/image.webp"
+            alt="image2"
           />
           <img
             className="w-full md:w-2/3 lg:w-1/3 select-none"
             src="./block3/image.webp"
+            alt="image3"
           />
           <FloatingGun y={y} />
         </div>
