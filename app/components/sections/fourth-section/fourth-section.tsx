@@ -150,11 +150,9 @@ export const FourthSection = (props: any) => {
       <audio hidden ref={audioPcRef as any} src="" />
       <audio hidden ref={audioClickRef as any} src="/block4/click.mp3" />
       <AppearWrapper>
-        {/* <Table /> */}
         {table()}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-[5%] lg:-translate-y-[25%] z-50 w-full select-none">
           <div className="relative flex items-center justify-center">
-            {/* <Pc /> */}
             {pc()}
             <div className="pc-content absolute crt z-20"></div>
             <div className="pc-content absolute z-10 scan-bar">
