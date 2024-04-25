@@ -29,12 +29,12 @@ export const Links = () => {
         <TgIcon iconClass={iconClass} />
       </a>
 
-      {/* <a target="_blank" href={RAYDIUM} className={buttonClass}>
+      <a target="_blank" href={RAYDIUM} className={buttonClass}>
         <RaydiumIcon iconClass={iconClass} />
       </a>
       <a target="_blank" href={JUPITER} className={buttonClass}>
         <JupiterIcon iconClass={iconClass} />
-      </a> */}
+      </a>
       <a target="_blank" href={DEXSCREENER} className={buttonClass}>
         <DexscreenerIcon iconClass={iconClass} />
       </a>
