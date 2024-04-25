@@ -124,22 +124,34 @@ export const FourthSection = (props: any) => {
               </TransitionGroup>
             )}
             <button
-              className="next-btn absolute z-40 p-8 w-6 h-6"
+              className="next-btn absolute z-40 w-16 h-16"
               onClick={nextSlide}
             >
-              Next
+              <img
+                src="/block4/next.webp"
+                alt="next"
+                className="w-full h-full"
+              />
             </button>
             <button
-              className="prev-btn absolute z-40 p-8 w-6 h-6"
+              className="prev-btn absolute z-40 w-16 h-16"
               onClick={prevSlide}
             >
-              Prev
+              <img
+                src="/block4/prev.webp"
+                alt="prev"
+                className="w-full h-full"
+              />
             </button>
             <button
-              className="on-btn absolute z-40 p-8 w-6 h-6"
+              className="on-btn absolute z-40 w-12 h-12"
               onClick={() => turn()}
             >
-              On
+              <img
+                src="/block4/off.webp"
+                alt="prev"
+                className="w-full h-full"
+              />
             </button>
           </div>
         </div>

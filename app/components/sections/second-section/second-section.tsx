@@ -44,13 +44,10 @@ export const SecondSection = (props: any) => {
             </div>
             <div className="relative w-full lg:w-1/2 p-4 lg:ps-24">
               <div className="ms-auto flex justify-center">
-                <video
+                <img
                   className="w-3/4 mt-12 rounded-2xl drop-shadow-2xl"
-                  controls={false}
-                  autoPlay={true}
-                  muted={true}
-                  loop={true}
-                  src="./block2/alien.mp4"
+                  src="./block2/alien.gif"
+                  alt="alien"
                 />
                 <FloatingDrink y={y} />
               </div>

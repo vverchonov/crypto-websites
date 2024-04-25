@@ -40,9 +40,9 @@ export const FooterSection = () => {
         </span>
       </p>
       <p className="px-2 text-xs">
-        $ALOLIEN is a memecoin with no intrinsic value, and is not a investment
-        and simply a community/culture token similar to $ALOLIEN. No Promises,
-        No Utility, Purely For Entertainment Purposes
+        $ALON is a memecoin with no intrinsic value, and is not a investment and
+        simply a community/culture token similar to $ALON. No Promises, No
+        Utility, Purely For Entertainment Purposes
       </p>
     </footer>
   );

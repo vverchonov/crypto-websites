@@ -30,15 +30,11 @@ export const MainSection = (props: any) => {
               imageClass="rotate(124deg)"
             />
             <div className="object-scale-down flex justify-center w-full lg:w-1/4 p-6">
-              <video
-                src="/block1/alien.mp4"
-                preload="auto"
-                controls={false}
-                autoPlay={true}
-                muted={true}
-                loop={true}
+              <img
+                src="/block1/alien.gif"
+                alt="dancing alien"
                 className="rounded-2xl w-2/3 lg:w-full h-full drop-shadow-2xl border-black"
-              ></video>
+              ></img>
             </div>
             <div className="flex flex-col h-full gap-6 text-center items-center justify-between relative w-full lg:w-1/2 p-6">
               <img
