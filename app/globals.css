@@ -19,7 +19,7 @@ body {
 .img-hor {
   transform: rotateY(180deg);
 }
-
+/* 
 .blurred-border-top::before {
   content: "";
   position: absolute;
@@ -33,7 +33,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   filter: blur(12px);
   z-index: 20;
-}
+} */
 
 .blurred-border-bottom::after {
   content: "";
@@ -45,7 +45,7 @@ body {
   width: 120%;
   overflow-y: hidden;
   background: inherit;
-  box-shadow: 0 2px 8px rgba(229, 231, 235, 0.5);
+  box-shadow: 0 10%px 10% #1b2327;
   filter: blur(14px);
   z-index: 20;
 }
@@ -99,7 +99,7 @@ body {
 }
 
 .img5-holder {
-  margin-bottom: e15vh;
+  /* margin-bottom: 15vh; */
 }
 
 .img5 {
@@ -107,9 +107,21 @@ body {
 }
 
 .img6-holder {
-  margin-bottom: 10vh;
+  /* margin-bottom: 10vh; */
 }
 
 .img6 {
   transform: rotate(5deg);
+}
+
+.stick1 {
+  transform: rotate(25deg);
+}
+
+.stick2 {
+  transform: rotate(10deg);
+}
+
+.stick3 {
+  transform: rotate(18deg);
 }

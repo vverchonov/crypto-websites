@@ -15,13 +15,13 @@ import {
 } from "@/app/urls";
 
 const buttonClass =
-  "w-full select-none text-white font-bold py-4 px-4 cursor-pointer rounded-full flex flex-row content-center items-center transform transition duration-500 hover:scale-105";
+  "select-none text-white font-bold py-4 px-4 cursor-pointer rounded-full flex flex-row content-center items-center transform transition duration-500 hover:scale-105";
 
 const iconClass = "w-12 h-12 fill-black";
 
 export const Links = () => {
   return (
-    <div className="flex flex-row gap-4 justify-center z-50">
+    <div className="flex flex-wrap flex-row gap-4 justify-center z-50">
       <a target="_blank" href={TWITTER} className={buttonClass}>
         <XIcon iconClass={iconClass} />
       </a>

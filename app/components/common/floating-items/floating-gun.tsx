@@ -5,7 +5,7 @@ export const FloatingGun = (props: any) => {
     <>
       <motion.div
         style={{ y: props.y }}
-        className=" p-8 absolute right-0 w-fit top-86 z-0"
+        className=" p-8 absolute right-12 w-fit top-86 z-0"
       >
         <motion.div
           initial={{
@@ -22,7 +22,7 @@ export const FloatingGun = (props: any) => {
           }}
         >
           <img
-            className="w-36 rotate-45 drop-shadow-xl z-0"
+            className="w-24 lg:w-36 rotate-45 drop-shadow-xl z-0"
             src="./block3/gun.png"
           />
         </motion.div>

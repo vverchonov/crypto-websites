@@ -4,7 +4,7 @@ export const FloatingDrink = (props: any) => {
   return (
     <>
       <motion.div
-        className="flex justify-center p-8 absolute top-0 right-0 lg:top-20"
+        className="flex justify-center p-8 absolute top-0 right-12 lg:top-20"
         style={{ y: props.y }}
       >
         <motion.div
