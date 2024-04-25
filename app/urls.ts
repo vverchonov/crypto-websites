@@ -1,5 +1,5 @@
 export const CA = "CKvHs1gAdyJUw3GoWQmmQ3fRVWxMqiKv841L7hmfFHyy";
-export const TELEGRAM = "https://t.me/+XKooR1LXr_w5NTk0";
+export const TELEGRAM = "https://t.me/alonthealien";
 export const TWITTER = "https://twitter.com/ALONDEALIEN";
 export const BUY_LING =
   "https://raydium.io/swap/?inputCurrency=4inoptdokTnnH5cU64CP64WQbeV6gdFUVmiokPfwzbsL&outputCurrency=sol&outputSymbol=4inopt&fixed=out";
