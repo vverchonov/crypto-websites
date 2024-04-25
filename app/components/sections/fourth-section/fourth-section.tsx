@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { AppearWrapper } from "../../common/appear-wrapper";
 import { FloatingCow } from "../../common/floating-items/floating-cow";
 import { FloatingPlanet } from "../../common/floating-items/floating-planet";
@@ -12,48 +12,48 @@ import table_img from "../../../../public/block4/table.webp";
 import pc_img from "../../../../public/block4/pc.webp";
 import off_img from "../../../../public/block4/m5.webp";
 
-function Table() {
-  return (
-    <Image
-      src={table_img}
-      alt="table"
-      className="w-full absolute bottom-0"
-      fetchPriority="high"
-      priority={true}
-    />
-  );
-}
-
-function Pc() {
-  return (
-    <Image
-      src={pc_img}
-      alt="pc"
-      className="w-full lg:w-[30%] z-30"
-      fetchPriority="high"
-      priority={true}
-    />
-  );
-}
-
-function Off() {
-  return (
-    <Image
-      src={off_img}
-      className="pc-content absolute transition-transform duration-300 ease-in-out"
-      alt="Screen Content"
-      fetchPriority="high"
-      priority={true}
-    />
-  );
-}
-
 export const FourthSection = (props: any) => {
   const { y, ref } = useMoveOnScrollHook(100);
 
   const audioPcRef = useRef();
   const [slideDirection, setSlideDirection] = useState("right");
   const audioClickRef = useRef();
+
+  const off1 = useCallback(() => {
+    return (
+      <Image
+        src={off_img}
+        className="pc-content absolute transition-transform duration-300 ease-in-out"
+        alt="Screen Content"
+        fetchPriority="high"
+        priority={true}
+      />
+    );
+  }, []);
+
+  const table = useCallback(() => {
+    return (
+      <Image
+        src={table_img}
+        alt="table"
+        className="w-full absolute bottom-0"
+        fetchPriority="high"
+        priority={true}
+      />
+    );
+  }, []);
+
+  const pc = useCallback(() => {
+    return (
+      <Image
+        src={pc_img}
+        alt="pc"
+        className="w-full lg:w-[30%] z-30"
+        fetchPriority="high"
+        priority={true}
+      />
+    );
+  }, []);
 
   const play = (ref: any) => {
     if (ref.current) {
@@ -120,36 +120,47 @@ export const FourthSection = (props: any) => {
     }, 100);
   };
 
+  const component = useCallback(() => {
+    return (
+      <>
+        {off ? (
+          // <Off />
+          <>{off1()}</>
+        ) : (
+          <TransitionGroup className="pc-content absolute overflow-hidden">
+            <CSSTransition
+              key={currentSlide}
+              timeout={200}
+              classNames={`slide-${slideDirection}`}
+            >
+              <img
+                className="w-full absolute transition-transform duration-200 ease-in-out"
+                src={slides[currentSlide]}
+                alt="Screen Content"
+              />
+            </CSSTransition>
+          </TransitionGroup>
+        )}
+      </>
+    );
+  }, [off, currentSlide, slideDirection]);
+
   return (
     <div className="flex min-h-screen w-full relative bg-[#1B2327] blurred-border-top overflow-x-clip">
       <audio hidden ref={audioPcRef as any} src="" />
       <audio hidden ref={audioClickRef as any} src="/block4/click.mp3" />
       <AppearWrapper>
-        <Table />
+        {/* <Table /> */}
+        {table()}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-[5%] lg:-translate-y-[25%] z-50 w-full select-none">
           <div className="relative flex items-center justify-center">
-            <Pc />
+            {/* <Pc /> */}
+            {pc()}
             <div className="pc-content absolute crt z-20"></div>
             <div className="pc-content absolute z-10 scan-bar">
               <div className="bg-[#3b86e98b] h-[20px] w-full"></div>
             </div>
-            {off ? (
-              <Off />
-            ) : (
-              <TransitionGroup className="pc-content absolute overflow-hidden">
-                <CSSTransition
-                  key={currentSlide}
-                  timeout={200}
-                  classNames={`slide-${slideDirection}`}
-                >
-                  <img
-                    className="w-full absolute transition-transform duration-200 ease-in-out"
-                    src={slides[currentSlide]}
-                    alt="Screen Content"
-                  />
-                </CSSTransition>
-              </TransitionGroup>
-            )}
+            {component()}
             <button
               className="next-btn absolute z-40 w-16 h-16"
               onClick={nextSlide}
