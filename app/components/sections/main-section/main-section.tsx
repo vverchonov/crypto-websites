@@ -69,7 +69,7 @@ export const MainSection = (props: any) => {
                 will launch a series and NFTs about it. Made wif love by Letto
                 Dev Team.
               </h1>
-              <CopyCa copyLink="test" />
+              <CopyCa copyLink="CKvHs1gAdyJUw3GoWQmmQ3fRVWxMqiKv841L7hmfFHyy" />
               <div className="flex w-full justify-center">
                 <Links />
               </div>
