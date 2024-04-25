@@ -24,7 +24,7 @@ export const FloatingSharkgirl = (props: any) => {
         >
           <img
             className="w-24 md:w-48 lg:w-64 ms-auto drop-shadow-xl z-0"
-            src="./block3/shark_girl.webp"
+            src="./block3/girl.webp"
           />
         </motion.div>
       </motion.div>

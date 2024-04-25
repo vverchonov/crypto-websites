@@ -24,7 +24,7 @@ export const FloatingSharkboy = (props: any) => {
         >
           <img
             className="w-24 md:w-48 lg:w-64 drop-shadow-xl z-0"
-            src="./block3/shark_male.webp"
+            src="./block3/boy.webp"
           />
         </motion.div>
       </motion.div>
