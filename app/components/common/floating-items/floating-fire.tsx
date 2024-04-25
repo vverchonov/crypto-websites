@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 export const FLoatingFire = (props: any) => {
   return (
     <div
-      className={"absolute left-0 top-0 tranfrom z-50 " + props.customTranslate}
+      className={
+        "absolute left-0 top-0 tranfrom z-50 select-none " +
+        props.customTranslate
+      }
     >
       <motion.div className="flex w-fit" style={{ y: props.y }}>
         <motion.div

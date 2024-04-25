@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 
 export const FloatingAlien = (props: any) => {
   return (
-    <div className={"absolute tranfrom z-50 " + props.customTranslate}>
+    <div
+      className={"absolute tranfrom z-50 select-none " + props.customTranslate}
+    >
       <motion.div className="w-full flex justify-center" style={{ y: props.y }}>
         <motion.div
           className="w-full flex justify-center"

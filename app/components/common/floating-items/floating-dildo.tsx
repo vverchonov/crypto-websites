@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 export const FloatingDildo = (props: any) => {
   return (
     <>
-      <motion.div className="absolute left-0 bottom-48" style={{ y: props.y }}>
+      <motion.div
+        className="absolute left-0 bottom-48 select-none"
+        style={{ y: props.y }}
+      >
         <motion.div
           className="w-fit"
           initial={{

@@ -4,7 +4,8 @@ export const FloatingUfo = (props: any) => {
   return (
     <div
       className={
-        "absolute bottom-0 right-0 tranfrom z-50 " + props.customTranslate
+        "absolute bottom-0 right-0 tranfrom z-50 select-none " +
+        props.customTranslate
       }
     >
       <motion.div className="flex w-fit" style={{ y: props.y }}>

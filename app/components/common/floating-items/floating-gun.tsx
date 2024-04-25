@@ -5,7 +5,7 @@ export const FloatingGun = (props: any) => {
     <>
       <motion.div
         style={{ y: props.y }}
-        className=" p-8 absolute right-12 w-fit top-86 z-0"
+        className=" p-8 absolute right-12 w-fit top-86 z-0 select-none "
       >
         <motion.div
           initial={{

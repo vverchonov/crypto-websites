@@ -4,7 +4,8 @@ export const FloatingKluch = (props: any) => {
   return (
     <div
       className={
-        "absolute left-0 bottom-0 tranfrom z-0 " + props.customTranslate
+        "absolute left-0 bottom-0 tranfrom z-0  select-none " +
+        props.customTranslate
       }
     >
       <motion.div className="flex w-fit" style={{ y: props.y }}>

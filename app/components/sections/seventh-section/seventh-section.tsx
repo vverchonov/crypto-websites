@@ -10,7 +10,7 @@ export const SeventhSection = (props: any) => {
         max-w-screen-2xl"
       >
         <AppearWrapper>
-          <p className="text-3xl md:text-6xl font-bold text-white text-center leading-loose">
+          <p className="text-3xl md:text-6xl font-bold text-white text-center leading-loose select-none">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
             dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
             amet consectetur adipisicing elit. Lorem ipsum dolor sit amet

@@ -5,7 +5,7 @@ export const FloatingSharkboy = (props: any) => {
     <>
       <motion.div
         style={{ y: props.y }}
-        className="absolute left-0 top-52 w-fit z-0 md:ps-16"
+        className="absolute left-0 top-64 w-fit z-0 md:ps-16 select-none "
       >
         <motion.div
           className="w-fit"

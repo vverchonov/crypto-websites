@@ -5,7 +5,7 @@ export const FloatingPlanet = (props: any) => {
     <>
       <motion.div
         style={{ y: props.y }}
-        className="absolute left-0 top-0 w-fit z-[100] ps-16"
+        className="absolute left-0 top-0 w-fit z-[100] ps-16 select-none "
       >
         <motion.div
           initial={{

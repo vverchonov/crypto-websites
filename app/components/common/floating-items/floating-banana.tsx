@@ -5,7 +5,7 @@ export const FloatingBanana = (props: any) => {
     <>
       <motion.div
         style={{ y: props.y }}
-        className=" absolute right-12 w-fit top-0 z-0"
+        className=" absolute right-12 w-fit top-0 z-0 select-none "
       >
         <motion.div
           initial={{

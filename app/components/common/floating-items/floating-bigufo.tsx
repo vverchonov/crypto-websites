@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export const FloatingBigUfo = (props: any) => {
   return (
     <>
-      <motion.div style={{ y: props.y }} className="w-full">
+      <motion.div style={{ y: props.y }} className="w-full select-none">
         <motion.div
           initial={{
             transform: "translateZ(2px) translateY(2px) rotate(0deg)",

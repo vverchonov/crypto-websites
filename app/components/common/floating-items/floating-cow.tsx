@@ -5,7 +5,7 @@ export const FloatingCow = (props: any) => {
     <>
       <motion.div
         style={{ y: props.y }}
-        className="absolute right-[18%] bottom-[45%] w-fit z-0 pe-16"
+        className="absolute right-[18%] bottom-[45%] w-fit z-0 pe-16 select-none"
       >
         <motion.div
           initial={{

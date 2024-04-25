@@ -5,7 +5,7 @@ export const FloatingMeteor = (props: any) => {
     <>
       <motion.div
         style={{ y: props.y }}
-        className=" p-8 absolute left-0 w-fit bottom-36 z-0"
+        className=" p-8 absolute left-0 w-fit bottom-64 z-0 select-none "
       >
         <motion.div
           initial={{

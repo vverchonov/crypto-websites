@@ -11,7 +11,7 @@ import { AppearWrapper } from "../../common/appear-wrapper";
 import { useMoveOnScrollHook } from "../../useMoveOnScrollHook";
 
 export const MainSection = (props: any) => {
-  const { y, ref } = useMoveOnScrollHook();
+  const { y, ref } = useMoveOnScrollHook({ val: 150 });
 
   return (
     <div ref={ref} className="flex min-h-screen w-full relative">
@@ -52,7 +52,7 @@ export const MainSection = (props: any) => {
               />
 
               <Circle customClass={"mt-40"} />
-              <h1 className="flex text-xl uppercase font-bold mt-24">
+              <h1 className="flex text-xl uppercase font-bold mt-24 select-none">
                 In 2023 I animated some silly IKEA aliens! This series of
                 animations went very viral. The project is not in association
                 with IKEA, but they did reach out with approval!
