@@ -41,7 +41,7 @@ export const SecondSection = (props: any) => {
                   <p className="text-2xl font-bold text-center">
                     "This meme isn't used that much wah wah it's not a real
                     meme" <br></br> The real meme is you not buying generational
-                    wealth token before its too late
+                    wealth token before its too late.
                   </p>
                 </div>
                 <FloatingDildo y={y} />

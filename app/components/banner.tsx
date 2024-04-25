@@ -16,11 +16,14 @@ export const Banner = (props: any) => {
   return (
     <div className="w-full min-h-screen bg-black flex justify-center items-center">
       <div className="flex flex-col gap-12">
-        <p className="text-4xl text-white font-bold">1. Be humble</p>
+        <h1 className="text-4xl text-white font-bold capitalize">
+          Alon the Alien
+        </h1>
+        {/* <p className="text-4xl text-white font-bold">1. Be humble</p>
         <p className="text-4xl text-white font-bold">2. Be true</p>
         <p className="text-4xl text-white font-bold">3. APE</p>
         <p className="text-4xl text-white font-bold">4. Respect</p>
-        <p className="text-4xl text-white font-bold">5. Believe</p>
+        <p className="text-4xl text-white font-bold">5. Believe</p> */}
         <button
           className={`proceed-btn  text-black font-bold p-4 rounded-xl ${
             !isButtonEnabled
