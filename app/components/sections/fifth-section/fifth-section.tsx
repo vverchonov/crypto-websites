@@ -8,8 +8,8 @@ export const FifthSection = (props: any) => {
         <p className="text-4xl md:text-7xl text-center font-bold uppercase text-white pt-16 pb-16 select-none">
           how to buy
         </p>
-        <div className="flex flex-col flex-wrap gap-16">
-          <div className="flex gap-16 flex-col lg:flex-row center-items items-center">
+        <div className="flex flex-col flex-wrap gap-[5rem] mb-24">
+          <div className="flex gap-16 flex-col lg:flex-row center-items items-center ">
             <div className="w-9/12 lg:w-[30%]">
               <img
                 id={"stick1"}
@@ -36,12 +36,12 @@ export const FifthSection = (props: any) => {
             </div>
           </div>
           <div className="flex flex-col lg:flex-row  justify-center align-center items-center">
-            <div className="w-9/12 lg:w-[25%] flex">
+            <div className="w-6/12 lg:w-[10%] hidden md:block translate-y-[75%]">
               <img
-                id={"stick3"}
-                src="./block5/note3.webp"
-                alt="path3"
-                className="mt-auto select-none hover:scale-110  transition-all duration-500 rotate-[2deg]"
+                id={"arrow2"}
+                src="./block5/arrow2.webp"
+                alt="arrow2"
+                className="select-none mirror-y"
               ></img>
             </div>
             <div className="w-9/12 lg:w-[25%]">
@@ -52,20 +52,38 @@ export const FifthSection = (props: any) => {
                 className="rotate-[-2deg] select-none hover:scale-110  transition-all duration-500"
               ></img>
             </div>
+            <div className="w-6/12 lg:w-[10%] -translate-y-[25%] hidden md:block">
+              <img
+                id={"arrow4"}
+                src="./block5/arrow4.webp"
+                alt="arrow4"
+                className="select-none rotate-[160deg]"
+              ></img>
+            </div>
+            <div className="w-9/12 lg:w-[25%] flex justify-center">
+              <img
+                id={"stick3"}
+                src="./block5/note3.webp"
+                alt="path3"
+                className="select-none rotate-[3deg] hover:scale-110  transition-all duration-500"
+              ></img>
+            </div>
+            <div className="w-6/12 lg:w-[10%] -translate-y-[25%] hidden md:block">
+              <img
+                id={"arrow2"}
+                src="./block5/arrow2.webp"
+                alt="arrow2"
+                className="select-none"
+              ></img>
+            </div>
+          </div>
+          <div className="flex flex-col lg:flex-row  justify-center align-center items-center md:mt-24">
             <div className="w-9/12 lg:w-[25%] flex justify-center">
               <img
                 id={"stick5"}
                 src="./block5/note5.webp"
                 alt="path5"
                 className="select-none rotate-[3deg] hover:scale-110  transition-all duration-500"
-              ></img>
-            </div>
-            <div className="w-6/12 lg:w-[10%] -translate-y-[25%] hidden md:block">
-              <img
-                id={"arrow1"}
-                src="./block5/arrow2.webp"
-                alt="arrow2"
-                className="select-none rotate-[deg]"
               ></img>
             </div>
           </div>
