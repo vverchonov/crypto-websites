@@ -50,7 +50,7 @@ body {
   top: 12%;
   left: 40%;
   width: 20%;
-  height: 35%;
+  height: 36%;
 }
 
 .crt {
@@ -72,13 +72,18 @@ body {
 }
 
 .button1 {
-  top: 63%;
-  left: 55%;
+  top: 59.5%;
+  left: 53.5%;
 }
 
 .button2 {
-  top: 63%;
-  left: 50%;
+  top: 59.5%;
+  left: 49.5%;
+}
+
+.button3 {
+  bottom: 12%;
+  right: 37.5%;
 }
 
 .seventh-block {
