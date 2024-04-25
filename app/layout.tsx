@@ -43,6 +43,7 @@ export default function RootLayout({
         />
         <link rel="preload" as="image" href="/block4/table.webp" />
         <link rel="preload" as="image" href="/block4/pc.webp" />
+        <link rel="preload" as="image" href="/block4/m5.webp" />
       </head>
       <body className={inter.className + " scroll-smooth"}>{children}</body>
     </html>

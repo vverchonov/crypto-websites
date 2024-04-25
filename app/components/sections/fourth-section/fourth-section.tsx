@@ -7,6 +7,47 @@ import { FloatingPlanet } from "../../common/floating-items/floating-planet";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { useMoveOnScrollHook } from "../../useMoveOnScrollHook";
 
+import Image from "next/image";
+import table_img from "../../../../public/block4/table.webp";
+import pc_img from "../../../../public/block4/pc.webp";
+import off_img from "../../../../public/block4/m5.webp";
+
+function Table() {
+  return (
+    <Image
+      src={table_img}
+      alt="table"
+      className="w-full absolute bottom-0"
+      fetchPriority="high"
+      priority={true}
+    />
+  );
+}
+
+function Pc() {
+  return (
+    <Image
+      src={pc_img}
+      alt="pc"
+      className="w-full lg:w-[30%] z-30"
+      fetchPriority="high"
+      priority={true}
+    />
+  );
+}
+
+function Off() {
+  return (
+    <Image
+      src={off_img}
+      className="pc-content absolute transition-transform duration-300 ease-in-out"
+      alt="Screen Content"
+      fetchPriority="high"
+      priority={true}
+    />
+  );
+}
+
 export const FourthSection = (props: any) => {
   const { y, ref } = useMoveOnScrollHook(100);
 
@@ -84,30 +125,16 @@ export const FourthSection = (props: any) => {
       <audio hidden ref={audioPcRef as any} src="" />
       <audio hidden ref={audioClickRef as any} src="/block4/click.mp3" />
       <AppearWrapper>
-        <img
-          src="/block4/table.webp"
-          alt="table"
-          className="w-full absolute bottom-0"
-          fetchPriority="high"
-        />
+        <Table />
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-[5%] lg:-translate-y-[25%] z-50 w-full select-none">
           <div className="relative flex items-center justify-center">
-            <img
-              src="/block4/pc.webp"
-              alt="pc"
-              className="w-full lg:w-[30%] z-30"
-              fetchPriority="high"
-            ></img>
+            <Pc />
             <div className="pc-content absolute crt z-20"></div>
             <div className="pc-content absolute z-10 scan-bar">
               <div className="bg-[#3b86e98b] h-[20px] w-full"></div>
             </div>
             {off ? (
-              <img
-                className="pc-content absolute transition-transform duration-300 ease-in-out"
-                src="/block4/m5.webp"
-                alt="Screen Content"
-              />
+              <Off />
             ) : (
               <TransitionGroup className="pc-content absolute overflow-hidden">
                 <CSSTransition
