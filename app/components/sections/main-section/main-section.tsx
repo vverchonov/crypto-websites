@@ -63,9 +63,11 @@ export const MainSection = (props: any) => {
                 className="flex text-xl uppercase font-bold mt-24 z-50"
                 ref={ref}
               >
-                In 2023 I animated some silly IKEA aliens! This series of
-                animations went very viral. The project is not in association
-                with IKEA, but they did reach out with approval!
+                Inspired by an IKEA toy, $ALON was created as a meme coin
+                capable of not only hit the moon but also venturing to the edge
+                of the universe. If the community falls in love with Alon, we
+                will launch a series and NFTs about it. Made wif love by Letto
+                Dev Team.
               </h1>
               <CopyCa copyLink="test" />
               <div className="flex w-full justify-center">
