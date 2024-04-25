@@ -19,7 +19,9 @@ export const FloatingBanana = (props: any) => {
           }}
         >
           <img
-            className="w-20 md:w-28 rotate-45 drop-shadow-xl z-0"
+            className={
+              "w-20 md:w-28 rotate-45 drop-shadow-xl z-0 " + props.bananaClass
+            }
             src="./block2/banana.webp"
           />
         </motion.div>

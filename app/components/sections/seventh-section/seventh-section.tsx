@@ -18,6 +18,7 @@ export const SeventhSection = (props: any) => {
             ipsum dolor sit amet consectetur adipisicing elit.
           </p>
           <FloatingBanana
+            bananaClass={"rotate-12"}
             key={2}
             customClass={"absolute right-12 w-fit top-0 z-0 select-none"}
           />
@@ -26,10 +27,12 @@ export const SeventhSection = (props: any) => {
             customClass={"absolute left-12 w-fit top-48 z-0 select-none"}
           />
           <FloatingBanana
+            bananaClass={"rotate-90"}
             key={3}
             customClass={"absolute left-48 w-fit bottom-48 z-0 select-none"}
           />
           <FloatingBanana
+            bananaClass={"rotate-4"}
             key={5}
             customClass={"absolute right-48 w-fit bottom-[50%] z-0 select-none"}
           />
