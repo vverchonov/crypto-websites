@@ -6,7 +6,8 @@ const inter = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ALON THE ALIEN",
-  description: "The cutest alien on the internet!",
+  description:
+    "Inspired by an IKEA toy, $ALON was created as a meme coin capable of not only hit the moon but also venturing to the edge of the universe. If the community falls in love with Alon, we will launch a series and NFTs about it. Made wif love by Letto Dev Team",
 };
 
 export default function RootLayout({
@@ -23,7 +24,8 @@ export default function RootLayout({
         <meta property="og:title" content="Solana Token" />
         <meta
           property="og:description"
-          content="Cutest alien on the internet!"
+          content="Inspired by an IKEA toy, $ALON was created as a meme coin capable of not only hit the moon but also venturing to the edge of the universe. If the community falls in love with Alon, we will launch a series and NFTs about it. 
+          Made wif love by Letto Dev Team"
         />
         <meta
           property="og:image"
@@ -35,7 +37,8 @@ export default function RootLayout({
         <meta name="twitter:title" content="Solana Token" />
         <meta
           name="twitter:description"
-          content="Cutest alien on the internet!"
+          content="Inspired by an IKEA toy, $ALON was created as a meme coin capable of not only hit the moon but also venturing to the edge of the universe. If the community falls in love with Alon, we will launch a series and NFTs about it. 
+          Made wif love by Letto Dev Team"
         />
         <meta
           name="twitter:image"
