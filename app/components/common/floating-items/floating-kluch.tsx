@@ -4,7 +4,7 @@ export const FloatingKluch = (props: any) => {
   return (
     <div
       className={
-        "absolute left-0 bottom-0 tranfrom z-0  select-none " +
+        "absolute left-0 -bottom-0 tranfrom z-0  select-none " +
         props.customTranslate
       }
     >

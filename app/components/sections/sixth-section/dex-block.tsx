@@ -22,7 +22,7 @@ export const DexBlock = (props: any) => {
           <div className="ms-auto w-full lg:w-2/4 h-full relative">
             <div className="w-full h-full relative" id="dexscreener-embed">
               <iframe
-                className="w-full h-full dex z-50 relative"
+                className="w-full h-[80vh] z-50 relative rounded-xl"
                 src="https://dexscreener.com/solana/ERCD6qtvn4sWhmNBLyPXfoKghjFRM3gxAYKxNzcw9a5x?embed=1&theme=dark&trades=0"
               ></iframe>
               <div ref={ref}></div>

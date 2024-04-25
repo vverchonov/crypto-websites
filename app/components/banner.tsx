@@ -14,7 +14,7 @@ export const Banner = (props: any) => {
   }, []);
 
   return (
-    <div className="banner flex justify-center items-center">
+    <div className="w-full min-h-screen bg-black flex justify-center items-center">
       <div className="flex flex-col gap-12">
         <p className="text-4xl text-white font-bold">1. Be humble</p>
         <p className="text-4xl text-white font-bold">2. Be true</p>
@@ -22,7 +22,7 @@ export const Banner = (props: any) => {
         <p className="text-4xl text-white font-bold">4. Respect</p>
         <p className="text-4xl text-white font-bold">5. Believe</p>
         <button
-          className={`button-style  text-black font-bold p-4 rounded-xl ${
+          className={`proceed-btn  text-black font-bold p-4 rounded-xl ${
             !isButtonEnabled
               ? "bg-gray-600 text-gray-800 cursor-not-allowed"
               : "bg-white"

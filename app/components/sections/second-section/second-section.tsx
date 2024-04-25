@@ -26,15 +26,15 @@ export const SecondSection = (props: any) => {
                 />
                 <FloatingBanana y={y} />
               </div>
-              <Circle customClass={"img-hor mt-64 w-[55%]"} />
+              <Circle customClass={"mirror-y mt-64 w-[55%]"} fill="#FF4A4A" />
               <FloatingAlien
-                customClass={"img-hor"}
+                customClass={"mirror-y"}
                 y={y}
                 customTranslate={"translate-y-[80%]"}
               />
               <div className="relative w-full justify-center">
                 <div className="mx-auto lg:w-2/4 text-center">
-                  <p className="text-2xl font-bold">
+                  <p className="text-2xl font-bold text-center">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   </p>
                 </div>
@@ -44,7 +44,7 @@ export const SecondSection = (props: any) => {
             <div className="relative w-full lg:w-1/2 p-4 lg:ps-24">
               <div className="ms-auto flex justify-center">
                 <video
-                  className="w-3/4 mt-12 rounded-2xl"
+                  className="w-3/4 mt-12 rounded-2xl drop-shadow-2xl"
                   controls={false}
                   autoPlay={true}
                   muted={true}

@@ -14,8 +14,8 @@ export const FifthSection = (props: any) => {
               <img
                 id={"stick1"}
                 src="./block5/note1.webp"
-                alt="path2"
-                className="select-none"
+                alt="path1"
+                className="select-none hover:scale-110 transition-all duration-500 rotate-[-10deg]"
               ></img>
             </div>
             <div className="w-9/12 lg:w-[40%] ms-auto stick1">
@@ -23,7 +23,7 @@ export const FifthSection = (props: any) => {
                 id={"stick2"}
                 src="./block5/note2.webp"
                 alt="path2"
-                className="select-none"
+                className="select-none hover:scale-110 transition-all duration-500 rotate-[25deg]"
               ></img>
             </div>
           </div>
@@ -32,8 +32,8 @@ export const FifthSection = (props: any) => {
               <img
                 id={"stick3"}
                 src="./block5/note3.webp"
-                alt="path2"
-                className="mt-auto select-none"
+                alt="path3"
+                className="mt-auto select-none hover:scale-110  transition-all duration-500 rotate-[2deg]"
               ></img>
             </div>
             <div className="w-9/12 lg:w-[25%]">
@@ -41,7 +41,7 @@ export const FifthSection = (props: any) => {
                 id={"stick4"}
                 src="./block5/note4.webp"
                 alt="path2"
-                className="stick2 select-none"
+                className="rotate-[-2deg] select-none hover:scale-110  transition-all duration-500"
               ></img>
             </div>
             <div className="w-9/12 lg:w-[25%] flex justify-center">
@@ -50,7 +50,7 @@ export const FifthSection = (props: any) => {
                 id={"stick5"}
                 src="./block5/note5.webp"
                 alt="path2"
-                className="stick3 select-none"
+                className="select-none rotate-[3deg] hover:scale-110  transition-all duration-500"
               ></img>
             </div>
           </div>

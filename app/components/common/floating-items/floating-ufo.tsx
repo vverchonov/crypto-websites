@@ -4,7 +4,7 @@ export const FloatingUfo = (props: any) => {
   return (
     <div
       className={
-        "absolute bottom-0 right-0 tranfrom z-50 select-none " +
+        "absolute -bottom-48 right-0 tranfrom z-50 select-none " +
         props.customTranslate
       }
     >

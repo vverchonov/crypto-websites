@@ -12,7 +12,7 @@ body {
   background-color: white;
 }
 
-.img-hor {
+.mirror-y {
   transform: rotateY(180deg);
 }
 
@@ -26,8 +26,8 @@ body {
   width: 120%;
   overflow-y: hidden;
   background: inherit;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  filter: blur(12px);
+  box-shadow: 0 10% 10% rgba(0, 0, 0, 0.5);
+  filter: blur(14px);
   z-index: 20;
 }
 
@@ -41,12 +41,12 @@ body {
   width: 120%;
   overflow-y: hidden;
   background: inherit;
-  box-shadow: 0 10%px 10% #1b2327;
+  box-shadow: 0 10% 10% rgba(0, 0, 0, 0.5);
   filter: blur(14px);
   z-index: 20;
 }
 
-.button-style {
+.proceed-btn {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -138,65 +138,4 @@ body {
     transform: translateY(100%);
     opacity: 0;
   }
-}
-
-.block6 {
-  width: 100%;
-  background-image: url("../public/block6/space.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.dex {
-  height: 80vh;
-}
-
-.img1 {
-  transform: rotate(-15deg);
-}
-
-.img2 {
-  transform: rotate(12deg);
-}
-
-.img3 {
-  transform: rotate(5deg);
-}
-
-.img4 {
-  transform: rotate(-12deg);
-}
-
-.img5-holder {
-  /* margin-bottom: 15vh; */
-}
-
-.img5 {
-  transform: rotate(-8deg);
-}
-
-.img6-holder {
-  /* margin-bottom: 10vh; */
-}
-
-.img6 {
-  transform: rotate(5deg);
-}
-
-.stick1 {
-  transform: rotate(25deg);
-}
-
-.stick2 {
-  transform: rotate(-2deg);
-}
-
-.stick3 {
-  transform: rotate(0deg);
-}
-
-.banner {
-  width: 100%;
-  height: 100vh;
-  background: black;
 }

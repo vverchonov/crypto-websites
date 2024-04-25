@@ -60,17 +60,21 @@ export const FourthSection = (props: any) => {
   const nextSlide = () => {
     if (off) return;
     play(audioClickRef);
-    setCurrentSlide((currentSlide + 1) % slides.length);
     setSlideDirection("right");
+    setTimeout(() => {
+      setCurrentSlide((currentSlide + 1) % slides.length);
+    }, 100);
   };
 
   const prevSlide = () => {
     if (off) return;
     play(audioClickRef);
-    setCurrentSlide(
-      (prevSlide) => (prevSlide - 1 + slides.length) % slides.length
-    );
     setSlideDirection("left");
+    setTimeout(() => {
+      setCurrentSlide(
+        (prevSlide) => (prevSlide - 1 + slides.length) % slides.length
+      );
+    }, 100);
   };
 
   return (
@@ -92,7 +96,7 @@ export const FourthSection = (props: any) => {
             ></img>
             <div className="pc-content absolute crt z-20"></div>
             <div className="pc-content absolute z-10 scan-bar">
-              <div className="bg-blue-600 h-[20px] w-full"></div>
+              <div className="bg-[#3b86e98b] h-[20px] w-full"></div>
             </div>
             {off ? (
               <img
@@ -145,7 +149,7 @@ export const FourthSection = (props: any) => {
         <img
           src="/sticker.webp"
           alt="sticker1"
-          className="lg:w-[15%] w-[30%] absolute top-0 right-0 transform -translate-x-[50%] translate-y-[10%] img-hor"
+          className="lg:w-[15%] w-[30%] absolute top-0 right-0 transform -translate-x-[50%] translate-y-[10%] mirror-y"
         />
         <FloatingCow y={y} />
       </AppearWrapper>

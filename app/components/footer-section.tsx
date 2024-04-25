@@ -10,7 +10,7 @@ export const FooterSection = () => {
     <footer className="py-2 text-center text-black backdrop-blur transition-colors duration-500">
       <p className="flex flex-row items-center justify-center gap-2">
         <span className="text-sm font-bold sm:text-xl">
-          $DAPUSS &copy; 2024
+          $ALOLIEN &copy; 2024
         </span>
         <span className="inline-flex">
           <a
@@ -40,9 +40,9 @@ export const FooterSection = () => {
         </span>
       </p>
       <p className="px-2 text-xs">
-        $DAPUSS is a memecoin with no intrinsic value, and is not a investment
-        and simply a community/culture token similar to $DAPUSS. No Promises, No
-        Utility, Purely For Entertainment Purposes
+        $ALOLIEN is a memecoin with no intrinsic value, and is not a investment
+        and simply a community/culture token similar to $ALOLIEN. No Promises,
+        No Utility, Purely For Entertainment Purposes
       </p>
     </footer>
   );

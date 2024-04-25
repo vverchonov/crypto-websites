@@ -25,7 +25,9 @@ export const FLoatingFire = (props: any) => {
           }}
         >
           <img
-            className={"w-1/3 drop-shadow-2xl " + props.customClass}
+            className={
+              "w-[50%] drop-shadow-2xl rotate-[20deg] " + props.customClass
+            }
             src="./block6/fire.webp"
           />
         </motion.div>
