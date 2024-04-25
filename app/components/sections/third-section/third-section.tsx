@@ -55,10 +55,9 @@ export const ThirdSection = (props: any) => {
             ref={ref}
             className="text-2xl p-8 pt-16 font-bold z-40 relative select-none text-center"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit.
+            We are developing 3D and 2D visualizations for $ALON to make it
+            easier for the community to create content and support our humanoid
+            :3
           </p>
         </div>
         <FloatingMeteor y={y} />
