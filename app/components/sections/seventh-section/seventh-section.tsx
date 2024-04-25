@@ -5,9 +5,13 @@ export const SeventhSection = (props: any) => {
   const { y } = props;
 
   return (
-    <div className="w-full min-h-screen bg-[url(/block6/space.webp)] sblock flex justify-center blurred-border-top overflow-x-clip relative bg-black">
+    <div className="w-full min-h-screen sblock bg-[url(/block6/space.webp)] sblock flex justify-center blurred-border-top overflow-x-clip relative bg-black">
       <AppearWrapper>
         <div className="pt-48 px-6 w-full lg:px-64 pb-36 max-w-screen-2xl relative">
+          <p className=" text-2xl lg:text-4xl font-bold text-center text-white">
+            {" "}
+            123
+          </p>
           {/* <FloatingBanana
             bananaClass={"rotate-12"}
             key={2}

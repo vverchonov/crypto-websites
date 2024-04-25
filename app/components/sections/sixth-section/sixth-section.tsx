@@ -13,7 +13,6 @@ export const SixthSection = (props: any) => {
         <AppearWrapper>
           <ImgsBlock />
         </AppearWrapper>
-        <div className="sblock"></div>
       </div>
     </>
   );
