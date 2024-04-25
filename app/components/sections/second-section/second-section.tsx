@@ -50,7 +50,7 @@ export const SecondSection = (props: any) => {
                   autoPlay={true}
                   muted={true}
                   loop={true}
-                  src="./block2/dancing.mp4"
+                  src="./block2/alien.mp4"
                 />
                 <FloatingDrink y={y} />
               </div>

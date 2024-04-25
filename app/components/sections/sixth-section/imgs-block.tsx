@@ -38,7 +38,7 @@ export const ImgsBlock = () => {
             </div>
             <div className="img6-holder flex justify-center lg:justify-start">
               <img
-                className="ms-auto w-9/12 mirror-y object-contain h-full select-none"
+                className="ms-auto w-9/12 object-contain h-full select-none"
                 src="./block6/frame6.webp"
               />
             </div>
