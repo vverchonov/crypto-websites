@@ -32,7 +32,7 @@ export default function RootLayout({
           content="http://alonthealien.com/header.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@ALONTHEALIEN" />
+        <meta name="twitter:site" content="@ALONDEALIEN" />
         <meta name="twitter:url" content="http://alonthealien.com/" />
         <meta name="twitter:title" content="Solana Token" />
         <meta

@@ -1,5 +1,5 @@
 export const CA = 'COMING';
-export const TELEGRAM = 'https://t.me/alonthealien'
+export const TELEGRAM = 'https://twitter.com/ALONDEALIEN'
 export const TWITTER = 'https://twitter.com/ALONTHEALIEN'
 export const TELEGRAM_DEV = 'https://t.me/lettodev'
 export const BUY_LING = 'Coming Soon'
