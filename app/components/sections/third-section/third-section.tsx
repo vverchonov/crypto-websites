@@ -1,14 +1,14 @@
 "use client";
-import { useRef } from "react";
-import { MotionValue, useScroll, useTransform } from "framer-motion";
+
 import { FloatingSharkboy } from "../../common/floating-items/floating-sharkboy";
 import { FloatingSharkgirl } from "../../common/floating-items/floating-sharkgirl";
 import { FloatingMeteor } from "../../common/floating-items/floating-meteor";
 import { FloatingGun } from "../../common/floating-items/floating-gun";
 import { AppearWrapper } from "../../common/appear-wrapper";
+import { useMoveOnScrollHook } from "../../useMoveOnScrollHook";
 
 export const ThirdSection = (props: any) => {
-  const { y } = props;
+  const { y, ref } = useMoveOnScrollHook();
   const onPhotoClick = () => {
     alert("cheese! TEMP");
   };
@@ -35,7 +35,7 @@ export const ThirdSection = (props: any) => {
           <FloatingGun y={y} />
         </div>
         <div className="relative h-1/3">
-          <p className="text-2xl p-8 pt-16 font-bold z-40 relative">
+          <p ref={ref} className="text-2xl p-8 pt-16 font-bold z-40 relative">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
             dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
             amet consectetur adipisicing elit. Lorem ipsum dolor sit amet

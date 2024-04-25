@@ -4,15 +4,10 @@ import { MotionValue, useScroll, useTransform } from "framer-motion";
 import { FLoatingFire } from "../../common/floating-items/floating-fire";
 import { FloatingKluch } from "../../common/floating-items/floating-kluch";
 import { FloatingBigUfo } from "../../common/floating-items/floating-bigufo";
+import { useMoveOnScrollHook } from "../../useMoveOnScrollHook";
 
-function useParallax(value: MotionValue<number>, distance: number) {
-  return useTransform(value, [0, 1], [distance, -distance]);
-}
-
-export const DexBlock = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 150);
+export const DexBlock = (props: any) => {
+  const { y, ref } = useMoveOnScrollHook();
 
   return (
     <>
@@ -25,7 +20,11 @@ export const DexBlock = () => {
             </div>
           </div>
           <div className="ms-auto w-full lg:w-2/4 h-full relative">
-            <div className="w-full h-full relative" id="dexscreener-embed">
+            <div
+              ref={ref}
+              className="w-full h-full relative"
+              id="dexscreener-embed"
+            >
               <iframe
                 className="w-full h-full dex z-50 relative"
                 src="https://dexscreener.com/solana/ERCD6qtvn4sWhmNBLyPXfoKghjFRM3gxAYKxNzcw9a5x?embed=1&theme=dark&trades=0"

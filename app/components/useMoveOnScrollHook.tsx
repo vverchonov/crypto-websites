@@ -8,7 +8,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
 export const useMoveOnScrollHook = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 150);
+  const y = useParallax(scrollYProgress, 100);
 
   return { ref, y };
 };

@@ -27,7 +27,7 @@ export const FifthSection = (props: any) => {
               ></img>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row">
+          <div className="flex flex-col lg:flex-row items-center">
             <div className="w-9/12 lg:w-[18%] lg:h-64 flex">
               <img
                 id={"stick3"}

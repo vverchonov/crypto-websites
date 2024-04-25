@@ -8,12 +8,13 @@ import { FloatingSilica } from "../../common/floating-items/floating-silica";
 import { Circle } from "../../common/circle";
 
 import { AppearWrapper } from "../../common/appear-wrapper";
+import { useMoveOnScrollHook } from "../../useMoveOnScrollHook";
 
 export const MainSection = (props: any) => {
-  const { y } = props;
+  const { y, ref } = useMoveOnScrollHook();
 
   return (
-    <div className="flex min-h-screen w-full relative">
+    <div ref={ref} className="flex min-h-screen w-full relative">
       <AppearWrapper>
         <div className="absolute top-0">
           <img src="/block1/bluetop.png" alt="header" />
