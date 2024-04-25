@@ -31,9 +31,9 @@ export default function Home() {
         <SecondSection />
         <ThirdSection />
         <FourthSection />
-        {/* <FifthSection /> */}
-        {/* <SixthSection /> */}
-        {/* <SeventhSection /> */}
+        <FifthSection />
+        <SixthSection />
+        <SeventhSection />
       </main>
       <FooterSection />
     </motion.div>
