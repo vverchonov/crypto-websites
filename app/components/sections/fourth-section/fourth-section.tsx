@@ -7,7 +7,7 @@ export const FourthSection = (props: any) => {
   const { y } = props;
 
   return (
-    <div className="flex min-h-screen w-full relative bg-[#1B2327] blurred-border-top overflow-x-clip">
+    <div className="flex min-h-screen w-full relative bg-[#1B2327] blurred-border-top overflow-x-clip ">
       <AppearWrapper>
         <img
           src="/block4/table.png"
@@ -15,11 +15,15 @@ export const FourthSection = (props: any) => {
           className="w-full absolute bottom-0"
         ></img>
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-[25%] z-50 w-full">
-          <div className="relative flex items-center justify-center">
-            <img src="/block4/pc.png" alt="pc" className="w-[30%]"></img>
+          <div className="relative flex items-center justify-center ">
+            <img src="/block4/pc.png" alt="pc" className="w-[30%] z-50"></img>
+            <div className="screen-content absolute crt z-20"></div>
+            <div className="screen-content absolute z-10 scan-bar">
+              <div className="bg-blue-600 h-[20px] w-full"></div>
+            </div>
             <img
               className="screen-content absolute"
-              src="/block4/meme.jpg"
+              src="/block4/m2.png"
               alt="Screen Content"
             ></img>
             <button className="button1 absolute">Next</button>

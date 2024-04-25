@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import { Head } from "next/document";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Alien",
@@ -18,11 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
-          as="style"
-        />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Da Puss" />
         <meta property="og:url" content="https://dapuss.com/" />

@@ -39,7 +39,7 @@ export const FooterSection = () => {
           </a>
         </span>
       </p>
-      <p className="px-2 text-sm">
+      <p className="px-2 text-xs">
         $DAPUSS is a memecoin with no intrinsic value, and is not a investment
         and simply a community/culture token similar to $DAPUSS. No Promises, No
         Utility, Purely For Entertainment Purposes
