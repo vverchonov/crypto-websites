@@ -24,7 +24,10 @@ export const SecondSection = (props: any) => {
                   className="z-40 relative"
                   src="./block2/text.webp"
                 />
-                <FloatingBanana y={y} />
+                <FloatingBanana
+                  customClass={"absolute right-12 w-fit top-0 z-0 select-none"}
+                  y={y}
+                />
               </div>
               <Circle customClass={"mirror-y mt-64 w-[55%]"} fill="#FF4A4A" />
               <FloatingAlien

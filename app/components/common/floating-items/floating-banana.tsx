@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 export const FloatingBanana = (props: any) => {
   return (
     <>
-      <motion.div
-        style={{ y: props.y }}
-        className=" absolute right-12 w-fit top-0 z-0 select-none "
-      >
+      <motion.div style={{ y: props.y }} className={props.customClass}>
         <motion.div
           initial={{
             transform: "translateZ(2px) translateY(2px) rotate(0deg)",

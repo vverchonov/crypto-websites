@@ -25,9 +25,9 @@ export const ThirdSection = (props: any) => {
           <button
             onClick={onPhotoClick}
             disabled={true}
-            className=" w-4/12 md:w-4/12 lg:w-2/12 cursor-not-allowed pb-8 hover:scale-110 transition-all duration-300"
+            className=" w-5/12 md:w-5/12 lg:w-3/12 cursor-not-allowed pb-8 hover:scale-110 transition-all duration-300"
           >
-            <img src="./block3/photo-button.webp" alt="photo" />
+            <img src="./block3/knopka.webp" alt="photo" />
           </button>
         </div>
         <div className="flex flex-col items-center lg:flex-row gap-16 justify-center">
