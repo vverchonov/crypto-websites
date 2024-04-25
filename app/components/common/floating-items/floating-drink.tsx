@@ -23,7 +23,7 @@ export const FloatingDrink = (props: any) => {
           }}
         >
           <img
-            className="w-32 rotate-45 drop-shadow-xl"
+            className="w-20 md:w-28 rotate-45 drop-shadow-xl"
             src="./block2/drink.webp"
           />
         </motion.div>

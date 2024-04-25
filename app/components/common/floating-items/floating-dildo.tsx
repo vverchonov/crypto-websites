@@ -20,7 +20,7 @@ export const FloatingDildo = (props: any) => {
           }}
         >
           <img
-            className="w-28 drop-shadow-xl rotate-180 z-0"
+            className="w-20 md:w-28 drop-shadow-xl rotate-180 z-0"
             src="./block2/dildo.png"
           />
         </motion.div>

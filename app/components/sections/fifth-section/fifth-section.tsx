@@ -10,7 +10,7 @@ export const FifthSection = (props: any) => {
         </p>
         <div className="flex flex-col flex-wrap gap-16">
           <div className="flex gap-16 flex-col-reverse lg:flex-row">
-            <div className="w-11/12 lg:w-5/12">
+            <div className="w-9/12 lg:w-[18%]">
               <img
                 id={"stick1"}
                 src="./block5/note1.png"
@@ -18,7 +18,7 @@ export const FifthSection = (props: any) => {
                 className=""
               ></img>
             </div>
-            <div className="w-11/12 lg:w-5/12 ms-auto stick1">
+            <div className="w-9/12 lg:w-[18%] ms-auto stick1">
               <img
                 id={"stick2"}
                 src="./block5/note2.png"
@@ -28,7 +28,7 @@ export const FifthSection = (props: any) => {
             </div>
           </div>
           <div className="flex flex-col lg:flex-row">
-            <div className="w-11/12 lg:w-4/12 lg:h-64 flex">
+            <div className="w-9/12 lg:w-[18%] lg:h-64 flex">
               <img
                 id={"stick3"}
                 src="./block5/note3.png"
@@ -36,7 +36,7 @@ export const FifthSection = (props: any) => {
                 className="mt-auto"
               ></img>
             </div>
-            <div className="w-11/12 lg:w-4/12">
+            <div className="w-9/12 lg:w-[18%]">
               <img
                 id={"stick4"}
                 src="./block5/note4.png"
@@ -44,7 +44,7 @@ export const FifthSection = (props: any) => {
                 className="stick2"
               ></img>
             </div>
-            <div className="w-11/12 lg:w-4/12">
+            <div className="w-9/12 lg:w-[18%]">
               <img
                 id={"stick5"}
                 src="./block5/note5.png"

@@ -3,7 +3,7 @@ import { TWITTER, TELEGRAM, TELEGRAM_DEV } from "../urls";
 import { TgIcon } from "./icons/tg-icon";
 import { DevIcon } from "./icons/dev-icon";
 
-const iconClass = "w-6 h-6 fill-white";
+const iconClass = "w-6 h-6 fill-black";
 
 export const FooterSection = () => {
   return (

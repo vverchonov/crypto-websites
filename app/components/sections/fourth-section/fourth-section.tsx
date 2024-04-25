@@ -1,6 +1,6 @@
 import { AppearWrapper } from "../../common/appear-wrapper";
-import { FloatingCow } from "./floating-cow";
-import { FloatingPlanet } from "./floating-planet";
+import { FloatingCow } from "../../common/floating-items/floating-cow";
+import { FloatingPlanet } from "../../common/floating-items/floating-planet";
 
 export const FourthSection = (props: any) => {
   //use this y for flying on scroll elements

@@ -16,7 +16,7 @@ export const SecondSection = (props: any) => {
       <AppearWrapper>
         <div className="flex flex-col justify-center align-center items-center">
           <div className="flex flex-col lg:flex-row h-full w-full border-black">
-            <div className="flex flex-col w-full w-full lg:w-1/2 items-center relative">
+            <div className="flex flex-col w-full lg:w-1/2 items-center relative">
               <div className="relative ms-auto">
                 <img className="z-40 relative" src="./block2/text.webp" />
                 <FloatingBanana y={y} />
@@ -36,13 +36,13 @@ export const SecondSection = (props: any) => {
                 <FloatingDildo y={y} />
               </div>
             </div>
-            <div className="relative w-full w-full lg:w-1/2 p-4 lg:ps-24">
+            <div className="relative w-full lg:w-1/2 p-4 lg:ps-24">
               <div className="ms-auto flex justify-center">
                 <video
                   className="w-3/4 mt-12 rounded-2xl"
                   controls={false}
                   autoPlay={true}
-                  muted
+                  muted={true}
                   loop={true}
                   src="./block2/dancing.mp4"
                 />

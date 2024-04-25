@@ -4,7 +4,7 @@ import { Links } from "./links";
 import { CopyCa } from "./copy-ca";
 import { ToastContainer } from "react-toastify";
 import { FloatingAlien } from "../../common/floating-items/floating-alien";
-import { FloatingSilica } from "./floating-silica";
+import { FloatingSilica } from "../../common/floating-items/floating-silica";
 import { Circle } from "../../common/circle";
 
 import { AppearWrapper } from "../../common/appear-wrapper";
@@ -13,8 +13,8 @@ export const MainSection = (props: any) => {
   const { y } = props;
 
   return (
-    <AppearWrapper>
-      <div className="flex min-h-screen w-full relative">
+    <div className="flex min-h-screen w-full relative">
+      <AppearWrapper>
         <div className="absolute top-0">
           <img src="/block1/bluetop.png" alt="header" />
         </div>
@@ -30,10 +30,10 @@ export const MainSection = (props: any) => {
               <video
                 src="/block1/alien.mp4"
                 preload="auto"
-                autoPlay
-                muted
-                loop
                 controls={false}
+                autoPlay={true}
+                muted={true}
+                loop={true}
                 className="rounded-2xl w-2/3 lg:w-full h-full"
               ></video>
             </div>
@@ -63,7 +63,7 @@ export const MainSection = (props: any) => {
             </div>
           </div>
         </div>
-      </div>
-    </AppearWrapper>
+      </AppearWrapper>
+    </div>
   );
 };

@@ -1,8 +1,8 @@
 "use client";
 import { useRef } from "react";
 import { MotionValue, useScroll, useTransform } from "framer-motion";
-import { FloatingSharkboy } from "./floating-sharkboy";
-import { FloatingSharkgirl } from "./floating-sharkgirl";
+import { FloatingSharkboy } from "../../common/floating-items/floating-sharkboy";
+import { FloatingSharkgirl } from "../../common/floating-items/floating-sharkgirl";
 import { FloatingMeteor } from "../../common/floating-items/floating-meteor";
 import { FloatingGun } from "../../common/floating-items/floating-gun";
 import { AppearWrapper } from "../../common/appear-wrapper";
@@ -22,7 +22,7 @@ export const ThirdSection = (props: any) => {
           </p>
           <img
             onClick={onPhotoClick}
-            className=" w-6/12 md:w-4/12 lg:w-3/12 pb-8 cursor-pointer mx-auto"
+            className=" w-5/12 md:w-4/12 lg:w-3/12 pb-8 cursor-pointer mx-auto"
             src="./block3/photo-button.png"
           />
         </div>
