@@ -16,18 +16,19 @@ export const ThirdSection = (props: any) => {
   return (
     <div className="relative flex-col bg-white min-h-screen w-full p-4 pt-28 lg:px-64 max-w-screen-2xl mb-24">
       <AppearWrapper>
-        <div className="relative justify-center w-full pt-0 h-1/4">
+        <div className="relative flex-col flex items-center justify-center w-full pt-0 h-1/4">
           <img
-            className="w-5/12 md:w-4/12 lg:w-6/12 pb-8 mx-auto"
+            className="w-6/12 md:w-4/12 lg:w-6/12 pb-8"
             src="./block3/header.webp"
             alt="header"
           />
-          <img
+          <button
             onClick={onPhotoClick}
-            className=" w-5/12 md:w-4/12 lg:w-2/12 pb-8 cursor-pointer mx-auto hover:scale-110 transition-all duration-300"
-            src="./block3/photo-button.webp"
-            alt="photo"
-          />
+            disabled={true}
+            className=" w-4/12 md:w-4/12 lg:w-2/12 cursor-not-allowed pb-8 hover:scale-110 transition-all duration-300"
+          >
+            <img src="./block3/photo-button.webp" alt="photo" />
+          </button>
         </div>
         <div className="flex flex-col items-center lg:flex-row gap-16 justify-center">
           <FloatingSharkgirl y={y} />

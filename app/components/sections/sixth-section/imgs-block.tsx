@@ -1,3 +1,5 @@
+import { FloatingStar } from "../../common/floating-items/floating-star";
+
 export const ImgsBlock = () => {
   return (
     <>
@@ -17,11 +19,12 @@ export const ImgsBlock = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col w-full items-center h-1/3">
+          <div className="flex flex-col w-full items-center h-1/3 relative">
             <img
               className="img-shake w-10/12 lg:w-4/12 h-full object-contain select-none"
               src="./block6/frame3.webp"
             />
+            <FloatingStar itemClass="right-0 -top-12" />
           </div>
           <div className="flex flex-col justify-center lg:flex-row w-full h-1/3">
             <div className="flex justify-center">

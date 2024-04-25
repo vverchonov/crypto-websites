@@ -29,7 +29,7 @@ export const Links = () => {
         <TgIcon iconClass={iconClass} />
       </a>
 
-      <a target="_blank" href={RAYDIUM} className={buttonClass}>
+      {/* <a target="_blank" href={RAYDIUM} className={buttonClass}>
         <RaydiumIcon iconClass={iconClass} />
       </a>
       <a target="_blank" href={JUPITER} className={buttonClass}>
@@ -40,7 +40,7 @@ export const Links = () => {
       </a>
       <a target="_blank" href={DEXTOOLS} className={buttonClass}>
         <DextoolsIcon iconClass={iconClass} />
-      </a>
+      </a> */}
     </div>
   );
 };
