@@ -1,4 +1,4 @@
-export const CA = "COMING";
+export const CA = "CKvHs1gAdyJUw3GoWQmmQ3fRVWxMqiKv841L7hmfFHyy";
 export const TELEGRAM = "https://t.me/+XKooR1LXr_w5NTk0";
 export const TWITTER = "https://twitter.com/ALONDEALIEN";
 export const BUY_LING =
