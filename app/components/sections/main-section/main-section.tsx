@@ -49,7 +49,11 @@ export const MainSection = (props: any) => {
                 itemClass="right-0 top-32"
                 imageClass="rotate(36deg)"
               />
-              <FloatingAlien y={y} customTranslate={"translate-y-[10%]"} />
+              <FloatingAlien
+                imgPath={"./alien.webp"}
+                y={y}
+                customTranslate={"translate-y-[10%]"}
+              />
               <FloatingSilica
                 y={y}
                 itemClass="left-0 -top-32"

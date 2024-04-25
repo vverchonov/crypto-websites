@@ -6,7 +6,7 @@ import { ImgsBlock } from "./imgs-block";
 export const SixthSection = (props: any) => {
   return (
     <>
-      <div className="flex w-full flex-col items-center bg-[url(/block6/space.webp)] bg-center bg-cover bg-no-repeat">
+      <div className="flex w-full gap-16 flex-col items-center bg-[url(/block6/space.webp)] bg-center bg-cover bg-no-repeat">
         <AppearWrapper>
           <DexBlock />
         </AppearWrapper>

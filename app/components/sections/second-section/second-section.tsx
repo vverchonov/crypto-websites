@@ -28,7 +28,8 @@ export const SecondSection = (props: any) => {
               </div>
               <Circle customClass={"mirror-y mt-64 w-[55%]"} fill="#FF4A4A" />
               <FloatingAlien
-                customClass={"mirror-y"}
+                imgPath={"./block2/alien2.webp"}
+                customClass={"w-48 md:w-72"}
                 y={y}
                 customTranslate={"translate-y-[80%]"}
               />
