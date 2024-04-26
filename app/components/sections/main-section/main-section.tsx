@@ -32,13 +32,8 @@ export const MainSection = (props: any) => {
               imageClass="rotate(124deg)"
             />
             <div className="object-scale-down flex-col flex justify-center w-full lg:w-1/4 p-6">
-              <img
-                src="/block1/alien.gif"
-                alt="dancing alien"
-                className="rounded-2xl w-2/3 lg:w-full h-full drop-shadow-2xl border-black"
-              ></img>
-              <p className="text-xl text-center mt-8">Choose language:</p>
-              <div className="flex flex-row justify-center gap-4 mt-4">
+              <p className="text-2xl text-center font-bold">Choose language:</p>
+              <div className="flex flex-row justify-center gap-4 mb-8 mt-4">
                 <button
                   className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
                   onClick={() => {
@@ -58,6 +53,11 @@ export const MainSection = (props: any) => {
                   Chinese
                 </button>
               </div>
+              <img
+                src="/block1/alien.gif"
+                alt="dancing alien"
+                className="rounded-2xl w-2/3 lg:w-full h-full drop-shadow-2xl border-black"
+              ></img>
             </div>
             <div className="flex flex-col h-full gap-6 text-center items-center justify-between relative w-full lg:w-1/2 p-6">
               <img
