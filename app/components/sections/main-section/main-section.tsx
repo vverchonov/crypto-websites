@@ -31,7 +31,7 @@ export const MainSection = (props: any) => {
               itemClass="left-0 bottom-48 md:top-48 z-50"
               imageClass="rotate(124deg)"
             />
-            <div className="object-scale-down flex-col flex justify-center w-full lg:w-1/4 p-6">
+            <div className="object-scale-down flex-col flex content-center items-center justify-center w-full lg:w-1/4 p-6">
               <p className="text-2xl text-center font-bold">Choose language:</p>
               <div className="flex flex-row justify-center gap-4 mb-8 mt-4">
                 <button
