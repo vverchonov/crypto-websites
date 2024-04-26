@@ -57,7 +57,7 @@ export const ThirdSection = (props: any) => {
             ref={ref}
             className="text-2xl p-8 pt-16 font-bold z-40 relative select-none text-center"
           >
-            {word("3", Langs.CHINESE)}
+            {word("3", props.lang)}
           </p>
         </div>
         <FloatingMeteor y={y} />
