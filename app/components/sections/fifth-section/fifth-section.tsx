@@ -1,12 +1,14 @@
 import { AppearWrapper } from "../../common/appear-wrapper";
+import { useGetWordsHook } from "../../useGetWordsHook";
 
 export const FifthSection = (props: any) => {
+  const { word } = useGetWordsHook();
   const { y } = props;
   return (
     <div className="flex min-h-screen w-full relative bg-[#1B2327] justify-center overflow-x-clip blurred-border-bottom p-4 lg:p-28">
       <AppearWrapper>
         <p className="text-4xl md:text-7xl text-center font-bold uppercase text-white pt-16 pb-16 select-none">
-          how to buy
+          {word("7", props.lang)}
         </p>
         <div className="flex flex-col flex-wrap gap-[5rem] mb-24">
           <div className="flex gap-16 flex-col lg:flex-row center-items items-center ">

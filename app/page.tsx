@@ -27,7 +27,7 @@ export default function Home() {
             <SecondSection lang={lang} />
             <ThirdSection lang={lang} />
             <FourthSection />
-            <FifthSection />
+            <FifthSection lang={lang} />
             <SixthSection />
             <SeventhSection lang={lang} />
           </main>

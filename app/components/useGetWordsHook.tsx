@@ -34,6 +34,8 @@ export const useGetWordsHook = () => {
 `;
         case "6":
           return `Alon, the alien, in his quest to belong,Finds peace in the universe's grand song.Though alone he may seem in the vast, infinite dome,In the cosmos’s embrace, he's eternally home.`;
+        case "7":
+          return "HOW TO BUY";
       }
     }
     if (val === Langs.CHINESE) {
@@ -52,6 +54,8 @@ export const useGetWordsHook = () => {
           return "透过宇宙的传说和行星的轨迹，他寻找着归属，超越了地球上的逻辑。然而，在广阔的星系和明亮的星云之间，他在无尽的星空中找到了慰藉。 ";
         case "6":
           return "Alon，这个外星人，在他寻找归属之旅中，找到了宇宙的宏伟之歌中的平静。虽然在无尽的宇宙之穹顶下他似乎孤身一人，但在宇宙的怀抱中，他永远的家。 ";
+        case "7":
+          return "如何购买";
       }
     }
   };
