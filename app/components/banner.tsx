@@ -33,7 +33,7 @@ export const Banner = (props: any) => {
           onClick={() => props.close()}
           disabled={!isButtonEnabled}
         >
-          Proceed to the Moon
+          Proceed to the Moon <br></br> 去月球吧
         </button>
       </div>
     </div>
