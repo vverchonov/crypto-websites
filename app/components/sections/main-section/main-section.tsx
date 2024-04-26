@@ -11,9 +11,11 @@ import { AppearWrapper } from "../../common/appear-wrapper";
 import { useMoveOnScrollHook } from "../../useMoveOnScrollHook";
 import { FloatingSolid } from "../../common/floating-items/floating-solid";
 import { FloatingSputnik } from "../../common/floating-items/floating-sputnik";
+import { Langs, useGetWordsHook } from "../../useGetWordsHook";
 
 export const MainSection = (props: any) => {
   const { y, ref } = useMoveOnScrollHook(100);
+  const { word } = useGetWordsHook();
 
   return (
     <div className="flex min-h-screen w-full relative">
@@ -29,12 +31,33 @@ export const MainSection = (props: any) => {
               itemClass="left-0 bottom-48 md:top-48 z-50"
               imageClass="rotate(124deg)"
             />
-            <div className="object-scale-down flex justify-center w-full lg:w-1/4 p-6">
+            <div className="object-scale-down flex-col flex justify-center w-full lg:w-1/4 p-6">
               <img
                 src="/block1/alien.gif"
                 alt="dancing alien"
                 className="rounded-2xl w-2/3 lg:w-full h-full drop-shadow-2xl border-black"
               ></img>
+              <p className="text-xl text-center mt-8">Choose language:</p>
+              <div className="flex flex-row justify-center gap-4 mt-4">
+                <button
+                  className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
+                  onClick={() => {
+                    props.setLang(Langs.ENG);
+                  }}
+                >
+                  English
+                </button>
+                <button
+                  className={
+                    "focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
+                  }
+                  onClick={() => {
+                    props.setLang(Langs.CHINESE);
+                  }}
+                >
+                  Chinese
+                </button>
+              </div>
             </div>
             <div className="flex flex-col h-full gap-6 text-center items-center justify-between relative w-full lg:w-1/2 p-6">
               <img
@@ -63,11 +86,7 @@ export const MainSection = (props: any) => {
                 className="flex text-xl uppercase font-bold mt-24 z-50"
                 ref={ref}
               >
-                Inspired by an IKEA toy, $ALON was created as a meme coin
-                capable of not only hit the moon but also venturing to the edge
-                of the universe. If the community falls in love with Alon, we
-                will launch a series and NFTs about it. Made wif love by Letto
-                Dev Team.
+                {word("1", props.lang)}
               </h1>
               <CopyCa copyLink="CKvHs1gAdyJUw3GoWQmmQ3fRVWxMqiKv841L7hmfFHyy" />
               <div className="flex w-full justify-center">

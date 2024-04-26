@@ -8,9 +8,11 @@ import { Circle } from "../../common/circle";
 
 import { AppearWrapper } from "../../common/appear-wrapper";
 import { useMoveOnScrollHook } from "../../useMoveOnScrollHook";
+import { Langs, useGetWordsHook } from "../../useGetWordsHook";
 
 export const SecondSection = (props: any) => {
   const { y, ref } = useMoveOnScrollHook(100);
+  const { word } = useGetWordsHook();
 
   return (
     <div className="flex flex-col bg-white min-h-screen w-full p-4 lg:p-28 max-w-screen-2xl">
@@ -39,9 +41,7 @@ export const SecondSection = (props: any) => {
               <div className="relative w-full justify-center">
                 <div className="mx-auto lg:w-3/4 text-center">
                   <p className="text-2xl font-bold text-center">
-                    "This meme isn't used that much wah wah it's not a real
-                    meme" <br></br> The real meme is you not buying generational
-                    wealth token before its too late.
+                    {word("2", props.lang)}
                   </p>
                 </div>
                 <FloatingDildo y={y} />

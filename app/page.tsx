@@ -1,7 +1,6 @@
 "use client";
 
-import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { MainSection } from "./components/sections/main-section/main-section";
 import { SecondSection } from "./components/sections/second-section/second-section";
 import { FooterSection } from "./components/footer-section";
@@ -11,13 +10,11 @@ import { SeventhSection } from "./components/sections/seventh-section/seventh-se
 import { SixthSection } from "./components/sections/sixth-section/sixth-section";
 import { FifthSection } from "./components/sections/fifth-section/fifth-section";
 import { Banner } from "./components/banner";
-
-function useParallax(value: MotionValue<number>, distance: number) {
-  return useTransform(value, [0, 1], [distance, -distance]);
-}
+import { Langs } from "./components/useGetWordsHook";
 
 export default function Home() {
   const [showBanner, setShowBanner] = useState(true);
+  const [lang, setLang] = useState(Langs.ENG);
 
   return (
     <>
@@ -26,13 +23,13 @@ export default function Home() {
       ) : (
         <>
           <main className="relative flex flex-col items-center">
-            <MainSection />
-            <SecondSection />
-            <ThirdSection />
+            <MainSection lang={lang} setLang={setLang} />
+            <SecondSection lang={lang} />
+            <ThirdSection lang={lang} />
             <FourthSection />
             <FifthSection />
             <SixthSection />
-            <SeventhSection />
+            <SeventhSection lang={lang} />
           </main>
           <FooterSection />
         </>

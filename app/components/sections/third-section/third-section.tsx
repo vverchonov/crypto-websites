@@ -6,9 +6,11 @@ import { FloatingMeteor } from "../../common/floating-items/floating-meteor";
 import { FloatingGun } from "../../common/floating-items/floating-gun";
 import { AppearWrapper } from "../../common/appear-wrapper";
 import { useMoveOnScrollHook } from "../../useMoveOnScrollHook";
+import { Langs, useGetWordsHook } from "../../useGetWordsHook";
 
 export const ThirdSection = (props: any) => {
   const { y, ref } = useMoveOnScrollHook(100);
+  const { word } = useGetWordsHook();
   const onPhotoClick = () => {
     alert("cheese! TEMP");
   };
@@ -55,9 +57,7 @@ export const ThirdSection = (props: any) => {
             ref={ref}
             className="text-2xl p-8 pt-16 font-bold z-40 relative select-none text-center"
           >
-            We are developing 3D and 2D visualizations for $ALON to make it
-            easier for the community to create content and support our humanoid
-            :3
+            {word("3", Langs.CHINESE)}
           </p>
         </div>
         <FloatingMeteor y={y} />

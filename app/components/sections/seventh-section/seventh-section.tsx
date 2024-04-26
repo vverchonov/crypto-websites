@@ -1,8 +1,10 @@
 import { AppearWrapper } from "../../common/appear-wrapper";
 import { FloatingBanana } from "../../common/floating-items/floating-banana";
+import { Langs, useGetWordsHook } from "../../useGetWordsHook";
 
 export const SeventhSection = (props: any) => {
   const { y } = props;
+  const { word } = useGetWordsHook();
 
   return (
     <div className="w-full min-h-screen sblock bg-[url(/block6/space.webp)] sblock flex justify-center overflow-x-clip relative bg-black">
@@ -28,19 +30,12 @@ export const SeventhSection = (props: any) => {
             customClass={"absolute right-48 w-fit bottom-[50%] z-0 select-none"}
           />
           <p className=" text-2xl leading-loose lg:text-6xl font-bold text-center text-white lg:leading-loose relative z-50">
-            In the vast cosmic sea, where the silent stars play, Alon sails
-            alone, night blending into day. His ship, stitched from dreams,
-            glides through starlit streams, A wanderer roaming where the galaxy
-            gleams.
+            {word("4", props.lang)}
             <br />
-            <br /> Through celestial tales and planetary trails,He seeks kinship
-            where earthly logic fails.Yet amidst galaxies wide and nebulas
-            bright,He finds solace in the endless starry night.
+            <br /> {word("5", props.lang)}
             <br />
             <br />
-            Alon, the alien, in his quest to belong,Finds peace in the
-            universe's grand song.Though alone he may seem in the vast, infinite
-            dome,In the cosmos’s embrace, he's eternally home.
+            {word("6", props.lang)}
           </p>
         </div>
       </AppearWrapper>
