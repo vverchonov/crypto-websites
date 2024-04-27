@@ -1,15 +1,11 @@
-import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import { Cat } from "./cat";
 import { Links } from "./links";
 import { CopyCa } from "./copy-ca";
 import { ToastContainer } from "react-toastify";
-import { ARTest } from "./ar-test";
 
 export const MainSection = (props: any) => {
   return (
     <div className="flex flex-col min-h-screen">
-      <ARTest />
       <ToastContainer />
       <div className="flex w-full h-fit p-12 justify-center z-50">
         <Links />
@@ -24,11 +20,11 @@ export const MainSection = (props: any) => {
         className="absolute top-0 z-0"
         style={{ width: "100%", height: "100vh" }}
       >
-        <Canvas className="z-0">
+        {/* <Canvas className="z-0">
           <OrbitControls enablePan={false} enableZoom={false} />
           <ambientLight intensity={3} color={"white"} />
           <Cat play={props.play} />
-        </Canvas>
+        </Canvas> */}
       </div>
     </div>
   );
