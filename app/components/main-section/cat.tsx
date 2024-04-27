@@ -8,8 +8,8 @@ import { FBXLoader, OBJLoader } from "three/examples/jsm/Addons.js";
 
 export const Cat = (props: any) => {
   const catRef = useRef();
-  const obj = useLoader(OBJLoader, "./test.obj");
-  const texture = useTexture("./texture.jpg");
+  const obj = useLoader(OBJLoader, "./puss_danya.obj");
+  const texture = useTexture("./texture_danya.png");
 
   const geometry = useMemo(() => {
     let g;
@@ -41,7 +41,7 @@ export const Cat = (props: any) => {
         onClick={props.play}
         ref={catRef as any}
         geometry={geometry}
-        scale={5}
+        scale={1.2}
       >
         <meshPhysicalMaterial map={texture} />
       </mesh>

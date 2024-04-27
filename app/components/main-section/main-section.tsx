@@ -24,7 +24,7 @@ export const MainSection = (props: any) => {
       >
         <Canvas className="z-0">
           <OrbitControls enablePan={false} enableZoom={false} />
-          <ambientLight intensity={2} color={"white"} />
+          <ambientLight intensity={3} color={"white"} />
           <Cat play={props.play} />
         </Canvas>
       </div>
