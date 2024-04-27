@@ -1,43 +1,59 @@
-import { Interactive, XR, ARButton, Controllers } from "@react-three/xr";
-import { Box, Text } from "@react-three/drei";
-
-import { Canvas } from "@react-three/fiber";
-import { Suspense, useState } from "react";
+"use client";
+import React, { useState } from "react";
 
 export const ARTest = (props: any) => {
-  const [hover, setHover] = useState(false);
-  const [color, setColor] = useState<any>("blue");
+  const modelRef = React.useRef();
+  const [annots, setAnnots] = useState([]);
 
-  const onSelect = () => {
-    setColor((Math.random() * 0xffffff) | 0);
+  const handleClick = (event: any) => {
+    const { clientX, clientY } = event;
+
+    if (modelRef.current) {
+      //@ts-ignore
+      let hit = modelRef.current.positionAndNormalFromPoint(clientX, clientY);
+      if (hit) {
+        //@ts-ignore
+        setAnnots((annot: any) => {
+          return [...annots, hit];
+        });
+      }
+    }
+  };
+
+  const getDataPosition = (annot: any) => {
+    return `${annot.position.x} ${annot.position.y} ${annot.position.z}`;
+  };
+
+  const getDataNormal = (annot: any) => {
+    return `${annot.normal.x} ${annot.normal.y} ${annot.normal.z}`;
   };
 
   return (
-    <>
-      <Interactive
-        onHover={() => setHover(true)}
-        onBlur={() => setHover(false)}
-        onSelect={onSelect}
-      >
-        <Box
-          color={color}
-          scale={hover ? [0.6, 0.6, 0.6] : [0.5, 0.5, 0.5]}
-          size={[0.4, 0.1, 0.1]}
-          {...props}
-        >
-          <Suspense fallback={null}>
-            <Text
-              position={[0, 0, 0.06]}
-              fontSize={0.05}
-              color="#000"
-              anchorX="center"
-              anchorY="middle"
-            >
-              Hello react-xr!
-            </Text>
-          </Suspense>
-        </Box>
-      </Interactive>
-    </>
+    //@ts-ignore
+    <model-viewer
+      className="model-viewer"
+      src="./Horse.glb"
+      alt="A rock"
+      exposure="0.008"
+      camera-controls
+      ar
+      ar-modes="webxr"
+      onClick={handleClick}
+      //@ts-ignore
+      ref={(ref) => {
+        modelRef.current = ref;
+      }}
+    >
+      {annots.map((annot, idx) => (
+        <button
+          key={`hotspot-${idx}`}
+          className="view-button"
+          slot={`hotspot-${idx}`}
+          data-position={getDataPosition(annot)}
+          data-normal={getDataNormal(annot)}
+        ></button>
+      ))}
+      {/* @ts-ignore */}
+    </model-viewer>
   );
 };

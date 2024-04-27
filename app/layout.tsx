@@ -18,6 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script
+          type="module"
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+        ></script>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Da Puss" />

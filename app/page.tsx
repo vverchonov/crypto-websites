@@ -1,6 +1,7 @@
 "use client";
 
-import { OrbitControls } from "@react-three/drei";
+import * as THREE from "three";
+import { Box, OrbitControls } from "@react-three/drei";
 import { Interactive, XR, Controllers, ARButton } from "@react-three/xr";
 import { Canvas } from "@react-three/fiber";
 
@@ -23,13 +24,19 @@ export default function Home() {
 
   return (
     <>
-      <ARButton className="" />
-      <Canvas>
-        <XR referenceSpace="local">
-          <ambientLight />
-          <pointLight position={[10, 10, 10]} />
-          <ARTest position={[0, 0.1, -0.2]} />
-          <Controllers />
+      <ARButton />
+      <Canvas camera={{ position: [0, 2, 0] }}>
+        <XR referenceSpace="local-floor">
+          <color attach="background" args={["#111"]} />
+          <ambientLight intensity={2} />
+          <pointLight position={[20, 10, -10]} intensity={2} />
+          <primitive object={new THREE.AxesHelper(2)} />
+          <primitive object={new THREE.GridHelper(20, 20)} />
+          <OrbitControls />
+
+          <Box key="companionCube">
+            <meshPhongMaterial color="#440066" />
+          </Box>
         </XR>
       </Canvas>
     </>
