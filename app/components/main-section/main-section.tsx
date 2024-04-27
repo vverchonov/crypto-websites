@@ -4,10 +4,12 @@ import { Cat } from "./cat";
 import { Links } from "./links";
 import { CopyCa } from "./copy-ca";
 import { ToastContainer } from "react-toastify";
+import { ARTest } from "./ar-test";
 
 export const MainSection = (props: any) => {
   return (
     <div className="flex flex-col min-h-screen">
+      <ARTest />
       <ToastContainer />
       <div className="flex w-full h-fit p-12 justify-center z-50">
         <Links />
