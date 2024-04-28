@@ -12,11 +12,11 @@ export const MainSection = (props: any) => {
       <div className="flex w-full h-fit p-12 justify-center z-50">
         <Links />
       </div>
-      <div className="flex flex-col gap-4 text-center z-50 mt-auto p-12 items-center">
-        <h1 className="mt-auto text-8xl uppercase font-bold select-none">
+      <div className="flex flex-col gap-4 text-center z-50 mt-auto p-12 items-center z-0">
+        <h1 className="mt-auto text-8xl uppercase font-bold select-none z-0">
           Da Puss
         </h1>
-        <CopyCa copyLink="test" />
+        {/* <CopyCa copyLink="test" /> */}
       </div>
       <div
         className="absolute top-0 z-0"
@@ -27,7 +27,7 @@ export const MainSection = (props: any) => {
           src="./cat1.glb"
           ar
           //@ts-ignore
-          class="block w-full min-h-screen"
+          class="block w-full min-h-screen z-50"
           ar-modes="webxr scene-viewer quick-look"
           camera-controls
           tone-mapping="neutral"
