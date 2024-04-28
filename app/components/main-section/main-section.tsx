@@ -34,13 +34,6 @@ export const MainSection = (props: any) => {
           poster="poster.webp"
           shadow-intensity="1"
         >
-          <div className="progress-bar hide" slot="progress-bar">
-            <div className="update-bar"></div>
-          </div>
-          <button slot="ar-button" id="ar-button">
-            View in your space
-          </button>
-
           {/* @ts-ignore */}
         </model-viewer>
         {/* <Canvas className="z-0">
