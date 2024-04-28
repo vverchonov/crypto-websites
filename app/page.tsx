@@ -27,11 +27,12 @@ export default function Home() {
     //@ts-ignore
     <model-viewer
       alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
-      src="./Horse.glb"
+      src="./alien.glb"
       ar
+      class="w-full min-h-screen"
       ar-modes="webxr scene-viewer quick-look"
       //   environment-image="shared-assets/environments/moon_1k.hdr"
-      poster="poster.webp"
+      poster="./poster.webp"
       seamless-poster
       shadow-intensity="1"
       camera-controls
