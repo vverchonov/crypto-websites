@@ -37,12 +37,12 @@ export const MainSection = (props: any) => {
           <Cat play={props.play} />
         </Canvas> */}
       </div>
-      <div className="flex flex-col gap-4 text-center z-50 mt-auto p-12 items-center z-0">
+      {/* <div className="flex flex-col gap-4 text-center z-50 mt-auto p-12 items-center z-0">
         <h1 className="mt-auto text-5xl uppercase font-bold select-none z-0">
           Da Puss
         </h1>
-        {/* <CopyCa copyLink="test" /> */}
-      </div>
+        <CopyCa copyLink="test" />
+      </div> */}
     </div>
   );
 };
