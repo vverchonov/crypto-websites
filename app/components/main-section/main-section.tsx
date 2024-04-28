@@ -24,18 +24,23 @@ export const MainSection = (props: any) => {
       >
         {/* @ts-ignore */}
         <model-viewer
-          alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
           src="./cat1.glb"
           ar
-          class="block min-w-full min-h-screen"
-          ar-modes="webxr scene-viewer quick-look"
           //@ts-ignore
-          environment-image="shared-assets/environments/moon_1k.hdr"
-          //poster="./alien.png"
-          seamless-poster
-          shadow-intensity="4"
+          class="block w-full min-h-screen"
+          ar-modes="webxr scene-viewer quick-look"
           camera-controls
+          tone-mapping="neutral"
+          poster="poster.webp"
+          shadow-intensity="1"
         >
+          <div className="progress-bar hide" slot="progress-bar">
+            <div className="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">
+            View in your space
+          </button>
+
           {/* @ts-ignore */}
         </model-viewer>
         {/* <Canvas className="z-0">
