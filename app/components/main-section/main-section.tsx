@@ -16,33 +16,18 @@ export const MainSection = (props: any) => {
         className="absolute top-0 z-0"
         style={{ width: "100%", height: "100vh" }}
       >
-        {/* @ts-ignore */}
-        <model-viewer
-          src="./cat1.glb"
-          ar
-          //@ts-ignore
-          class="block w-full min-h-screen z-50"
-          ar-modes="webxr scene-viewer quick-look"
-          camera-controls
-          tone-mapping="neutral"
-          poster="poster.webp"
-          shadow-intensity="1"
-        >
-          {/* @ts-ignore */}
-        </model-viewer>
-
-        {/* <Canvas className="z-0">
+        <Canvas className="z-0">
           <OrbitControls enablePan={false} enableZoom={false} />
           <ambientLight intensity={2} color={"white"} />
           <Cat play={props.play} />
-        </Canvas> */}
+        </Canvas>
       </div>
-      {/* <div className="flex flex-col gap-4 text-center z-50 mt-auto p-12 items-center z-0">
+      <div className="flex flex-col gap-4 text-center z-50 mt-auto p-12 items-center z-0">
         <h1 className="mt-auto text-5xl uppercase font-bold select-none z-0">
           Da Puss
         </h1>
         <CopyCa copyLink="test" />
-      </div> */}
+      </div>
     </div>
   );
 };

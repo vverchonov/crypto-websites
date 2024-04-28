@@ -5,23 +5,22 @@ import "ar.js";
 class ARView extends Component {
   render() {
     return (
-      //@ts-ignore
-      <a-scene embedded arjs>
+      <>
         {/* @ts-ignore */}
-        <a-marker preset="hiro">
+        <model-viewer
+          src="./cat1.glb"
+          ar
+          //@ts-ignore
+          class="block w-full min-h-screen z-50"
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          tone-mapping="neutral"
+          poster="poster.webp"
+          shadow-intensity="1"
+        >
           {/* @ts-ignore */}
-          <a-entity
-            gltf-model="./Horse.glb)"
-            scale="0.1 0.1 0.1"
-            position="0 0 0"
-            //@ts-expect-error
-          ></a-entity>
-          {/* @ts-ignore */}
-        </a-marker>
-        {/* @ts-ignore */}
-        <a-entity camera></a-entity>
-        {/* @ts-ignore */}
-      </a-scene>
+        </model-viewer>
+      </>
     );
   }
 }
