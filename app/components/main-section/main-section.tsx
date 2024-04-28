@@ -22,11 +22,27 @@ export const MainSection = (props: any) => {
         className="absolute top-0 z-0"
         style={{ width: "100%", height: "100vh" }}
       >
-        <Canvas className="z-0">
+        {/* @ts-ignore */}
+        <model-viewer
+          alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+          src="./cat1.glb"
+          ar
+          class="block min-w-full min-h-screen"
+          ar-modes="webxr scene-viewer quick-look"
+          //@ts-ignore
+          environment-image="shared-assets/environments/moon_1k.hdr"
+          //poster="./alien.png"
+          seamless-poster
+          shadow-intensity="4"
+          camera-controls
+        >
+          {/* @ts-ignore */}
+        </model-viewer>
+        {/* <Canvas className="z-0">
           <OrbitControls enablePan={false} enableZoom={false} />
           <ambientLight intensity={2} color={"white"} />
           <Cat play={props.play} />
-        </Canvas>
+        </Canvas> */}
       </div>
     </div>
   );
