@@ -8,7 +8,7 @@ export const SectionFour = (props: any) => {
   const t = useTranslations("SectionFour");
   return (
     <>
-      <div className="min-h-screen w-full content-center relative">
+      <div className="min-h-screen w-full content-center relative overflow-hidden">
         <Wrapper>
           <AppearWrapper>
             <div className="flex flex-col gap-8 lg:flex-row content-center min-h-screen py-16 justify-center relative">
