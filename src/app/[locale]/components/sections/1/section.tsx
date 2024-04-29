@@ -13,6 +13,7 @@ export const SectionOne = (props: any) => {
         <Wrapper>
           <div className="flex flex-col gap-8 items-center">
             <RegularText customClass={"text-center"} text={t("1")} />
+            <img className="w-[50%] md:w-[15%]" src={"./1/change-lang.png"} />
             <img className="md:w-[50%]" src={"./1/game.png"} />
           </div>
         </Wrapper>
