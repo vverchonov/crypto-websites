@@ -2,7 +2,10 @@
 
 import { AppearWrapper } from "../../common/wrappers/appear-wrapper";
 import { MovingImg } from "../../moving-img";
+import { useCompensateScrollbar } from "../../hooks/useCompensateScrollbar";
+import { RPC_ENDPOINT } from "../../../urls";
 
+import { useEffect, useMemo, useState } from "react";
 import {
   ConnectionProvider,
   WalletProvider,
@@ -13,10 +16,10 @@ import {
   SolflareWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
 import "@solana/wallet-adapter-react-ui/styles.css";
-import { useEffect, useMemo, useState } from "react";
-import { RPC_ENDPOINT } from "../../../urls";
+import { NFT } from "./nft";
 
 export const SectionTwo = (props: any) => {
+  useCompensateScrollbar();
   const [mounted, setMounted] = useState(false);
 
   const wallets = useMemo(
@@ -51,42 +54,7 @@ export const SectionTwo = (props: any) => {
                       Google Disk
                     </a>
                   </div>
-                  <div className="flex flex-row justify-between items-center relative">
-                    <MovingImg
-                      customClassWrapper={"right-[5%] bottom-0"}
-                      imgPath={"./section-4/floating-item.png"}
-                    />
-                    <MovingImg
-                      customClassWrapper={"right-[5%] top-0"}
-                      imgPath={"./section-4/floating-item.png"}
-                    />
-                    <div>
-                      <img
-                        src="/section-2/chel.png"
-                        alt="chel"
-                        className="w-[40%]"
-                      />
-                    </div>
-                    <div className="flex flex-col w-full justify-center items-center h-full mr-24 pr-48">
-                      <h3 className="text-4xl text-center mb-12">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Itaque, error! Similique error libero nobis ad
-                        iusto repellat ipsum assumenda, quibusdam nulla
-                        provident asperiores id dignissimos quis illo
-                        necessitatibus, rem eum!
-                      </h3>
-                      <h2 className="text-4xl text-center mb-12">
-                        Supply: 1000
-                        <br />
-                        Left: 100
-                        <br />
-                        Price: 0.1
-                      </h2>
-                      <button className="text-4xl rounded-xl w-1/2 border p-4 border-black">
-                        Claim
-                      </button>
-                    </div>
-                  </div>
+                  <NFT />
                 </div>
               </div>
             </AppearWrapper>

@@ -10,4 +10,5 @@ export const RAYDIUM = 'https://raydium.io/swap/?inputCurrency=4inoptdokTnnH5cU6
 export const JUPITER = 'https://jup.ag/swap/4inoptdokTnnH5cU64CP64WQbeV6gdFUVmiokPfwzbsL-SOL'
 export const DEXTOOLS = 'https://www.dextools.io/app/en/solana/pair-explorer/ERCD6qtvn4sWhmNBLyPXfoKghjFRM3gxAYKxNzcw9a5x?t=1713314960171'
 
-export const RPC_ENDPOINT = 'https://thrilling-fragrant-mound.solana-mainnet.quiknode.pro/6734a574caaed4ee4260acbebfef3847e0ba7b46/'
+export const RPC_ENDPOINT = 'https://withered-crimson-sun.solana-devnet.quiknode.pro/5df09d3d4a53046d05db415a893610388d405d59/'
+export const CANDY_MACHINE = new PublicKey('Fkg8MFxwcuDPZxAU6sjfJ7AwrrJ9YRS4FMfm4MnKMetR')
