@@ -15,19 +15,25 @@ export const SectionOne = (props: any) => {
           <Wrapper>
             <div className="flex flex-col gap-8 items-center">
               <RegularText customClass={"text-center"} text={t("1")} />
-              <img className="w-[50%] md:w-[15%]" src={"./1/change-lang.png"} />
-              <img className="md:w-[50%]" src={"./1/game.png"} />
+              <img
+                className="w-[50%] md:w-[15%]"
+                src={"./section-1/change-lang.png"}
+              />
+              <img className="md:w-[50%]" src={"./section-1/game.png"} />
             </div>
           </Wrapper>
           <div className="w-full absolute bottom-0 left-0">
             <div className="flex">
-              <img className="ml-16 h-32 md:h-64 w-auto" src="./1/bear-1.png" />
+              <img
+                className="ml-16 h-32 md:h-64 w-auto"
+                src="./section-1/bear-1.png"
+              />
               <img
                 className="mr-16 h-32 md:h-64 w-auto ms-auto mirror-y"
                 src="./1/bear-2.png"
               />
             </div>
-            <img className="w-full" src={"./1/doroga.png"} />
+            <img className="w-full" src={"./section-1/doroga.png"} />
           </div>
         </div>
       </AppearWrapper>
