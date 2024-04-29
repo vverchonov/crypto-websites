@@ -1,6 +1,21 @@
-import { useTranslations } from "next-intl";
+import { SectionOne } from "./components/sections/1/section";
+import { SectionTwo } from "./components/sections/2/section";
+import { SectionThree } from "./components/sections/3/section";
+import { SectionFour } from "./components/sections/4/section";
+import { SectionFive } from "./components/sections/5/section";
+import { SectionSix } from "./components/sections/6/section";
+import { SectionSeven } from "./components/sections/7/section";
 
 export default function Home() {
-  const t = useTranslations("Index");
-  return <h1>{t("title")}</h1>;
+  return (
+    <>
+      <SectionOne />
+      <SectionTwo />
+      <SectionThree />
+      <SectionFour />
+      <SectionFive />
+      <SectionSix />
+      <SectionSeven />
+    </>
+  );
 }

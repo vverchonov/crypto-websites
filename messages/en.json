@@ -1,5 +1,26 @@
 {
-  "Index": {
+  "SectionOne": {
+    "title": "Hello world ENG!"
+  },
+  "SectionTwo": {
+    "title": "Hello world ENG!"
+  },
+  "SectionThree": {
+    "title": "Hello world ENG!"
+  },
+  "SectionFour": {
+    "title": "Hello world ENG!"
+  },
+  "SectionFive": {
+    "title": "Hello world ENG!"
+  },
+  "SectionSix": {
+    "title": "Hello world ENG!"
+  },
+  "SectionSeven": {
+    "title": "Hello world ENG!"
+  },
+  "InitialPopup": {
     "title": "Hello world ENG!"
   }
 }

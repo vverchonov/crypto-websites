@@ -1,5 +1,26 @@
 {
-  "Index": {
+  "SectionOne": {
+    "title": "Hello world CHINA!"
+  },
+  "SectionTwo": {
+    "title": "Hello world CHINA!"
+  },
+  "SectionThree": {
+    "title": "Hello world CHINA!"
+  },
+  "SectionFour": {
+    "title": "Hello world CHINA!"
+  },
+  "SectionFive": {
+    "title": "Hello world CHINA!"
+  },
+  "SectionSix": {
+    "title": "Hello world CHINA!"
+  },
+  "SectionSeven": {
+    "title": "Hello world CHINA!"
+  },
+  "InitialPopup": {
     "title": "Hello world CHINA!"
   }
 }
