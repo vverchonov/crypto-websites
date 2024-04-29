@@ -1,3 +1,5 @@
 export const Wrapper = (props: any) => {
-  return <div className="p-4 md:p-12 lg:p-36">{props.children}</div>;
+  return (
+    <div className="px-4 md:px-12 lg:px-36 pt-8 pb-8">{props.children}</div>
+  );
 };
