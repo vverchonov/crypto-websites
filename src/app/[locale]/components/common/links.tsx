@@ -13,7 +13,7 @@ import {
   TELEGRAM,
   TWITTER,
   DEXTOOLS,
-} from "@/app/urls";
+} from "@/app/[locale]/urls";
 
 const buttonClass =
   " select-none text-white font-bold cursor-pointer rounded-full flex flex-row content-center items-center transform transition duration-500 hover:scale-105";

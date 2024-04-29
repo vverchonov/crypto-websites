@@ -2,7 +2,7 @@
 import { Bounce, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { CopyIcon } from "./icons/copy-icon";
-import { CA } from "@/app/urls";
+import { CA } from "@/app/[locale]/urls";
 
 type Props = {
   copyLink: string;
