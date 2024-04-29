@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export const MovingWrapper = (props: any) => {
+export const MovingImg = (props: any) => {
   return (
     <motion.div className="w-full flex justify-center" style={{ y: props.y }}>
       {/*  MAYBE MOVE THIS WRAPPER SEPARETE IF WE NEED TO REUSE IT  */}
