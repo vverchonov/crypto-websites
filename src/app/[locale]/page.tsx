@@ -5,17 +5,21 @@ import { SectionFour } from "./components/sections/section-4/section";
 import { SectionFive } from "./components/sections/section-5/section";
 import { SectionSix } from "./components/sections/section-6/section";
 import { FooterSection } from "./components/footer-section";
+import { WelcomeBanner } from "./components/common/welcome-banner";
 
 export default function Home() {
   return (
-    <main>
-      <SectionOne />
-      <SectionTwo />
-      <SectionThree />
-      <SectionFour />
-      <SectionFive />
-      <SectionSix />
-      <FooterSection />
-    </main>
+    <>
+      <main>
+        <WelcomeBanner />
+        <SectionOne />
+        <SectionTwo />
+        <SectionThree />
+        <SectionFour />
+        <SectionFive />
+        <SectionSix />
+        <FooterSection />
+      </main>
+    </>
   );
 }

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Bounce, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { WelcomeBanner } from "./components/common/welcome-banner";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <head>
-      <meta property="og:type" content="website" />
+        <meta property="og:type" content="website" />
         <meta property="og:site_name" content="ALON THE ALIEN" />
         <meta property="og:url" content="http://alonthealien.com/" />
         <meta property="og:title" content="Solana Token" />

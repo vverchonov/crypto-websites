@@ -2,21 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    background-color: white;
-  }
-}
-
 .mirror-y {
   transform: rotateY(180deg);
+}
+
+.div-fw {
+  background-image: url("../../../public/banner/banner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
 }
