@@ -16,8 +16,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang={locale}>
-      <head></head>
-      <body>{children}</body>
+      <head>
+        <script
+          type="module"
+          src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+        ></script>
+      </head>
+      <body>
+        {" "}
+        <>
+          {/* @ts-ignore */}
+          <model-viewer
+            class={"w-full min-h-screen"}
+            src="alpha-blend-litmus.glb"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            tone-mapping="neutral"
+            poster="poster.webp"
+            shadow-intensity="1"
+          >
+            {/* @ts-ignore */}
+          </model-viewer>
+        </>
+      </body>
     </html>
   );
 }
