@@ -1,5 +1,5 @@
 import { XIcon } from "./common/icons/x-icon";
-import { TWITTER, TELEGRAM, TELEGRAM_DEV } from "../urls";
+import { TWITTER, TELEGRAM, TELEGRAM_DEV } from "../../urls";
 import { TgIcon } from "./common/icons/tg-icon";
 import { DevIcon } from "./common/icons/dev-icon";
 
