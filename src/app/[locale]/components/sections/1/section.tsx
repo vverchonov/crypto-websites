@@ -24,7 +24,7 @@ export const SectionOne = (props: any) => {
               src="./1/bear-2.png"
             />
           </div>
-          <img className="w-full" src={"./1/road.png"} />
+          <img className="w-full" src={"./1/doroga.png"} />
         </div>
       </div>
       <div className="w-full">
