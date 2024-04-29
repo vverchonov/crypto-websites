@@ -17,7 +17,7 @@ export const NFT = (props: any) => {
   const [candyState, setCandyState] = useState<CandyMachineV2 | null>();
   const [candyStateErr, setCandyStateErr] = useState<string | null>();
   const [candyStateLoading, setCandyStateLoading] = useState(true);
-  const [txErr, setTxErr] = useState();
+  const [txErr, setTxErr] = useState<string | null>();
   const [txLoading, setTxLoading] = useState(false);
   //   const [nfts, setNfts] = useState([]);
   const { connection } = useConnection();
@@ -47,13 +47,34 @@ export const NFT = (props: any) => {
         toast.error("Error fetching candy machine state");
       } finally {
         setCandyStateLoading(false);
-        toast.success("Candy machine state fetched");
       }
     };
     updateState();
     const intervalId = setInterval(updateState, 30_000);
     return () => clearInterval(intervalId);
   }, [metaplex]);
+
+  const mint = async () => {
+    if(!metaplex || !candyState) return;
+
+    setTxLoading(true);
+    setTxErr(null);
+
+    try {
+        const mintResult = await metaplex.candyMachinesV2().mint({
+            candyMachine: candyState,
+        }); 
+    } catch (e) {
+        console.error(e);
+        setTxErr("Error claiming NFT");
+        toast.error("Error claiming NFT");
+    } finally {
+        setTxLoading(false);
+        toast.success("NFT claimed");
+    }
+  };
+
+  const soldOut = candyState?.itemsRemaining.eqn(0)
 
   return (
     <div className="flex flex-row justify-between items-center relative">
@@ -80,7 +101,7 @@ export const NFT = (props: any) => {
             candyState && (
               <>
                 <p>
-                  {candyState.itemsRemaining.eqn(0)
+                  {soldOut
                     ? "SOLD OUT"
                     : `${candyState.itemsRemaining.toString()} out of ${candyState.itemsAvailable.toString()} left`}
                 </p>
@@ -92,8 +113,8 @@ export const NFT = (props: any) => {
             )
           )}
         </div>
-        <button className="text-4xl rounded-xl w-1/2 border p-4 border-black">
-          (txLoading ? "Claiming..." : "Claim NFT")
+        <button className="text-4xl rounded-xl w-1/2 border p-4 border-black" onClick={mint} disabled={txLoading || !candyState || !wallet}>
+          {soldOut ? "Sold Out" : txLoading ? "Claiming..." : "Claim NFT"}
         </button>
         <div className="text-4xl text-center mt-12">
           {txErr && <p>{txErr}</p>}
