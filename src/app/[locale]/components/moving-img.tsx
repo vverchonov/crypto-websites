@@ -1,8 +1,12 @@
+"use client";
 import { motion } from "framer-motion";
 
 export const MovingImg = (props: any) => {
   return (
-    <motion.div className="w-full flex justify-center" style={{ y: props.y }}>
+    <motion.div
+      className={"absolute " + props.customClassWrapper}
+      style={{ y: props.y }}
+    >
       {/*  MAYBE MOVE THIS WRAPPER SEPARETE IF WE NEED TO REUSE IT  */}
       <motion.div
         className="w-full flex justify-center"
@@ -19,7 +23,7 @@ export const MovingImg = (props: any) => {
           ease: "easeInOut",
         }}
       >
-        <img className={props.customClass} src={props.imgPath} />
+        <img className={props.customClassImg} src={props.imgPath} />
       </motion.div>
     </motion.div>
   );
