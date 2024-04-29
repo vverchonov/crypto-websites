@@ -7,6 +7,11 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
+RUN apk add --no-cache python3 py3-pip make g++ \
+    && ln -sf python3 /usr/bin/python
+
+RUN npm cache clean --force
+
 # Install dependencies
 RUN npm install
 
