@@ -75,20 +75,12 @@ export const NFT = (props: any) => {
 
   return (
     <div className="flex flex-row justify-end items-center relative min-h-[60vh]">
-      <MovingImg
-        customClassWrapper={"right-[5%] bottom-0"}
-        imgPath={"./section-4/floating-item.png"}
-      />
-      <MovingImg
-        customClassWrapper={"right-[5%] top-0"}
-        imgPath={"./section-4/floating-item.png"}
-      />
       <img
         src="/section-2/chel.png"
         alt="chel"
         className="w-[40%] left-[-50%] absolute"
       />
-      <div className="flex flex-col w-full justify-center items-center h-full">
+      <div className="flex flex-col gap-6 w-full justify-center items-center h-full">
         <WalletMultiButton />
         <BigText text={"Claim your NFT"} />
         <div className="text-4xl text-center mb-12">
@@ -113,7 +105,7 @@ export const NFT = (props: any) => {
           )}
         </div>
         <button
-          className="text-4xl rounded-xl w-1/2 border p-4 border-black"
+          className="text-4xl rounded-xl w-1/3 border p-4 border-black"
           onClick={mint}
           disabled={txLoading || !candyState || !wallet}
         >

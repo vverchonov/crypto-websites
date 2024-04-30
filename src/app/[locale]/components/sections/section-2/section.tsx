@@ -43,7 +43,15 @@ export const SectionTwo = (props: any) => {
             <AppearWrapper>
               <div className="min-h-screen w-full content-center relative ">
                 <MovingImg
-                  customClassWrapper={"top-[50%] left-[40%]"}
+                  customClassWrapper={"top-[50%] left-[10%]"}
+                  imgPath={"./section-4/floating-item.png"}
+                />
+                <MovingImg
+                  customClassWrapper={"right-[5%] bottom-0"}
+                  imgPath={"./section-4/floating-item.png"}
+                />
+                <MovingImg
+                  customClassWrapper={"right-[5%] top-0"}
                   imgPath={"./section-4/floating-item.png"}
                 />
                 <div className="flex flex-col">
