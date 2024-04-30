@@ -18,7 +18,7 @@ export const SectionFive = (props: any) => {
                   <RegularText text={t("2")} />
                 </div>
                 <div className="lg:w-5/12 flex flex-col gap-8 justify-center">
-                  <img className="h-[70vh]" src="./section-5/bear-gun.png" />
+                  <img className="h-[70vh]" src="./section-5/bear-gun.webp" />
                 </div>
               </div>
             </div>

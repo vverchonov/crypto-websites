@@ -10,7 +10,7 @@ export const MarqueeCustom = () => {
             {[...Array(40)].map((_, index) => (
               <img
                 key={index}
-                src={`/section-1/pho${index + 1}.png`}
+                src={`/section-1/marquee/pho${index + 1}.webp`}
                 alt={`Image ${index}`}
                 className="w-full rounded-2xl"
               />

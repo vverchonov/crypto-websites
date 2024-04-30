@@ -15,7 +15,7 @@ export const SectionSix = (props: any) => {
             <div className="flex flex-col gap-16">
               <HeaderText customClass={"uppercase"} text={t("1")} />
               <div className="w-full flex justify-center">
-                <img src={"./section-6/dev.png"} />
+                <img src={"./section-6/dev.webp"} />
               </div>
               <RegularText customClass={"text-center mb-16 "} text={t("2")} />
               <Links />

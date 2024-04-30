@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Bounce, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { WelcomeBanner } from "./components/sections/welcome-banner";
 
 export const metadata: Metadata = {
   title: "SMOB",
