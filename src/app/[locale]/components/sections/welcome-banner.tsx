@@ -34,7 +34,7 @@ export const WelcomeBanner = (props: any) => {
       {showBanner ? (
         <div className="sticky top-0 left-0 w-full h-[100vh] z-20 bg-black justify-center align-center">
           <div className="div-fw h-fit w-full flex justify-center align-center">
-            <div className="flex md:flex-row flex-col justify-end md:items-center mr-24">
+            <div className="flex md:flex-row flex-col justify-end md:items-center mb-16 md:mb-0 md:mr-24">
               <img
                 id="noButton"
                 onMouseEnter={onHover}

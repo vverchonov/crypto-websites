@@ -1,7 +1,8 @@
+import { useTranslations } from "next-intl";
 import { BigText } from "../../common/text/big-text";
-import { RegularText } from "../../common/text/regular-text";
 
 export const SectionThree = (props: any) => {
+  const t = useTranslations("SectionThree");
   return (
     <div className="relative w-full mb-2 ">
       <img src={"/section-3/topscr.png"} alt="Top Screen" className="w-full" />
@@ -12,7 +13,7 @@ export const SectionThree = (props: any) => {
           className="w-[20%] absolute left-0 bottom-1/2 translate-y-1/2"
         />
         <div className="flex flex-col justify-center items-center gap-14">
-          <BigText text={"Augmented Reality"} />
+          <BigText text={t("1")} />
           <img src={"/section-3/button.png"} alt="Button" className="w-[40%]" />
           <div className="flex flex-col items-center lg:flex-row gap-16 justify-center">
             <img

@@ -6,7 +6,7 @@
     "1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
   "SectionThree": {
-    "title": "Hello world ENG!"
+    "1": "Augmented Reality"
   },
   "SectionFour": {
     "1": "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -17,7 +17,7 @@
   },
   "SectionFive": {
     "1": "Lorem ipsum dolor",
-    "2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "2": "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
   "SectionSix": {
     "1": "Dev info",

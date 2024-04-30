@@ -28,25 +28,26 @@ export const SectionFour = (props: any) => {
             </div>
           </AppearWrapper>
           <AppearWrapper>
-            <div className="flex flex-col gap-8 lg:flex-row content-center min-h-screen py-16 justify-center relative">
+            <div className="flex flex-col-reverse gap-8 lg:flex-row content-center min-h-screen py-16 justify-center relative">
               <MovingImg
                 customClassWrapper={"left-[10%]"}
                 imgPath={"./section-4/floating-item.png"}
               />
               <img
-                className="absolute bottom-0 left-[0%] h-[24vh]"
+                className="absolute bottom-0 left-[0%] h-[12vh] md:h-[24vh]"
                 src="./section-4/bear-side.png"
               />
               <img
-                className="absolute mirror-y bottom-0 right-[0%] h-[24vh]"
+                className="absolute mirror-y bottom-0 right-[0%] h-[12vh] md:h-[24vh]"
                 src="./section-4/bear-side.png"
               />
               <div className="flex items-center lg:w-5/12">
                 <BigText
+                  customClass={"md:text-left text-center"}
                   extra={
                     <MovingImg
                       y={150}
-                      customClassWrapper={"bottom-0 left-[50%]"}
+                      customClassWrapper={"bottom-0 left-[50%] "}
                       imgPath={"./section-4/floating-item.png"}
                     />
                   }

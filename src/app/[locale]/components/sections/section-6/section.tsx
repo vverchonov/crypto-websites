@@ -13,7 +13,10 @@ export const SectionSix = (props: any) => {
         <AppearWrapper>
           <Wrapper>
             <div className="flex flex-col gap-16">
-              <HeaderText customClass={"uppercase"} text={t("1")} />
+              <HeaderText
+                customClass={"uppercase text-center md:text-left"}
+                text={t("1")}
+              />
               <div className="w-full flex justify-center">
                 <img src={"./section-6/dev.webp"} />
               </div>

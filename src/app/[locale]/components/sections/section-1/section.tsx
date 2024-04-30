@@ -14,12 +14,16 @@ export const SectionOne = (props: any) => {
         <div className="min-h-screen w-full relative ">
           <Wrapper>
             <div className="flex flex-col gap-8 items-center">
+              <Links />
               <RegularText customClass={"text-center"} text={t("1")} />
               <img
                 className="w-[50%] md:w-[15%]"
                 src={"./section-1/change-lang.webp"}
               />
-              <img className="md:w-[50%]" src={"./section-1/game.webp"} />
+              <img
+                className="md:w-[50%] mb-32 md:mb-16"
+                src={"./section-1/game.webp"}
+              />
             </div>
           </Wrapper>
           <div className="w-full absolute bottom-0 left-0">
@@ -33,7 +37,10 @@ export const SectionOne = (props: any) => {
                 src="./section-1/bear-2.webp"
               />
             </div>
-            <img className="w-full" src={"./section-1/doroga.webp"} />
+            <img
+              className="w-full h-16 md:h-fill"
+              src={"./section-1/doroga.webp"}
+            />
           </div>
         </div>
       </AppearWrapper>
