@@ -4,13 +4,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { CopyIcon } from "./icons/copy-icon";
 import { CA } from "@/app/[locale]/urls";
 
-type Props = {
-  copyLink: string;
-};
-
-export const CopyCa = (props: Props) => {
+export const CopyCa = (props: any) => {
   const onCopy = () => {
-    navigator.clipboard.writeText(props.copyLink);
+    navigator.clipboard.writeText(CA);
     toast.success("Link copied to clipboard!", {
       position: "top-right",
       autoClose: 3000,

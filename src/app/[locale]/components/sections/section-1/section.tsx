@@ -5,6 +5,8 @@ import { RegularText } from "../../common/text/regular-text";
 
 import { AppearWrapper } from "../../common/wrappers/appear-wrapper";
 import { MarqueeCustom } from "./marquee";
+import { SwitchLang } from "./switch-lang";
+import { CopyCa } from "../../common/copy-ca";
 
 export const SectionOne = (props: any) => {
   const t = useTranslations("SectionOne");
@@ -15,11 +17,11 @@ export const SectionOne = (props: any) => {
           <Wrapper>
             <div className="flex flex-col gap-8 items-center">
               <Links />
+
               <RegularText customClass={"text-center"} text={t("1")} />
-              <img
-                className="w-[50%] md:w-[15%]"
-                src={"./section-1/change-lang.webp"}
-              />
+              <CopyCa copyLink="" />
+              <SwitchLang />
+
               <img
                 className="md:w-[50%] mb-32 md:mb-16"
                 src={"./section-1/game.webp"}

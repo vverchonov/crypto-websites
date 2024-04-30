@@ -5,6 +5,7 @@ import { RegularText } from "../../common/text/regular-text";
 import { Links } from "./links";
 import { AppearWrapper } from "../../common/wrappers/appear-wrapper";
 import { BigText } from "../../common/text/big-text";
+import { CopyCa } from "../../common/copy-ca";
 
 export const SectionSix = (props: any) => {
   const t = useTranslations("SectionSix");
@@ -33,6 +34,9 @@ export const SectionSix = (props: any) => {
                 </div>
               </div>
               <Links customWrapper={"mt-auto max-w-screen-2xl"} />
+              <div className="flex w-full justify-center">
+                <CopyCa copyLink={urls} />
+              </div>
             </div>
           </Wrapper>
         </AppearWrapper>
