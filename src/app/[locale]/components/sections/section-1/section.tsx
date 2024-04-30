@@ -12,16 +12,12 @@ export const SectionOne = (props: any) => {
       <AppearWrapper>
         <div className="min-h-screen w-full relative ">
           <Wrapper>
-            <div className="flex flex-col gap-8 items-center ">
-              <Links />
-              <RegularText
-                customClass={"text-center max-w-screen-2xl"}
-                text={t("1")}
-              />
-              <img
+            <div className="flex flex-col gap-8 items-center">
+              <RegularText customClass={"text-center"} text={t("1")} />
+              {/* <img
                 className="w-[50%] md:w-[15%]"
                 src={"./section-1/change-lang.png"}
-              />
+              /> */}
               <img className="md:w-[50%]" src={"./section-1/game.png"} />
             </div>
           </Wrapper>
