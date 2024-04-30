@@ -57,9 +57,6 @@ export const SectionOne = (props: any) => {
           </div>
         </div>
       </AppearWrapper>
-      <div className="w-full">
-        <MarqueeCustom />
-      </div>
     </>
   );
 };
