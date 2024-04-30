@@ -10,8 +10,6 @@ COPY package*.json ./
 RUN apk add --no-cache python3 py3-pip make g++ linux-headers eudev-dev \
     && ln -sf python3 /usr/bin/python
 
-RUN npm cache clean --force
-RUN rm -rf node_modules
 RUN npm install
 
 # Copy the rest of your app's source code from your host to your image filesystem.
