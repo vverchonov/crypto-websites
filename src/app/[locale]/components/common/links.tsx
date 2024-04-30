@@ -20,9 +20,14 @@ const buttonClass =
 
 const iconClass = "w-12 h-12 fill-black 2xl:h-24 2xl:w-24 ";
 
-export const Links = () => {
+export const Links = (props: any) => {
   return (
-    <div className="flex justify-evenly w-full gap-8 flex-row z-50 flex-wrap max-w-screen-2xl">
+    <div
+      className={
+        "flex justify-evenly w-full gap-8 flex-row z-50 flex-wrap max-w-screen-2xl " +
+        props.customWrapper
+      }
+    >
       <a target="_blank" href={TWITTER} className={buttonClass}>
         <XIcon iconClass={iconClass} />
       </a>

@@ -38,7 +38,7 @@ export const SectionOne = (props: any) => {
               />
             </div>
             <img
-              className="w-full h-16 md:h-fill"
+              className="w-full h-16 md:h-32"
               src={"./section-1/doroga.webp"}
             />
           </div>
