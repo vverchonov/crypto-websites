@@ -11,7 +11,6 @@ export const SectionOne = (props: any) => {
     <>
       <AppearWrapper>
         <div className="min-h-screen w-full relative">
-          <Links />
           <Wrapper>
             <div className="flex flex-col gap-8 items-center">
               <RegularText customClass={"text-center"} text={t("1")} />

@@ -6,16 +6,16 @@ export const MarqueeCustom = () => {
     <AppearWrapper>
       <div className="w-full my-16">
         <Marquee autoFill>
-          <img className="w-6/12" src="./section-1/marquee.jpg" />
-          <img className="w-6/12" src="./section-1/marquee.jpg" />
-          <img className="w-6/12" src="./section-1/marquee.jpg" />
-          <img className="w-6/12" src="./section-1/marquee.jpg" />
-          <img className="w-6/12" src="./section-1/marquee.jpg" />
-          <img className="w-6/12" src="./section-1/marquee.jpg" />
-          <img className="w-6/12" src="./section-1/marquee.jpg" />
-          <img className="w-6/12" src="./section-1/marquee.jpg" />
-          <img className="w-6/12" src="./section-1/marquee.jpg" />
-          <img className="w-6/12" src="./section-1/marquee.jpg" />
+          <div className="flex flex-row gap-8 h-[25vh]">
+            {[...Array(40)].map((_, index) => (
+              <img
+                key={index}
+                src={`/section-1/pho${index + 1}.png`}
+                alt={`Image ${index}`}
+                className="w-full rounded-2xl"
+              />
+            ))}
+          </div>
         </Marquee>
       </div>
     </AppearWrapper>

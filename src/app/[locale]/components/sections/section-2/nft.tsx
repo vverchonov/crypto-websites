@@ -42,9 +42,7 @@ export const NFT = (props: any) => {
         // setNfts(state.items);
         setCandyStateErr(null);
       } catch (e: any) {
-        console.error(e);
-        setCandyStateErr("Error fetching candy machine state");
-        toast.error("Error fetching candy machine state");
+        setCandyStateErr("Failed to get NFT information");
       } finally {
         setCandyStateLoading(false);
       }
@@ -65,12 +63,11 @@ export const NFT = (props: any) => {
             candyMachine: candyState,
         }); 
     } catch (e) {
-        console.error(e);
-        setTxErr("Error claiming NFT");
-        toast.error("Error claiming NFT");
+        setTxErr("Failed to claim NFT");
+        toast.error("Failed to claim NFT, try again...");
     } finally {
         setTxLoading(false);
-        toast.success("NFT claimed");
+        toast.success("NFT claimed, congrats!");
     }
   };
 
