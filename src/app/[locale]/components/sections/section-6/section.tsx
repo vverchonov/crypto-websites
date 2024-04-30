@@ -16,7 +16,7 @@ function Dev() {
       alt="Developer"
       priority
       fetchPriority="high"
-      className="rounded-2xl shadow-xl"
+      className="rounded-2xl shadow-xl "
     />
   );
 }
@@ -30,7 +30,7 @@ export const SectionSix = (props: any) => {
           <Wrapper>
             <div className="flex flex-col gap-16">
               <HeaderText
-                customClass={"uppercase text-center mb-4"}
+                customClass={"uppercase text-center mb-2"}
                 text={t("1")}
               />
               <Dev />

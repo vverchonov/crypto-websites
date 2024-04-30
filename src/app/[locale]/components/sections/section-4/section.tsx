@@ -55,7 +55,11 @@ export const SectionFour = (props: any) => {
                 />
               </div>
               <div className="lg:w-5/12 flex flex-col gap-8">
-                <div className="h-[80vh]" id="dexscreener-embed">
+                <div className="h-[80vh] relative" id="dexscreener-embed">
+                  <img
+                    className="absolute top-0 w-32 left-[50%] mt-[-30%] md:mt-[-15%]"
+                    src={"./section-4/sitting.webp"}
+                  />
                   <iframe
                     className="w-full h-full rounded-xl shadow-2xl"
                     src="https://dexscreener.com/solana/CSUbFtooSRsNs1HfAreVnG42fwef234gD6AUZ3Mt6deYtAcv3uQjp?embed=1&theme=dark"
