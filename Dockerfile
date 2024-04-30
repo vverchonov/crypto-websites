@@ -7,12 +7,11 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-RUN apk add --no-cache python3 py3-pip make g++ \
+RUN apk add --no-cache python3 py3-pip make g++ linux-headers \
     && ln -sf python3 /usr/bin/python
 
 RUN npm cache clean --force
-
-# Install dependencies
+RUN rm -rf node_modules
 RUN npm install
 
 # Copy the rest of your app's source code from your host to your image filesystem.
