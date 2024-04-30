@@ -53,25 +53,25 @@ export const NFT = (props: any) => {
   }, [metaplex]);
 
   const mint = async () => {
-    if(!metaplex || !candyState) return;
+    if (!metaplex || !candyState) return;
 
     setTxLoading(true);
     setTxErr(null);
 
     try {
-        const mintResult = await metaplex.candyMachinesV2().mint({
-            candyMachine: candyState,
-        }); 
+      const mintResult = await metaplex.candyMachinesV2().mint({
+        candyMachine: candyState,
+      });
     } catch (e) {
-        setTxErr("Failed to claim NFT");
-        toast.error("Failed to claim NFT, try again...");
+      setTxErr("Failed to claim NFT");
+      toast.error("Failed to claim NFT, try again...");
     } finally {
-        setTxLoading(false);
-        toast.success("NFT claimed, congrats!");
+      setTxLoading(false);
+      toast.success("NFT claimed, congrats!");
     }
   };
 
-  const soldOut = candyState?.itemsRemaining.eqn(0)
+  const soldOut = candyState?.itemsRemaining.eqn(0);
 
   return (
     <div className="flex flex-row justify-between items-center relative">
@@ -83,9 +83,11 @@ export const NFT = (props: any) => {
         customClassWrapper={"right-[5%] top-0"}
         imgPath={"./section-4/floating-item.png"}
       />
-      <div>
-        <img src="/section-2/chel.png" alt="chel" className="w-[40%]" />
-      </div>
+      <img
+        src="/section-2/chel.png"
+        alt="chel"
+        className="w-[40%] left-[-50%] absolute"
+      />
       <div className="flex flex-col w-full justify-center items-center h-full mr-24 pr-48">
         <WalletMultiButton />
         <BigText text={"Claim your NFT"} />
@@ -110,7 +112,11 @@ export const NFT = (props: any) => {
             )
           )}
         </div>
-        <button className="text-4xl rounded-xl w-1/2 border p-4 border-black" onClick={mint} disabled={txLoading || !candyState || !wallet}>
+        <button
+          className="text-4xl rounded-xl w-1/2 border p-4 border-black"
+          onClick={mint}
+          disabled={txLoading || !candyState || !wallet}
+        >
           {soldOut ? "Sold Out" : txLoading ? "Claiming..." : "Claim NFT"}
         </button>
         <div className="text-4xl text-center mt-12">
