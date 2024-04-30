@@ -17,9 +17,9 @@ export const SectionOne = (props: any) => {
               <RegularText customClass={"text-center"} text={t("1")} />
               <img
                 className="w-[50%] md:w-[15%]"
-                src={"./section-1/change-lang.png"}
+                src={"./section-1/change-lang.webp"}
               />
-              <img className="md:w-[50%]" src={"./section-1/game.png"} />
+              <img className="md:w-[50%]" src={"./section-1/game.webp"} />
             </div>
           </Wrapper>
           <div className="w-full absolute bottom-0 left-0">
