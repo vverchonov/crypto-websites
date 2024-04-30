@@ -8,7 +8,7 @@ export const SectionFour = (props: any) => {
   const t = useTranslations("SectionFour");
   return (
     <>
-      <div className="min-h-screen w-full content-center relative overflow-hidden">
+      <div className="min-h-screen w-full content-center relative overflow-hidden max-w-screen-2xl">
         <Wrapper>
           <AppearWrapper>
             <div className="flex flex-col gap-8 lg:flex-row content-center min-h-screen py-16 justify-center relative">
@@ -34,11 +34,11 @@ export const SectionFour = (props: any) => {
                 imgPath={"./section-4/floating-item.png"}
               />
               <img
-                className="absolute bottom-0 left-[-15%] h-[24vh]"
+                className="absolute bottom-0 left-[0%] h-[24vh]"
                 src="./section-4/bear-side.png"
               />
               <img
-                className="absolute mirror-y bottom-0 right-[-15%] h-[24vh]"
+                className="absolute mirror-y bottom-0 right-[0%] h-[24vh]"
                 src="./section-4/bear-side.png"
               />
               <div className="flex items-center lg:w-5/12">

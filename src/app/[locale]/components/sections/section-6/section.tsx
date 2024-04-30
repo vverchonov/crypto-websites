@@ -9,7 +9,7 @@ export const SectionSix = (props: any) => {
   const t = useTranslations("SectionSix");
   return (
     <>
-      <div className="min-h-screen w-full relative">
+      <div className="min-h-screen w-full relative max-w-screen-2xl">
         <AppearWrapper>
           <Wrapper>
             <div className="flex flex-col gap-16">
@@ -17,7 +17,7 @@ export const SectionSix = (props: any) => {
               <div className="w-full flex justify-center">
                 <img src={"./section-6/dev.png"} />
               </div>
-              <RegularText customClass={"text-center"} text={t("2")} />
+              <RegularText customClass={"text-center mb-16 "} text={t("2")} />
               <Links />
             </div>
           </Wrapper>

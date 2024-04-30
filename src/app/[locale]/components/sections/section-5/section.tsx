@@ -8,7 +8,7 @@ export const SectionFive = (props: any) => {
   const t = useTranslations("SectionFive");
   return (
     <>
-      <div className="min-h-screen w-full relative">
+      <div className="min-h-screen w-full relative max-w-screen-2xl">
         <AppearWrapper>
           <Wrapper>
             <div className="flex flex-col gap-16">

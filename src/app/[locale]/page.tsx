@@ -10,16 +10,16 @@ import { WelcomeBanner } from "./components/common/welcome-banner";
 export default function Home() {
   return (
     <>
-      <main>
-        <WelcomeBanner />
+      <WelcomeBanner />
+      <main className="flex justtify-center align-center content-center items-center flex-col">
         <SectionOne />
         <SectionTwo />
         <SectionThree />
         <SectionFour />
         <SectionFive />
         <SectionSix />
-        <FooterSection />
       </main>
+      <FooterSection />
     </>
   );
 }

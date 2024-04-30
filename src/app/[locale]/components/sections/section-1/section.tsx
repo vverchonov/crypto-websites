@@ -10,10 +10,14 @@ export const SectionOne = (props: any) => {
   return (
     <>
       <AppearWrapper>
-        <div className="min-h-screen w-full relative">
+        <div className="min-h-screen w-full relative ">
           <Wrapper>
-            <div className="flex flex-col gap-8 items-center">
-              <RegularText customClass={"text-center"} text={t("1")} />
+            <div className="flex flex-col gap-8 items-center ">
+              <Links />
+              <RegularText
+                customClass={"text-center max-w-screen-2xl"}
+                text={t("1")}
+              />
               <img
                 className="w-[50%] md:w-[15%]"
                 src={"./section-1/change-lang.png"}

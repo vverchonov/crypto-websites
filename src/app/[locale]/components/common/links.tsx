@@ -18,11 +18,11 @@ import {
 const buttonClass =
   " select-none text-white font-bold cursor-pointer rounded-full flex flex-row content-center items-center transform transition duration-500 hover:scale-105";
 
-const iconClass = "w-12 h-12 fill-black";
+const iconClass = "w-12 h-12 fill-black 2xl:h-24 2xl:w-24 ";
 
 export const Links = () => {
   return (
-    <div className="flex justify-evenly p-8 flex-row z-50 flex-wrap">
+    <div className="flex justify-evenly w-full gap-8 flex-row z-50 flex-wrap max-w-screen-2xl">
       <a target="_blank" href={TWITTER} className={buttonClass}>
         <XIcon iconClass={iconClass} />
       </a>

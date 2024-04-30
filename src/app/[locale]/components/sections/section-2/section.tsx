@@ -17,6 +17,7 @@ import {
 } from "@solana/wallet-adapter-wallets";
 import "@solana/wallet-adapter-react-ui/styles.css";
 import { NFT } from "./nft";
+import { BigText } from "../../common/text/big-text";
 
 export const SectionTwo = (props: any) => {
   useCompensateScrollbar();
@@ -40,16 +41,20 @@ export const SectionTwo = (props: any) => {
         <WalletModalProvider>
           {mounted && (
             <AppearWrapper>
-              <div className="min-h-screen w-full content-center relative">
+              <div className="min-h-screen w-full content-center relative ">
                 <MovingImg
                   customClassWrapper={"top-[50%] left-[40%]"}
                   imgPath={"./section-4/floating-item.png"}
                 />
-                <div className="flex flex-col">
+                <div className="flex flex-col ">
                   <div className="flex flex-col justify-center items-center w-full">
-                    <h2 className="text-3xl">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit
-                    </h2>
+                    <BigText
+                      customClass={" max-w-screen-2xl "}
+                      text={
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit"
+                      }
+                    />
+
                     <a href="https://google.com" className="text-2xl mt-6">
                       Google Disk
                     </a>

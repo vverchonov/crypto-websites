@@ -1,6 +1,6 @@
 export const SectionThree = (props: any) => {
   return (
-    <div className="relative w-full mb-2">
+    <div className="relative w-full mb-2 ">
       <img
         src="/section-3/topscr.png"
         alt="Top Screen"

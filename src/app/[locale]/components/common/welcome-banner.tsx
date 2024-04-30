@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const imgClass = "cursor-pointer mb-4 h-16 md:mb-0 lg:h-24";
+const imgClass = "cursor-pointer mb-4 h-16 md:mb-0 lg:h-18";
 
 export const WelcomeBanner = (props: any) => {
   const [showBanner, setShowBanner] = useState(true);
@@ -34,17 +34,17 @@ export const WelcomeBanner = (props: any) => {
       {showBanner ? (
         <div className="sticky top-0 left-0 w-full h-[100vh] z-20 bg-black justify-center align-center">
           <div className="div-fw h-fit w-full flex justify-center align-center">
-            <div className="flex md:flex-row flex-col justify-end md:items-center">
-              <img
-                onClick={onClick}
-                className={imgClass + " "}
-                src="./banner/yes.png"
-              />
+            <div className="flex md:flex-row flex-col justify-end md:items-center mr-24">
               <img
                 id="noButton"
                 onMouseEnter={onHover}
                 className={imgClass + " transition duration-300 ease-in-out"}
                 src="./banner/no.png"
+              />
+              <img
+                onClick={onClick}
+                className={imgClass + " "}
+                src="./banner/yes.png"
               />
             </div>
           </div>
