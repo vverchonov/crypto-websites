@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { HeaderText } from "../../common/text/header-text";
 import { Wrapper } from "../../common/wrappers/wrapper";
 import { RegularText } from "../../common/text/regular-text";
-import { Links } from "../../common/links";
+import { Links } from "./links";
 import { AppearWrapper } from "../../common/wrappers/appear-wrapper";
 import { BigText } from "../../common/text/big-text";
 

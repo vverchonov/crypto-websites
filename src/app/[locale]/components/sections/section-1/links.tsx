@@ -1,10 +1,10 @@
-import { DevIcon } from "./icons/dev-icon";
-import { RaydiumIcon } from "./icons/raydium-icon";
-import { TgIcon } from "./icons/tg-icon";
-import { XIcon } from "./icons/x-icon";
-import { JupiterIcon } from "./icons/jupiter-icon";
-import { DexscreenerIcon } from "./icons/dexscreener-icon";
-import { DextoolsIcon } from "./icons/dextools-icon";
+import { DevIcon } from "../../common/icons/dev-icon";
+import { RaydiumIcon } from "../../common/icons/raydium-icon";
+import { TgIcon } from "../../common/icons/tg-icon";
+import { XIcon } from "../../common/icons/x-icon";
+import { JupiterIcon } from "../../common/icons/jupiter-icon";
+import { DexscreenerIcon } from "../../common/icons/dexscreener-icon";
+import { DextoolsIcon } from "../../common/icons/dextools-icon";
 import {
   DEXSCREENER,
   JUPITER,
@@ -22,12 +22,7 @@ const iconClass = "w-12 h-12 fill-black 2xl:h-24 2xl:w-24 ";
 
 export const Links = (props: any) => {
   return (
-    <div
-      className={
-        "flex justify-evenly w-full gap-8 flex-row z-50 flex-wrap max-w-screen-2xl " +
-        props.customWrapper
-      }
-    >
+    <div className="flex justify-center w-full gap-12 lg:gap-24 flex-row flex-wrap max-w-screen-2xl">
       <a target="_blank" href={TWITTER} className={buttonClass}>
         <XIcon iconClass={iconClass} />
       </a>

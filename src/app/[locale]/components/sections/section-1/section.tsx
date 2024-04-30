@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Links } from "../../common/links";
+import { Links } from "./links";
 import { Wrapper } from "../../common/wrappers/wrapper";
 import { RegularText } from "../../common/text/regular-text";
 

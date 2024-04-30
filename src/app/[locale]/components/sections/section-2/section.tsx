@@ -46,15 +46,14 @@ export const SectionTwo = (props: any) => {
                   customClassWrapper={"top-[50%] left-[40%]"}
                   imgPath={"./section-4/floating-item.png"}
                 />
-                <div className="flex flex-col ">
+                <div className="flex flex-col">
                   <div className="flex flex-col justify-center items-center w-full">
                     <BigText
-                      customClass={" max-w-screen-2xl "}
+                      customClass={" max-w-screen-2xl text-center"}
                       text={
                         "Lorem ipsum dolor sit amet consectetur adipisicing elit"
                       }
                     />
-
                     <a href="https://google.com" className="text-2xl mt-6">
                       Google Disk
                     </a>

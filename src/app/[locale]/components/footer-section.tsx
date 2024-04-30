@@ -27,14 +27,6 @@ export const FooterSection = () => {
           >
             <TgIcon iconClass={iconClass} />
           </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={TELEGRAM_DEV}
-            className="mx-[2px] rounded p-2 font-bold"
-          >
-            <DevIcon iconClass={iconClass} />
-          </a>
         </span>
       </p>
       <p className="px-2 text-sm">

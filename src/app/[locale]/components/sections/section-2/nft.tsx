@@ -74,7 +74,7 @@ export const NFT = (props: any) => {
   const soldOut = candyState?.itemsRemaining.eqn(0);
 
   return (
-    <div className="flex flex-row justify-between items-center relative">
+    <div className="flex flex-row justify-end items-center relative min-h-[60vh]">
       <MovingImg
         customClassWrapper={"right-[5%] bottom-0"}
         imgPath={"./section-4/floating-item.png"}
@@ -88,7 +88,7 @@ export const NFT = (props: any) => {
         alt="chel"
         className="w-[40%] left-[-50%] absolute"
       />
-      <div className="flex flex-col w-full justify-center items-center h-full mr-24 pr-48">
+      <div className="flex flex-col w-full justify-center items-center h-full">
         <WalletMultiButton />
         <BigText text={"Claim your NFT"} />
         <div className="text-4xl text-center mb-12">

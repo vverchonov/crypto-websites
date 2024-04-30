@@ -17,7 +17,7 @@ export default function RootLayout({
   params: { locale: string };
 }) {
   return (
-    <html lang={locale}>
+    <html lang={locale} className="">
       <head>
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="SMOB" />
@@ -32,7 +32,7 @@ export default function RootLayout({
         <meta name="twitter:description" content="Smoking and Depressed Bear" />
         <meta name="twitter:image" content="http://smobsolana.com/header.png" />
       </head>
-      <body>
+      <body className="overflow-hidden">
         <ToastContainer
           position="top-right"
           autoClose={5000}
