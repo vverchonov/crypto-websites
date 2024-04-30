@@ -47,7 +47,7 @@ export const Banner = (props: any) => {
                   src="./banner/yes.webp"
                 />
               </div>
-              <div className="lg:min-w-56 min-w-44">
+              <div className="lg:min-w-56 min-w-44 mb-16 md:mb-0">
                 <img
                   id="noButton"
                   onMouseEnter={onHover}
