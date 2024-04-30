@@ -35,7 +35,7 @@ export const SectionSix = (props: any) => {
               </div>
               <Links customWrapper={"mt-auto max-w-screen-2xl"} />
               <div className="flex w-full justify-center">
-                <CopyCa copyLink={urls} />
+                <CopyCa />
               </div>
             </div>
           </Wrapper>

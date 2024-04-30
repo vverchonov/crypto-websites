@@ -20,7 +20,6 @@ export const SectionOne = (props: any) => {
 
               <RegularText customClass={"text-center"} text={t("1")} />
               <CopyCa copyLink="" />
-              <SwitchLang />
 
               <img
                 className="md:w-[50%] mb-32 md:mb-16"
