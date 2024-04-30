@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-RUN apk add --no-cache python3 py3-pip make g++ linux-headers \
+RUN apk add --no-cache python3 py3-pip make g++ linux-headers eudev-dev \
     && ln -sf python3 /usr/bin/python
 
 RUN npm cache clean --force
