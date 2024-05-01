@@ -46,7 +46,7 @@ export default function RootLayout({
       <body>
         {/* @ts-ignore */}
         <model-viewer
-          src="666.glb"
+          src="Astronaut.glb"
           ar
           ar-modes="scene-viewer webxr quick-look"
           camera-controls
