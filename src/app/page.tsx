@@ -34,7 +34,7 @@ export default function Home() {
       {/* @ts-ignore */}
       <model-viewer
         ref={modelViewerRef}
-        src="test6.glb"
+        src="test7.glb"
         ar
         ar-modes="scene-viewer webxr quick-look"
         camera-controls
