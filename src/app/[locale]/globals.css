@@ -58,3 +58,8 @@ body {
 .bg-sky {
   background-color: #d9e8f8;
 }
+
+.orange-link {
+  color: #ff9900;
+  fill: #ff9900;
+}

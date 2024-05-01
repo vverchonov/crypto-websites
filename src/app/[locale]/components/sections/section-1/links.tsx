@@ -16,9 +16,9 @@ import {
 } from "@/app/[locale]/urls";
 
 const buttonClass =
-  " select-none text-white font-bold cursor-pointer rounded-full flex flex-row content-center items-center transform transition duration-500 hover:scale-105";
+  " select-none orange-link font-bold cursor-pointer rounded-full flex flex-row content-center items-center transform transition duration-500 hover:scale-105";
 
-const iconClass = "w-12 h-12 fill-black 2xl:h-24 2xl:w-24 ";
+const iconClass = "w-12 h-12 orange-link  fill-black 2xl:h-24 2xl:w-24 ";
 
 export const Links = (props: any) => {
   return (
