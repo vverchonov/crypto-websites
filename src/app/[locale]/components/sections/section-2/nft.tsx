@@ -102,14 +102,14 @@ export const NFT = (props: any) => {
         <div className="w-full flex justify-center">
           <button
             className={
-              " rounded-xl w-[30%] flex justify-center " + soldOut
+              " rounded-xl w-[50%] flex justify-center " + soldOut
                 ? "btn-red "
                 : "btn-orange"
             }
             onClick={mint}
             disabled={txLoading || !candyState || !wallet}
           >
-            <p className="text-4xl p-4 pt-0 cursor-pointer">
+            <p className="text-4xl  p-8 pt-4 cursor-pointer">
               {soldOut ? "Sold Out" : txLoading ? "Claiming..." : "Claim NFT"}
             </p>
           </button>
