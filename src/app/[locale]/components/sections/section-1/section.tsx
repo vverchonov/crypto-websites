@@ -4,7 +4,7 @@ import { Wrapper } from "../../common/wrappers/wrapper";
 import { RegularText } from "../../common/text/regular-text";
 
 import { AppearWrapper } from "../../common/wrappers/appear-wrapper";
-import { MarqueeCustom } from "./marquee";
+import { MarqueeCustom } from "../section-2/marquee";
 // import { SwitchLang } from "../../switch-lang";
 import { CopyCa } from "../../common/copy-ca";
 import Image from "next/image";

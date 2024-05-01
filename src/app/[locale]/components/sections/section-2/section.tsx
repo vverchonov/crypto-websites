@@ -18,7 +18,7 @@ import {
 import "@solana/wallet-adapter-react-ui/styles.css";
 import { NFT } from "./nft";
 import { BigText } from "../../common/text/big-text";
-import { MarqueeCustom } from "../section-1/marquee";
+import { MarqueeCustom } from "./marquee";
 
 export const SectionTwo = (props: any) => {
   useCompensateScrollbar();
