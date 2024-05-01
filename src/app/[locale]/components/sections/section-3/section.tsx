@@ -33,7 +33,7 @@ function BotScreen() {
 export const SectionThree = (props: any) => {
   const t = useTranslations("SectionThree");
   return (
-    <div className="relative w-full mb-2 ">
+    <div className="relative w-full mb-2">
       <TopScreen />
       <div className="min-h-[80vh] flex items-center justify-center relative z-10">
         <img
