@@ -53,12 +53,51 @@ function Doroga() {
   );
 }
 
+function Clouds() {
+  return (
+    <AppearWrapper>
+      <div className="w-full absolute top-12 left-0 w-full flex flex-col gap-4">
+        <Marquee className="relative " speed={15} autoFill direction={"left"}>
+          <div className="flex flew-row gap-24">
+            {[...Array(10)].map((_, index) => (
+              <img
+                key={index}
+                src={`/section-1/clouds/cl${index + 1}.webp`}
+                alt={`Image ${index}`}
+                className="w-full h-16 select-none"
+              />
+            ))}
+          </div>
+        </Marquee>
+        <Marquee
+          className="relative bottom-[-15px]"
+          speed={25}
+          autoFill
+          direction={"left"}
+        >
+          <div className="flex flew-row gap-16">
+            {[...Array(10)].map((_, index) => (
+              <img
+                key={index}
+                src={`/section-1/clouds/cl${index + 1}.webp`}
+                alt={`Image ${index}`}
+                className="w-full h-16 select-none"
+              />
+            ))}
+          </div>
+        </Marquee>
+      </div>
+    </AppearWrapper>
+  );
+}
+
 export const SectionOne = (props: any) => {
   const t = useTranslations("SectionOne");
   return (
     <>
       <AppearWrapper>
         <div className="min-h-screen w-full flex justify-center align-center items-center relative overflow-hidden bg-sky">
+          <Clouds />
           <Wrapper>
             <div className="flex flex-col gap-8 items-center">
               <Links />
