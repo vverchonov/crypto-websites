@@ -10,7 +10,32 @@ export const SectionFive = (props: any) => {
   const t = useTranslations("SectionFive");
   return (
     <>
-      <div className="min-h-screen w-full flex justify-center items-center max-w-screen-2xl">
+      <div className="min-h-screen w-full flex justify-center relative items-center max-w-screen-2xl">
+        <MovingImg
+          tz={1}
+          ty={4}
+          tx={4}
+          customClassImg={"w-2/12 md:w-4/12 h-auto"}
+          customClassWrapper={"left-0"}
+          imgPath={"./common/money.webp"}
+        />
+        <MovingImg
+          tz={1}
+          ty={-4}
+          tx={-2}
+          customClassImg={"w-2/12 md:w-4/12 h-auto"}
+          customClassWrapper={"right-0 bottom-40"}
+          imgPath={"./common/money.webp"}
+        />
+        <MovingImg
+          tz={1}
+          ty={-4}
+          tx={-2}
+          customClassImg={"w-2/12 md:w-4/12 h-auto"}
+          customClassWrapper={"left-50 bottom-24"}
+          imgPath={"./common/money.webp"}
+        />
+
         <AppearWrapper>
           <Wrapper>
             <div className="flex flex-col md:gap-16">
