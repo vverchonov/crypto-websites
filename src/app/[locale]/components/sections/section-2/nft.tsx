@@ -109,7 +109,7 @@ export const NFT = (props: any) => {
             onClick={mint}
             disabled={txLoading || !candyState || !wallet}
           >
-            <p className="text-4xl  p-8 pt-4 cursor-pointer">
+            <p className="text-4xl  p-8 pt-4 cursor-pointer select-none">
               {soldOut ? "Sold Out" : txLoading ? "Claiming..." : "Claim NFT"}
             </p>
           </button>
