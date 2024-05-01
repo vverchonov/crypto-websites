@@ -34,7 +34,7 @@ export default function Home() {
       {/* @ts-ignore */}
       <model-viewer
         ref={modelViewerRef}
-        src="Horse.glb"
+        src="RobotExpressive.glb"
         ar
         ar-modes="scene-viewer webxr quick-look"
         camera-controls
