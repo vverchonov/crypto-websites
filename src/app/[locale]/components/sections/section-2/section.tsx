@@ -46,9 +46,14 @@ export const SectionTwo = (props: any) => {
                 <img
                   src="/section-2/chel.png"
                   alt="chel"
-                  className="w-[20%] left-[-10%] mt-20 md:mt-0 absolute"
+                  className="w-[30%] left-[-15%] mt-20 md:mt-0 absolute"
                 />
-                <div className="min-h-[70vh] w-full content-center relative max-w-screen-2xl overflow-hidden">
+                <img
+                  src="/section-2/chel.png"
+                  alt="chel"
+                  className="w-[30%] right-[-15%] mt-20 md:mt-0 absolute mirror-y"
+                />
+                <div className="min-h-[100vh] w-full content-center relative max-w-screen-2xl overflow-hidden">
                   <MovingImg
                     customClassWrapper={"top-[50%] left-[10%]"}
                     imgPath={"./section-4/floating-item.png"}
