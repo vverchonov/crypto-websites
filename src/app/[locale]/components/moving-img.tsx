@@ -25,7 +25,10 @@ export const MovingImg = (props: any) => {
           ease: "easeInOut",
         }}
       >
-        <img className={props.customClassImg} src={props.imgPath} />
+        <img
+          className={props.customClassImg + " select-none"}
+          src={props.imgPath}
+        />
       </motion.div>
     </motion.div>
   );

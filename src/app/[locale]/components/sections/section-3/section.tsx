@@ -12,7 +12,7 @@ function TopScreen() {
     <Image
       src={topScrImg}
       alt="Top Screen"
-      className="w-full h-8 md:h-16"
+      className="w-full h-8 md:h-16 select-none"
       fetchPriority="high"
       priority
     />
@@ -24,7 +24,7 @@ function BotScreen() {
     <Image
       src={btmScrImg}
       alt="Bottom Screen"
-      className="w-full"
+      className="w-full select-none"
       fetchPriority="high"
       priority
     />
@@ -40,7 +40,7 @@ export const SectionThree = (props: any) => {
         <img
           src={"/section-3/hand2.png"}
           alt="Hand"
-          className="w-[20%] absolute left-0 bottom-1/2 translate-y-1/2"
+          className="w-[20%] absolute left-0 bottom-1/2 translate-y-1/2 select-none"
         />
         <Wrapper>
           <div className="flex flex-col justify-center items-center gap-24">
@@ -57,7 +57,7 @@ export const SectionThree = (props: any) => {
               <img
                 src={"/section-3/vr/qrcode.svg"}
                 alt="Button"
-                className="w-11/12"
+                className="w-11/12 select-none"
               />
             </a>
             <Preview />
@@ -66,7 +66,7 @@ export const SectionThree = (props: any) => {
         <img
           src={"/section-3/hand1.png"}
           alt="Hand"
-          className="w-[20%] absolute right-0 bottom-1/2 translate-y-1/2"
+          className="w-[20%] absolute right-0 bottom-1/2 translate-y-1/2 select-none"
         />
       </div>
       <BotScreen />

@@ -16,7 +16,7 @@ function Dev() {
       alt="Developer"
       priority
       fetchPriority="high"
-      className="rounded-2xl shadow-xl "
+      className="rounded-2xl shadow-xl select-none "
     />
   );
 }

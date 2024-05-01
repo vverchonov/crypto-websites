@@ -62,12 +62,12 @@ export const SectionTwo = (props: any) => {
                 <img
                   src="/section-2/chel.png"
                   alt="chel"
-                  className="w-[30%] bottom-1 left-[-15%] mt-28 absolute"
+                  className="w-[30%] bottom-1 left-[-15%] mt-28 absolute select-none"
                 />
                 <img
                   src="/section-2/chel.png"
                   alt="chel"
-                  className="w-[30%] bottom-1 right-[-15%] mt-28 absolute mirror-y"
+                  className="w-[30%] bottom-1 right-[-15%] mt-28 absolute mirror-y select-none"
                 />
                 <div className=" w-full content-center relative max-w-screen-2xl overflow-hidden m-auto">
                   <MovingImg

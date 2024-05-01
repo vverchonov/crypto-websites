@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { BigText } from "../../common/text/big-text";
+import { HeaderText } from "../../common/text/header-text";
 
 export const NFT = (props: any) => {
   const [metaplex, setMetaplex] = useState<Metaplex | null>(null);
@@ -76,7 +77,7 @@ export const NFT = (props: any) => {
     <div className="flex flex-row justify-end items-center relative min-h-[60vh]">
       <div className="flex flex-col gap-6 w-full justify-center items-center h-full">
         <WalletMultiButton />
-        <BigText customClass={"text-6xl"} text={"Claim your NFT"} />
+        <HeaderText customClass={"text-6xl"} text={"Claim your NFT"} />
         <div className="text-4xl text-center mb-12">
           {candyStateLoading ? (
             <p>Loading...</p>

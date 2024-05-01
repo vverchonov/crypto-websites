@@ -27,7 +27,7 @@ function Doroga() {
           <Image
             src={city}
             alt="city"
-            className="w-full h-96 z-10"
+            className="w-full h-96 z-10 select-none"
             fetchPriority="high"
             priority
           />
@@ -42,7 +42,7 @@ function Doroga() {
             <Image
               src={dorogaImg}
               alt="Doroga"
-              className="w-full h-24 md:h-36"
+              className="w-full h-24 md:h-36 select-none"
               fetchPriority="high"
               priority
             />
@@ -66,7 +66,7 @@ export const SectionOne = (props: any) => {
               <CopyCa copyLink="" />
 
               <img
-                className="md:w-[50%] mb-32 md:mb-16 z-50"
+                className="md:w-[50%] mb-32 md:mb-16 z-50 select-none"
                 src={"./section-1/game.webp"}
               />
             </div>
@@ -78,7 +78,9 @@ export const SectionOne = (props: any) => {
                 ty={2}
                 tz={5}
                 customClassWrapper={"absolute z-50 bottom-14 md:bottom-5"}
-                customClassImg={"md:ml-64 h-32 md:h-64  w-auto z-50 relative"}
+                customClassImg={
+                  "md:ml-64 h-32 md:h-64  w-auto z-50 relative select-none"
+                }
                 imgPath={"./section-1/bear-1.webp"}
               />
               <MovingImg
@@ -87,7 +89,7 @@ export const SectionOne = (props: any) => {
                 tz={5}
                 customClassWrapper={"right-0 z-50 bottom-14 md:bottom-5"}
                 customClassImg={
-                  "md:mr-64 h-32 md:h-64 w-auto ms-auto mirror-y z-50 relative"
+                  "md:mr-64 h-32 md:h-64 w-auto ms-auto mirror-y z-50 relative select-none"
                 }
                 imgPath={"./section-1/bear-2.webp"}
               />

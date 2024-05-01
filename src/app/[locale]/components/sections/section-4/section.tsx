@@ -49,7 +49,7 @@ export const SectionFour = (props: any) => {
                 imgPath={"./common/shrooms.webp"}
               />
               <img
-                className="md:absolute block -top-[6rem] left-[0%] w-[75%] md:w-[20%]"
+                className="md:absolute block -top-[6rem] left-[0%] w-[75%] md:w-[20%] select-none"
                 src="./section-4/painting.webp"
               />
               <div className="flex items-center lg:w-5/12">
@@ -71,9 +71,9 @@ export const SectionFour = (props: any) => {
                 />
               </div>
               <div className="lg:w-5/12 flex flex-col gap-8">
-                <div className="h-[75vh] relative" id="dexscreener-embed">
+                <div className="h-[75vh] relative " id="dexscreener-embed">
                   <img
-                    className="absolute top-0 w-32 left-[50%] mt-[-30%] md:mt-[-15%]"
+                    className="absolute top-0 w-32 left-[50%] mt-[-30%] md:mt-[-15%] select-none"
                     src={"./section-4/sitting.webp"}
                   />
                   <iframe
