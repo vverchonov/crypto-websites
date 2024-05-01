@@ -23,10 +23,7 @@ export const SectionTwo = (props: any) => {
   useCompensateScrollbar();
   const [mounted, setMounted] = useState(false);
 
-  const wallets = useMemo(
-    () => [new PhantomWalletAdapter(), new SolflareWalletAdapter()],
-    []
-  );
+  const wallets = useMemo(() => [new SolflareWalletAdapter()], []);
 
   useEffect(() => {
     setMounted(true);

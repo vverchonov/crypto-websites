@@ -23,7 +23,7 @@ export const CopyCa = (props: any) => {
   return (
     <button
       onClick={onCopy}
-      className="text-center z-50 text-xl cursor-pointer flex flex-row gap-4 align-center select-none"
+      className="text-center text-xl cursor-pointer flex flex-row gap-4 align-center select-none"
     >
       CA: {CA}
       <CopyIcon />

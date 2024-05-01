@@ -5,8 +5,23 @@ import { RegularText } from "../../common/text/regular-text";
 
 import { AppearWrapper } from "../../common/wrappers/appear-wrapper";
 import { MarqueeCustom } from "./marquee";
-import { SwitchLang } from "./switch-lang";
+// import { SwitchLang } from "../../switch-lang";
 import { CopyCa } from "../../common/copy-ca";
+import Image from "next/image";
+
+import dorogaImg from "../../../../../../public/section-1/doroga.webp";
+
+function Doroga() {
+  return (
+    <Image
+      src={dorogaImg}
+      alt="Doroga"
+      className="w-full h-16 md:h-32"
+      fetchPriority="high"
+      priority
+    />
+  );
+}
 
 export const SectionOne = (props: any) => {
   const t = useTranslations("SectionOne");
@@ -38,10 +53,7 @@ export const SectionOne = (props: any) => {
                 src="./section-1/bear-2.webp"
               />
             </div>
-            <img
-              className="w-full h-16 md:h-32"
-              src={"./section-1/doroga.webp"}
-            />
+            <Doroga />
           </div>
         </div>
       </AppearWrapper>

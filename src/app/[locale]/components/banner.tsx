@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { SwitchLang } from "./sections/section-1/switch-lang";
+import { SwitchLang } from "./switch-lang";
 
 const imgClass = "cursor-pointer mb-4 w-44 md:mb-0 lg:w-56";
 
-export const WelcomeBanner = (props: any) => {
+export const Banner = (props: any) => {
   const [showBanner, setShowBanner] = useState(true);
 
   const onClick = () => {
@@ -34,12 +34,12 @@ export const WelcomeBanner = (props: any) => {
   return (
     <>
       {showBanner ? (
-        <div className="sticky top-0 left-0 w-full h-[100vh] z-20 bg-black justify-center align-center">
+        <div className="w-full h-[100vh] bg-black justify-center align-center overflow-hidden">
           <div className="flex w-full p-4 justify-center align-center">
             <SwitchLang />
           </div>
           <div className="div-fw h-fit w-full flex justify-center align-center">
-            <div className="flex md:flex-row flex-col justify-end md:items-center space-x-0 lg:space-x-4">
+            <div className="flex md:flex-row flex-col justify-end md:items-center ml-0 space-x-0 lg:space-x-4 lg:mr-24">
               <div className="lg:min-w-56 min-w-44">
                 <img
                   onClick={onClick}
@@ -61,7 +61,7 @@ export const WelcomeBanner = (props: any) => {
           </div>
         </div>
       ) : (
-        <></>
+        <>{props.children}</>
       )}
     </>
   );

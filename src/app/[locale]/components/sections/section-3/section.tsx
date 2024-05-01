@@ -1,11 +1,39 @@
 import { useTranslations } from "next-intl";
 import { BigText } from "../../common/text/big-text";
+import Image from "next/image";
+
+import topScrImg from "../../../../../../public/section-3/topscr.png";
+import btmScrImg from "../../../../../../public/section-3/btmscr.png";
+
+function TopScreen() {
+  return (
+    <Image
+      src={topScrImg}
+      alt="Top Screen"
+      className="w-full h-8 md:h-16"
+      fetchPriority="high"
+      priority
+    />
+  );
+}
+
+function BotScreen() {
+  return (
+    <Image
+      src={btmScrImg}
+      alt="Bottom Screen"
+      className="w-full"
+      fetchPriority="high"
+      priority
+    />
+  );
+}
 
 export const SectionThree = (props: any) => {
   const t = useTranslations("SectionThree");
   return (
     <div className="relative w-full mb-2 ">
-      <img src={"/section-3/topscr.png"} alt="Top Screen" className="w-full" />
+      <TopScreen />
       <div className="min-h-[80vh] flex items-center justify-center relative z-10">
         <img
           src={"/section-3/hand2.png"}
@@ -51,11 +79,7 @@ export const SectionThree = (props: any) => {
           className="w-[20%] absolute right-0 bottom-1/2 translate-y-1/2"
         />
       </div>
-      <img
-        src={"/section-3/btmscr.png"}
-        alt="Bottom Screen"
-        className="w-full"
-      />
+      <BotScreen />
     </div>
   );
 };

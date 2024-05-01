@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Bounce, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { WelcomeBanner } from "./components/sections/welcome-banner";
 
 export const metadata: Metadata = {
   title: "SMOB",
@@ -32,7 +31,7 @@ export default function RootLayout({
         <meta name="twitter:description" content="Smoking and Depressed Bear" />
         <meta name="twitter:image" content="http://smobsolana.com/header.png" />
       </head>
-      <body className="overflow-hidden">
+      <body>
         <ToastContainer
           position="top-right"
           autoClose={5000}
