@@ -25,7 +25,7 @@ export const SectionSix = (props: any) => {
   const t = useTranslations("SectionSix");
   return (
     <>
-      <div className="min-h-screen w-full relative max-w-screen-2xl">
+      <div className="min-h-screen w-full flex justify-center items-center content-center max-w-screen-2xl">
         <AppearWrapper>
           <Wrapper>
             <div className="flex flex-col gap-16">

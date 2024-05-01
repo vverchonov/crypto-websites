@@ -17,7 +17,7 @@ function Doroga() {
   return (
     <AppearWrapper>
       <div className="w-full">
-        <Marquee autoFill direction={"right"}>
+        <Marquee speed={15} autoFill direction={"right"}>
           <div className="flex flex-row h-auto">
             <Image
               src={dorogaImg}
@@ -38,7 +38,7 @@ export const SectionOne = (props: any) => {
   return (
     <>
       <AppearWrapper>
-        <div className="min-h-screen w-full relative ">
+        <div className="min-h-screen w-full flex justify-center align-center items-center ">
           <Wrapper>
             <div className="flex flex-col gap-8 items-center">
               <Links />
@@ -55,13 +55,19 @@ export const SectionOne = (props: any) => {
           <div className="w-full absolute bottom-0 left-0">
             <div className="flex">
               <MovingImg
+                tx={7}
+                ty={2}
+                tz={5}
                 customClassWrapper={"relative"}
-                customClassImg={"ml-16 h-32 md:h-64  w-auto"}
+                customClassImg={"ml-64 h-32 md:h-64  w-auto"}
                 imgPath={"./section-1/bear-1.webp"}
               />
               <MovingImg
-                customClassWrapper={"relative"}
-                customClassImg={"mr-16 h-32 md:h-64 w-auto ms-auto mirror-y"}
+                tx={10}
+                ty={2}
+                tz={5}
+                customClassWrapper={"right-0"}
+                customClassImg={"mr-64 h-32 md:h-64 w-auto ms-auto mirror-y"}
                 imgPath={"./section-1/bear-2.webp"}
               />
             </div>

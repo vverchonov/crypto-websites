@@ -3,7 +3,7 @@ export const BigText = (props: any) => {
     <div className={"relative " + props.customWrapper}>
       <p
         className={
-          "text-5xl text-black relative leading-snug " + props.customClass
+          "text-3xl text-black relative leading-snug " + props.customClass
         }
       >
         {props.text}

@@ -3,6 +3,7 @@ import { Bounce, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { CopyIcon } from "./icons/copy-icon";
 import { CA } from "@/app/[locale]/urls";
+import { BigText } from "./text/big-text";
 
 export const CopyCa = (props: any) => {
   const onCopy = () => {
@@ -23,9 +24,9 @@ export const CopyCa = (props: any) => {
   return (
     <button
       onClick={onCopy}
-      className="text-center text-xl cursor-pointer flex flex-row gap-4 align-center select-none"
+      className="text-center text-xl cursor-pointer flex flex-row gap-4 align-center justify-center items-center select-non flex"
     >
-      CA: {CA}
+      <BigText text={`CA: ${CA}`} />
       <CopyIcon />
     </button>
   );

@@ -42,7 +42,11 @@ export const SectionTwo = (props: any) => {
         <WalletProvider wallets={wallets} autoConnect>
           <WalletModalProvider>
             {mounted && (
-              <AppearWrapper customClass={"overflow-hidden"}>
+              <AppearWrapper
+                customClass={
+                  "overflow-hidden min-h-screen flex justify-center items-center relative align-center w-full"
+                }
+              >
                 <img
                   src="/section-2/chel.png"
                   alt="chel"
@@ -53,13 +57,13 @@ export const SectionTwo = (props: any) => {
                   alt="chel"
                   className="w-[30%] right-[-15%] mt-28 absolute mirror-y"
                 />
-                <div className="min-h-[100vh] w-full content-center relative max-w-screen-2xl overflow-hidden">
+                <div className=" w-full content-center relative max-w-screen-2xl overflow-hidden m-0 m-auto">
                   <MovingImg
                     tz={3}
                     ty={5}
                     tx={1}
                     customClassImg={"w-1/12 md:w-2/12"}
-                    customClassWrapper={"top-[30%] left-[-70%] md:left-[-30%]"}
+                    customClassWrapper={"top-[30%] left-[70%] md:left-[0%]"}
                     imgPath={"./common/pack.webp"}
                   />
                   <MovingImg
@@ -68,7 +72,7 @@ export const SectionTwo = (props: any) => {
                     tx={1}
                     customClassImg={"w-3/12 md:w-7/12 "}
                     customClassWrapper={
-                      "right-[5%] bottom-[25%] md:bottom-[20%] "
+                      "right-[20%] bottom-[25%] md:bottom-[5%] "
                     }
                     imgPath={"./common/money.webp"}
                   />

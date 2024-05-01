@@ -8,7 +8,7 @@ export const SectionFour = (props: any) => {
   const t = useTranslations("SectionFour");
   return (
     <>
-      <div className="min-h-screen w-full content-center relative overflow-hidden max-w-screen-2xl">
+      <div className="min-h-screen w-full content-center items-center justify-center flex overflow-hidden max-w-screen-2xl">
         <Wrapper>
           <AppearWrapper>
             <div className="flex flex-col gap-8 lg:flex-row content-center min-h-screen py-16 justify-center relative">
@@ -25,7 +25,7 @@ export const SectionFour = (props: any) => {
                   tz={1}
                   ty={4}
                   tx={1}
-                  customClassImg={"w-12/12 md:w-12/12 h-auto"}
+                  customClassImg={"h-120 h-auto"}
                   customClassWrapper={"relative"}
                   imgPath={"./section-4/bear.png"}
                 />
@@ -49,11 +49,11 @@ export const SectionFour = (props: any) => {
                 imgPath={"./common/shrooms.webp"}
               />
               <img
-                className="absolute bottom-0 left-[0%] h-[12vh] md:h-[24vh]"
+                className="absolute top-10 left-[0%] h-[12vh] md:h-[24vh]"
                 src="./section-4/bear-side.png"
               />
               <img
-                className="absolute mirror-y bottom-0 right-[0%] h-[12vh] md:h-[24vh]"
+                className="absolute mirror-y bottom-12 right-[0%] h-[12vh] md:h-[24vh]"
                 src="./section-4/bear-side.png"
               />
               <div className="flex items-center lg:w-5/12">
@@ -75,7 +75,7 @@ export const SectionFour = (props: any) => {
                 />
               </div>
               <div className="lg:w-5/12 flex flex-col gap-8">
-                <div className="h-[80vh] relative" id="dexscreener-embed">
+                <div className="h-[75vh] relative" id="dexscreener-embed">
                   <img
                     className="absolute top-0 w-32 left-[50%] mt-[-30%] md:mt-[-15%]"
                     src={"./section-4/sitting.webp"}

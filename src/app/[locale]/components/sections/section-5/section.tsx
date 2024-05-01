@@ -10,7 +10,7 @@ export const SectionFive = (props: any) => {
   const t = useTranslations("SectionFive");
   return (
     <>
-      <div className="min-h-screen w-full relative max-w-screen-2xl">
+      <div className="min-h-screen w-full flex justify-center items-center max-w-screen-2xl">
         <AppearWrapper>
           <Wrapper>
             <div className="flex flex-col md:gap-16">
@@ -27,7 +27,7 @@ export const SectionFive = (props: any) => {
                     tz={1}
                     ty={2}
                     tx={2}
-                    customClassImg={"w-10/12 md:w-8/12 h-auto"}
+                    customClassImg={"w-10/12 md:w-10/12 h-auto"}
                     customClassWrapper={"relative"}
                     imgPath={"./section-5/bear-gun.webp"}
                   />

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const AppearWrapper = (props: any) => {
   return (
     <motion.div
-      className={props.customClass}
+      className={props.customClass + " flex justify-center"}
       initial={{
         opacity: 0,
       }}
