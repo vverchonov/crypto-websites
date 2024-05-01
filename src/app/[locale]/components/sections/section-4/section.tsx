@@ -54,10 +54,10 @@ export const SectionFour = (props: any) => {
                   text={t("5")}
                 />
               </div>
-              <div className="lg:w-5/12 flex flex-col gap-8 ">
+              <div className="lg:w-5/12 flex flex-col gap-8">
                 <div className="h-[80vh]" id="dexscreener-embed">
                   <iframe
-                    className="w-full h-full"
+                    className="w-full h-full rounded-xl shadow-2xl"
                     src="https://dexscreener.com/solana/CSUbFtooSRsNs1HfAreVnG42fwef234gD6AUZ3Mt6deYtAcv3uQjp?embed=1&theme=dark"
                   ></iframe>
                 </div>
