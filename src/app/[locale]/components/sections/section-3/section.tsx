@@ -5,6 +5,7 @@ import Image from "next/image";
 import topScrImg from "../../../../../../public/section-3/topscr.webp";
 import btmScrImg from "../../../../../../public/section-3/btmscr.webp";
 import Preview from "./preview";
+import { HeaderText } from "../../common/text/header-text";
 
 function TopScreen() {
   return (
@@ -42,14 +43,18 @@ export const SectionThree = (props: any) => {
           className="w-[20%] absolute left-0 bottom-1/2 translate-y-1/2"
         />
         <div className="flex flex-col justify-center items-center gap-24">
-          <BigText text={"Augmented Reality"} />
+          <BigText customClass={"mt-4"} text={"Augmented Reality"} />
           <a
             className="inline-flex justify-center items-center"
             href="https://bear-ar.sigma.zalupa.ca"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={"/section-3/button.png"} alt="Button" className="w-2/3" />
+            <img
+              src={"/section-3/vr/qrcode.svg"}
+              alt="Button"
+              className="w-11/12"
+            />
           </a>
           <Preview />
         </div>

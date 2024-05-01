@@ -32,7 +32,7 @@ export const SectionTwo = (props: any) => {
 
   return (
     <>
-      <div className="w-full">
+      <div className="w-full overflow-hidden">
         <MarqueeCustom />
       </div>
       <ConnectionProvider
@@ -42,29 +42,43 @@ export const SectionTwo = (props: any) => {
         <WalletProvider wallets={wallets} autoConnect>
           <WalletModalProvider>
             {mounted && (
-              <AppearWrapper>
+              <AppearWrapper customClass={"overflow-hidden"}>
                 <img
                   src="/section-2/chel.png"
                   alt="chel"
-                  className="w-[30%] left-[-15%] mt-20 md:mt-0 absolute"
+                  className="w-[30%] left-[-15%] mt-28  absolute"
                 />
                 <img
                   src="/section-2/chel.png"
                   alt="chel"
-                  className="w-[30%] right-[-15%] mt-20 md:mt-0 absolute mirror-y"
+                  className="w-[30%] right-[-15%] mt-28 absolute mirror-y"
                 />
                 <div className="min-h-[100vh] w-full content-center relative max-w-screen-2xl overflow-hidden">
                   <MovingImg
-                    customClassWrapper={"top-[50%] left-[10%]"}
-                    imgPath={"./section-4/floating-item.png"}
+                    tz={3}
+                    ty={5}
+                    tx={1}
+                    customClassImg={"w-1/12 md:w-2/12"}
+                    customClassWrapper={"top-[30%] left-[-70%] md:left-[-30%]"}
+                    imgPath={"./common/pack.webp"}
                   />
                   <MovingImg
-                    customClassWrapper={"right-[5%] bottom-0"}
-                    imgPath={"./section-4/floating-item.png"}
+                    tz={10}
+                    ty={4}
+                    tx={1}
+                    customClassImg={"w-3/12 md:w-7/12 "}
+                    customClassWrapper={
+                      "right-[5%] bottom-[25%] md:bottom-[20%] "
+                    }
+                    imgPath={"./common/money.webp"}
                   />
                   <MovingImg
-                    customClassWrapper={"right-[5%] top-10"}
-                    imgPath={"./section-4/floating-item.png"}
+                    tz={1}
+                    ty={10}
+                    tx={10}
+                    customClassImg={" w-2/12 md:w-5/12 "}
+                    customClassWrapper={"right-[5%] top-[0%] "}
+                    imgPath={"./common/glock.webp"}
                   />
                   <div className="flex flex-col">
                     <div className="flex flex-col justify-center items-center w-full">

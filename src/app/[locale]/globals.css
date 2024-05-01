@@ -35,3 +35,12 @@ body {
   background-repeat: no-repeat;
   background-image: url("../../../public/section-2/buttons/red.png");
 }
+
+.gentle-shake {
+  animation: tilt-shaking 3s infinite;
+  animation-delay: 3s;
+}
+
+.img-cup {
+  transform: rotate(-8deg);
+}

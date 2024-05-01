@@ -11,10 +11,12 @@ export const MovingImg = (props: any) => {
       <motion.div
         className="w-full flex justify-center"
         initial={{
-          transform: "translateZ(8px) translateY(-2px) translateX(0px)",
+          transform: `translateZ(${props.tz}px) translateY(${props.ty}px) translateX(${props.tx}px)`,
         }}
         animate={{
-          transform: "translateZ(64px) translateY(-30px) translateX(10px)",
+          transform: `translateZ(${props.tz * 3}px) translateY(${
+            props.ty * 4
+          }px) translateX(${props.tx * 5}px)`,
         }}
         transition={{
           repeat: Infinity,

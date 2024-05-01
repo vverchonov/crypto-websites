@@ -5,7 +5,7 @@ export const MarqueeCustom = () => {
   return (
     <AppearWrapper>
       <div className="w-full mt-16 mb-8">
-        <Marquee autoFill>
+        <Marquee pauseOnHover autoFill>
           <div className="flex flex-row gap-8 h-[25vh]">
             {[...Array(40)].map((_, index) => (
               <img

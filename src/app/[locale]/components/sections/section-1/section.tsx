@@ -10,16 +10,26 @@ import { CopyCa } from "../../common/copy-ca";
 import Image from "next/image";
 
 import dorogaImg from "../../../../../../public/section-1/doroga.webp";
+import Marquee from "react-fast-marquee";
+import { MovingImg } from "../../moving-img";
 
 function Doroga() {
   return (
-    <Image
-      src={dorogaImg}
-      alt="Doroga"
-      className="w-full h-16 md:h-32"
-      fetchPriority="high"
-      priority
-    />
+    <AppearWrapper>
+      <div className="w-full">
+        <Marquee autoFill direction={"right"}>
+          <div className="flex flex-row h-auto">
+            <Image
+              src={dorogaImg}
+              alt="Doroga"
+              className="w-full h-16 md:h-32"
+              fetchPriority="high"
+              priority
+            />
+          </div>
+        </Marquee>
+      </div>
+    </AppearWrapper>
   );
 }
 
@@ -44,13 +54,15 @@ export const SectionOne = (props: any) => {
           </Wrapper>
           <div className="w-full absolute bottom-0 left-0">
             <div className="flex">
-              <img
-                className="ml-16 h-32 md:h-64 w-auto"
-                src="./section-1/bear-1.webp"
+              <MovingImg
+                customClassWrapper={"relative"}
+                customClassImg={"ml-16 h-32 md:h-64  w-auto"}
+                imgPath={"./section-1/bear-1.webp"}
               />
-              <img
-                className="mr-16 h-32 md:h-64 w-auto ms-auto mirror-y"
-                src="./section-1/bear-2.webp"
+              <MovingImg
+                customClassWrapper={"relative"}
+                customClassImg={"mr-16 h-32 md:h-64 w-auto ms-auto mirror-y"}
+                imgPath={"./section-1/bear-2.webp"}
               />
             </div>
             <Doroga />

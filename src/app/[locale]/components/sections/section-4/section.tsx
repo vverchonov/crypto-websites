@@ -13,11 +13,22 @@ export const SectionFour = (props: any) => {
           <AppearWrapper>
             <div className="flex flex-col gap-8 lg:flex-row content-center min-h-screen py-16 justify-center relative">
               <MovingImg
+                tz={1}
+                ty={3}
+                tx={10}
+                customClassImg={" w-3/12 md:w-4/12 "}
                 customClassWrapper={"top-[50%] left-[40%]"}
-                imgPath={"./section-4/floating-item.png"}
+                imgPath={"./common/money.webp"}
               />
-              <div className="flex content-center items-center lg:w-5/12">
-                <img className="" src="./section-4/bear.png" />
+              <div className="flex content-center img-cup items-center lg:w-5/12">
+                <MovingImg
+                  tz={1}
+                  ty={4}
+                  tx={1}
+                  customClassImg={"w-12/12 md:w-12/12 h-auto"}
+                  customClassWrapper={"relative"}
+                  imgPath={"./section-4/bear.png"}
+                />
               </div>
               <div className="lg:w-5/12 flex flex-col gap-8 justify-center">
                 <BigText customClass={"text-center"} text={t("1")} />
@@ -30,8 +41,12 @@ export const SectionFour = (props: any) => {
           <AppearWrapper>
             <div className="flex flex-col-reverse gap-8 lg:flex-row content-center min-h-screen py-16 justify-center relative">
               <MovingImg
+                tz={1}
+                ty={5}
+                tx={3}
+                customClassImg={" w-3/12 md:w-2/12 "}
                 customClassWrapper={"left-[10%]"}
-                imgPath={"./section-4/floating-item.png"}
+                imgPath={"./common/shrooms.webp"}
               />
               <img
                 className="absolute bottom-0 left-[0%] h-[12vh] md:h-[24vh]"
@@ -43,12 +58,17 @@ export const SectionFour = (props: any) => {
               />
               <div className="flex items-center lg:w-5/12">
                 <BigText
-                  customClass={"md:text-left text-center"}
+                  customClass={"md:text-left text-center z-50"}
                   extra={
                     <MovingImg
-                      y={150}
-                      customClassWrapper={"bottom-0 left-[50%] "}
-                      imgPath={"./section-4/floating-item.png"}
+                      tz={1}
+                      ty={5}
+                      tx={2}
+                      customClassImg={" w-3/12 md:w-4/12 "}
+                      customClassWrapper={
+                        "bottom-0 md:bottom-[-10%] left-[20%]"
+                      }
+                      imgPath={"./common/money.webp"}
                     />
                   }
                   text={t("5")}

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 export const AppearWrapper = (props: any) => {
   return (
     <motion.div
+      className={props.customClass}
       initial={{
         opacity: 0,
       }}
