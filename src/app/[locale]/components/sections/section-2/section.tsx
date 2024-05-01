@@ -34,6 +34,15 @@ export const SectionTwo = (props: any) => {
     <>
       <div className="w-full overflow-hidden">
         <MarqueeCustom />
+        <div className="flex flex-col justify-center items-center w-full">
+          <BigText
+            customClass={" max-w-screen-2xl text-center"}
+            text={"Lorem ipsum dolor sit amet consectetur adipisicing elit"}
+          />
+          <a href="https://google.com" className="text-2xl mt-6">
+            Google Disk
+          </a>
+        </div>
       </div>
       <ConnectionProvider
         endpoint={RPC_ENDPOINT}
@@ -85,17 +94,6 @@ export const SectionTwo = (props: any) => {
                     imgPath={"./common/glock.webp"}
                   />
                   <div className="flex flex-col">
-                    <div className="flex flex-col justify-center items-center w-full">
-                      <BigText
-                        customClass={" max-w-screen-2xl text-center"}
-                        text={
-                          "Lorem ipsum dolor sit amet consectetur adipisicing elit"
-                        }
-                      />
-                      <a href="https://google.com" className="text-2xl mt-6">
-                        Google Disk
-                      </a>
-                    </div>
                     <NFT />
                   </div>
                 </div>
