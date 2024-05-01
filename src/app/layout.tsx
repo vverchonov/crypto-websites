@@ -40,22 +40,31 @@ export default function RootLayout({
           type="module"
           src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
         ></script>
+        <link type="text/css" href="./styles.css" rel="stylesheet" />
+        <script src="./script.js"></script>
       </head>
       <body>
-        <>
+        {/* @ts-ignore */}
+        <model-viewer
+          src="666.glb"
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          camera-controls
+          tone-mapping="neutral"
+          poster="poster.webp"
+          shadow-intensity="1"
+        >
+          <div className="progress-bar hide" slot="progress-bar">
+            <div className="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">
+            View in your space
+          </button>
+          <div id="ar-prompt">
+            <img src="ar_hand_prompt.png" />
+          </div>
           {/* @ts-ignore */}
-          <model-viewer
-            class={"w-full min-h-screen"}
-            src="666.glb"
-            ar
-            ar-modes="webxr scene-viewer quick-look"
-            camera-controls
-            tone-mapping="neutral"
-            shadow-intensity="1"
-          >
-            {/* @ts-ignore */}
-          </model-viewer>
-        </>
+        </model-viewer>
       </body>
     </html>
   );
