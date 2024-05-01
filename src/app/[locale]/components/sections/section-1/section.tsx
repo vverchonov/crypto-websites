@@ -38,7 +38,7 @@ export const SectionOne = (props: any) => {
   return (
     <>
       <AppearWrapper>
-        <div className="min-h-screen w-full flex justify-center align-center items-center ">
+        <div className="min-h-screen w-full flex justify-center align-center items-center relative overflow-hidden">
           <Wrapper>
             <div className="flex flex-col gap-8 items-center">
               <Links />

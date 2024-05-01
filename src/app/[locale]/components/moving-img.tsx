@@ -9,7 +9,7 @@ export const MovingImg = (props: any) => {
     >
       {/*  MAYBE MOVE THIS WRAPPER SEPARETE IF WE NEED TO REUSE IT  */}
       <motion.div
-        className="w-full flex justify-center"
+        className="w-fit flex justify-center"
         initial={{
           transform: `translateZ(${props.tz}px) translateY(${props.ty}px) translateX(${props.tx}px)`,
         }}
