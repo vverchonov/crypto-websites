@@ -50,14 +50,14 @@ export const SectionThree = (props: any) => {
             />
             <a
               className="inline-flex justify-center items-center"
-              href="https://bear-ar.sigma.zalupa.ca"
+              href="http://ar.smobsolana.com/"
               target="_blank"
               rel="noreferrer"
             >
               <img
                 src={"/section-3/vr/qrcode.svg"}
                 alt="Button"
-                className="w-11/12 select-none"
+                className="w-7/12 rounded-2xl select-none"
               />
             </a>
             <Preview />

@@ -10,7 +10,7 @@ import { CopyCa } from "../../common/copy-ca";
 import Image from "next/image";
 
 import dorogaImg from "../../../../../../public/section-1/doroga.webp";
-import city from "../../../../../../public/section-1/city.png";
+import city from "../../../../../../public/section-1/city.webp";
 import Marquee from "react-fast-marquee";
 import { MovingImg } from "../../moving-img";
 
@@ -33,8 +33,9 @@ function Doroga() {
           />
         </Marquee>
         <Marquee
-          className="relative bottom-[-5px]"
+          className="relative bottom-[-5px] overflow-hidden"
           speed={15}
+          style={{ width: "calc(2px+100%)" }}
           autoFill
           direction={"right"}
         >
@@ -56,26 +57,9 @@ function Doroga() {
 function Clouds() {
   return (
     <AppearWrapper>
-      <div className="w-full absolute top-12 left-0 w-full flex flex-col gap-4">
+      <div className="w-full absolute top-3 left-0 flex flex-col gap-4">
         <Marquee className="relative " speed={15} autoFill direction={"left"}>
           <div className="flex flew-row gap-24">
-            {[...Array(10)].map((_, index) => (
-              <img
-                key={index}
-                src={`/section-1/clouds/cl${index + 1}.webp`}
-                alt={`Image ${index}`}
-                className="w-full h-16 select-none"
-              />
-            ))}
-          </div>
-        </Marquee>
-        <Marquee
-          className="relative bottom-[-15px]"
-          speed={25}
-          autoFill
-          direction={"left"}
-        >
-          <div className="flex flew-row gap-16">
             {[...Array(10)].map((_, index) => (
               <img
                 key={index}
@@ -96,12 +80,12 @@ export const SectionOne = (props: any) => {
   return (
     <>
       <AppearWrapper>
-        <div className="min-h-screen w-full flex justify-center align-center items-center relative overflow-hidden bg-sky">
+        <div className="min-h-screen w-full flex justify-center align-center items-center relative overflow-x-clip bg-[#d9e8f8]">
           <Clouds />
           <Wrapper>
             <div className="flex flex-col gap-8 items-center">
               <Links />
-              <RegularText customClass={"text-center"} text={t("1")} />
+              <RegularText customClass={"text-center z-[100]"} text={t("1")} />
               <CopyCa copyLink="" />
 
               <img

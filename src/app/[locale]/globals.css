@@ -27,7 +27,7 @@ body {
 .btn-orange {
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("../../../public/section-2/buttons/orange.png");
+  background-image: url("../../../public/section-2/buttons/orange.webp");
 }
 
 .btn-google {
@@ -43,7 +43,7 @@ body {
 .btn-red {
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("../../../public/section-2/buttons/red.png");
+  background-image: url("../../../public/section-2/buttons/red.webp");
 }
 
 .gentle-shake {
@@ -55,8 +55,8 @@ body {
   transform: rotate(-8deg);
 }
 
-.bg-sky {
-  background-color: #d9e8f8;
+.pixelated {
+  image-rendering: pixelated;
 }
 
 .orange-link {

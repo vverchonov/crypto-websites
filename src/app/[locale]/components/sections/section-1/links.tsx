@@ -9,7 +9,6 @@ import {
   DEXSCREENER,
   JUPITER,
   RAYDIUM,
-  TELEGRAM_DEV,
   TELEGRAM,
   TWITTER,
   DEXTOOLS,
@@ -18,11 +17,11 @@ import {
 const buttonClass =
   " select-none orange-link font-bold cursor-pointer rounded-full flex flex-row content-center items-center transform transition duration-500 hover:scale-105";
 
-const iconClass = "w-12 h-12 orange-link  fill-black 2xl:h-24 2xl:w-24 ";
+const iconClass = "w-12 h-12 fill-[#111827] 2xl:h-24 2xl:w-24";
 
 export const Links = (props: any) => {
   return (
-    <div className="w-full z-50  flex justify-center w-full gap-12 lg:gap-24 flex-row flex-wrap max-w-screen-2xl">
+    <div className=" w-full z-50 top-24 flex justify-center gap-12 lg:gap-24 flex-row flex-wrap max-w-screen-2xl">
       <a target="_blank" href={TWITTER} className={buttonClass}>
         <XIcon iconClass={iconClass} />
       </a>

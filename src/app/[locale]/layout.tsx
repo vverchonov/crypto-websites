@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import { Bounce, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -7,6 +8,13 @@ export const metadata: Metadata = {
   title: "SMOB",
   description: "Smoking and Depressed Bear",
 };
+
+const PermanentMarker = Permanent_Marker({
+  weight: ["400"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -34,7 +42,7 @@ export default function RootLayout({
           content="http://smobsolana.com/header.webp"
         />
       </head>
-      <body>
+      <body className={PermanentMarker.className}>
         <ToastContainer
           position="top-right"
           autoClose={5000}
