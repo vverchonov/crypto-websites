@@ -24,7 +24,7 @@ export const CopyCa = (props: any) => {
   return (
     <button
       onClick={onCopy}
-      className="text-center text-xl cursor-pointer flex flex-row gap-4 align-center justify-center items-center select-non flex"
+      className="text-center text-xl cursor-pointer flex flex-row gap-4 align-center justify-center items-center select-non flex z-50"
     >
       <BigText text={`CA: ${CA}`} />
       <CopyIcon />

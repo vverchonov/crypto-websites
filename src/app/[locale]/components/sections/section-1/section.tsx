@@ -18,7 +18,12 @@ function Doroga() {
   return (
     <AppearWrapper>
       <div className="w-full relative">
-        <Marquee className="mb[-120%]" speed={5} autoFill direction={"left"}>
+        <Marquee
+          className="relative bottom-[-15px]"
+          speed={5}
+          autoFill
+          direction={"left"}
+        >
           <Image
             src={city}
             alt="city"
@@ -27,12 +32,17 @@ function Doroga() {
             priority
           />
         </Marquee>
-        <Marquee speed={15} autoFill direction={"right"}>
+        <Marquee
+          className="relative bottom-[-5px]"
+          speed={15}
+          autoFill
+          direction={"right"}
+        >
           <div className="flex flex-row h-auto">
             <Image
               src={dorogaImg}
               alt="Doroga"
-              className="w-full h-24 md:h-32"
+              className="w-full h-24 md:h-36"
               fetchPriority="high"
               priority
             />
@@ -48,11 +58,9 @@ export const SectionOne = (props: any) => {
   return (
     <>
       <AppearWrapper>
-        <div className="min-h-screen w-full flex justify-center align-center items-center relative overflow-hidden">
+        <div className="min-h-screen w-full flex justify-center align-center items-center relative overflow-hidden bg-sky">
           <Wrapper>
             <div className="flex flex-col gap-8 items-center">
-              <Links />
-
               <RegularText customClass={"text-center"} text={t("1")} />
               <CopyCa copyLink="" />
 

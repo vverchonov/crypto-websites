@@ -6,12 +6,14 @@ import { SectionFive } from "./components/sections/section-5/section";
 import { SectionSix } from "./components/sections/section-6/section";
 import { FooterSection } from "./components/footer-section";
 import { Banner } from "./components/banner";
+import { Links } from "./components/sections/section-1/links";
 
 export default function Home() {
   return (
     <>
       <Banner>
         <main className="flex justtify-center align-center content-center items-center flex-col">
+          <Links />
           <SectionOne />
           <SectionTwo />
           <SectionThree />

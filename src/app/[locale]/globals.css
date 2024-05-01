@@ -54,3 +54,7 @@ body {
 .img-cup {
   transform: rotate(-8deg);
 }
+
+.bg-sky {
+  background-color: #d9e8f8;
+}
