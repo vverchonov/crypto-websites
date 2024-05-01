@@ -6,7 +6,6 @@ import { SectionFive } from "./components/sections/section-5/section";
 import { SectionSix } from "./components/sections/section-6/section";
 import { FooterSection } from "./components/footer-section";
 import { Banner } from "./components/banner";
-import { useState } from "react";
 
 export default function Home() {
   return (
