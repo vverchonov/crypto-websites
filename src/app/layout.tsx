@@ -46,12 +46,11 @@ export default function RootLayout({
           {/* @ts-ignore */}
           <model-viewer
             class={"w-full min-h-screen"}
-            src="555.glb"
+            src="666.glb"
             ar
             ar-modes="webxr scene-viewer quick-look"
             camera-controls
             tone-mapping="neutral"
-            poster="poster.webp"
             shadow-intensity="1"
           >
             {/* @ts-ignore */}
