@@ -78,7 +78,7 @@ export const SectionFive = (props: any) => {
                     tx={2}
                     customClassImg={"w-10/12 md:w-10/12 h-auto"}
                     customClassWrapper={"relative"}
-                    imgPath={"./section-5/bear-gun.webp"}
+                    imgPath={"./section-5/bear-back.webp"}
                   />
                 </div>
               </div>

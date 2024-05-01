@@ -8,7 +8,7 @@ export const SectionFour = (props: any) => {
   const t = useTranslations("SectionFour");
   return (
     <>
-      <div className="min-h-screen w-full content-center items-center justify-center flex overflow-hidden max-w-screen-2xl">
+      <div className="min-h-screen w-full content-center items-center justify-center flex overflow-x-clip max-w-screen-2xl">
         <Wrapper>
           <AppearWrapper>
             <div className="flex flex-col gap-8 lg:flex-row content-center min-h-screen py-16 justify-center relative">
@@ -81,6 +81,10 @@ export const SectionFour = (props: any) => {
                     src="https://dexscreener.com/solana/CSUbFtooSRsNs1HfAreVnG42fwef234gD6AUZ3Mt6deYtAcv3uQjp?embed=1&theme=dark"
                   ></iframe>
                 </div>
+                <img
+                  className="absolute -bottom-[8.5%] w-[30%] -right-[5%] select-none -z-10"
+                  src={"./section-4/bearfire.webp"}
+                />
               </div>
             </div>
           </AppearWrapper>

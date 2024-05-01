@@ -11,6 +11,7 @@ import Image from "next/image";
 
 import dorogaImg from "../../../../../../public/section-1/doroga.webp";
 import city from "../../../../../../public/section-1/city.webp";
+import game from "../../../../../../public/section-1/game.webp";
 import Marquee from "react-fast-marquee";
 import { MovingImg } from "../../moving-img";
 
@@ -35,7 +36,6 @@ function Doroga() {
         <Marquee
           className="relative bottom-[-5px] overflow-hidden"
           speed={15}
-          style={{ width: "calc(2px+100%)" }}
           autoFill
           direction={"right"}
         >
@@ -59,7 +59,7 @@ function Clouds() {
     <AppearWrapper>
       <div className="w-full absolute top-3 left-0 flex flex-col gap-4">
         <Marquee className="relative " speed={15} autoFill direction={"left"}>
-          <div className="flex flew-row gap-24">
+          <div className="flex flew-row mr-12 gap-24">
             {[...Array(10)].map((_, index) => (
               <img
                 key={index}
@@ -88,9 +88,12 @@ export const SectionOne = (props: any) => {
               <RegularText customClass={"text-center z-[100]"} text={t("1")} />
               <CopyCa copyLink="" />
 
-              <img
+              <Image
                 className="md:w-[50%] mb-32 md:mb-16 z-50 select-none"
-                src={"./section-1/game.webp"}
+                alt="Doroga"
+                fetchPriority="high"
+                priority
+                src={game}
               />
             </div>
           </Wrapper>
