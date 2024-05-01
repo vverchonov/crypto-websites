@@ -15,7 +15,7 @@ export default function Home() {
         <main className="flex justtify-center align-center content-center items-center flex-col">
           <SectionOne />
           <SectionTwo />
-          <SectionThree />
+          {/* <SectionThree /> */}
           <SectionFour />
           <SectionFive />
           <SectionSix />
