@@ -13,7 +13,6 @@ export default function Home() {
     <>
       <Banner>
         <main className="flex justtify-center align-center content-center items-center flex-col">
-          <Links />
           <SectionOne />
           <SectionTwo />
           <SectionThree />

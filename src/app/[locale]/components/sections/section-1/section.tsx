@@ -61,6 +61,7 @@ export const SectionOne = (props: any) => {
         <div className="min-h-screen w-full flex justify-center align-center items-center relative overflow-hidden bg-sky">
           <Wrapper>
             <div className="flex flex-col gap-8 items-center">
+              <Links />
               <RegularText customClass={"text-center"} text={t("1")} />
               <CopyCa copyLink="" />
 

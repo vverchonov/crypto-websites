@@ -22,7 +22,7 @@ const iconClass = "w-12 h-12 fill-black 2xl:h-24 2xl:w-24 ";
 
 export const Links = (props: any) => {
   return (
-    <div className="absolute w-full z-50 top-4 flex justify-center w-full gap-12 lg:gap-24 flex-row flex-wrap max-w-screen-2xl">
+    <div className="w-full z-50  flex justify-center w-full gap-12 lg:gap-24 flex-row flex-wrap max-w-screen-2xl">
       <a target="_blank" href={TWITTER} className={buttonClass}>
         <XIcon iconClass={iconClass} />
       </a>
