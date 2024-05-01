@@ -16,9 +16,9 @@ export const SectionFour = (props: any) => {
                 tz={1}
                 ty={3}
                 tx={10}
-                customClassImg={" w-3/12 md:w-4/12 "}
-                customClassWrapper={"top-[50%] left-[40%]"}
-                imgPath={"./common/money.webp"}
+                customClassImg={" w-2/12 md:w-2/12 "}
+                customClassWrapper={"top-[50%] -right-[15%]"}
+                imgPath={"./common/weed.webp"}
               />
               <div className="flex content-center img-cup items-center lg:w-5/12">
                 <MovingImg
@@ -27,7 +27,7 @@ export const SectionFour = (props: any) => {
                   tx={1}
                   customClassImg={"h-120 h-auto"}
                   customClassWrapper={"relative"}
-                  imgPath={"./section-4/bear.png"}
+                  imgPath={"./section-4/bear.webp"}
                 />
               </div>
               <div className="lg:w-5/12 flex flex-col gap-8 justify-center">
@@ -49,12 +49,8 @@ export const SectionFour = (props: any) => {
                 imgPath={"./common/shrooms.webp"}
               />
               <img
-                className="absolute top-10 left-[0%] h-[12vh] md:h-[24vh]"
-                src="./section-4/bear-side.png"
-              />
-              <img
-                className="absolute mirror-y bottom-12 right-[0%] h-[12vh] md:h-[24vh]"
-                src="./section-4/bear-side.png"
+                className="md:absolute block -top-[6rem] left-[0%] w-[75%] md:w-[20%]"
+                src="./section-4/painting.webp"
               />
               <div className="flex items-center lg:w-5/12">
                 <BigText
@@ -64,11 +60,11 @@ export const SectionFour = (props: any) => {
                       tz={1}
                       ty={5}
                       tx={2}
-                      customClassImg={" w-3/12 md:w-4/12 "}
+                      customClassImg={" w-2/12 md:w-3/12 "}
                       customClassWrapper={
-                        "bottom-0 md:bottom-[-10%] left-[20%]"
+                        "bottom-0 md:-bottom-[50%] left-[10%]"
                       }
-                      imgPath={"./common/money.webp"}
+                      imgPath={"./common/dick.webp"}
                     />
                   }
                   text={t("5")}

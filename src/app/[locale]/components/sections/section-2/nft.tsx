@@ -8,7 +8,6 @@ import {
 import { useAnchorWallet, useConnection } from "@solana/wallet-adapter-react";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { MovingImg } from "../../moving-img";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { BigText } from "../../common/text/big-text";
 
@@ -71,13 +70,13 @@ export const NFT = (props: any) => {
     }
   };
 
-  const soldOut = candyState?.itemsRemaining.eqn(0);
+  const soldOut: boolean = candyState?.itemsRemaining.eqn(0) || false;
 
   return (
     <div className="flex flex-row justify-end items-center relative min-h-[60vh]">
       <div className="flex flex-col gap-6 w-full justify-center items-center h-full">
         <WalletMultiButton />
-        <BigText text={"Claim your NFT"} />
+        <BigText customClass={"text-6xl"} text={"Claim your NFT"} />
         <div className="text-4xl text-center mb-12">
           {candyStateLoading ? (
             <p>Loading...</p>
@@ -102,14 +101,12 @@ export const NFT = (props: any) => {
         <div className="w-full flex justify-center">
           <button
             className={
-              " rounded-xl w-[50%] flex justify-center " + soldOut
-                ? "btn-red "
-                : "btn-orange"
+              "flex justify-center " + (soldOut ? "btn-red" : "btn-orange")
             }
             onClick={mint}
             disabled={txLoading || !candyState || !wallet}
           >
-            <p className="text-4xl  p-16 pt-6 cursor-pointer select-none">
+            <p className="text-4xl p-16 pt-6 cursor-pointer select-none">
               {soldOut ? "Sold Out" : txLoading ? "Claiming..." : "Claim NFT"}
             </p>
           </button>

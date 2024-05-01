@@ -30,6 +30,16 @@ body {
   background-image: url("../../../public/section-2/buttons/orange.png");
 }
 
+.btn-google {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../../public/section-2/knopka.webp");
+  display: inline-block;
+  width: 20rem;
+  height: 5.5rem;
+}
+
 .btn-red {
   background-size: contain;
   background-repeat: no-repeat;

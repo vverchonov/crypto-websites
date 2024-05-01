@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import { BigText } from "../../common/text/big-text";
 import Image from "next/image";
 
 import topScrImg from "../../../../../../public/section-3/topscr.webp";
@@ -45,7 +44,10 @@ export const SectionThree = (props: any) => {
         />
         <Wrapper>
           <div className="flex flex-col justify-center items-center gap-24">
-            <BigText customClass={"mt-4"} text={"Augmented Reality"} />
+            <HeaderText
+              customClass={"mt-4 text-center"}
+              text={"Augmented Reality"}
+            />
             <a
               className="inline-flex justify-center items-center"
               href="https://bear-ar.sigma.zalupa.ca"
