@@ -11,11 +11,12 @@ import Image from "next/image";
 
 import dorogaImg from "../../../../../../public/section-1/doroga.webp";
 import city from "../../../../../../public/section-1/city.webp";
-import game from "../../../../../../public/game/start.webp";
+
 import Marquee from "react-fast-marquee";
 import { MovingImg } from "../../moving-img";
-import { Game } from "./game";
+
 import { Button } from "./button";
+import { PlayButton } from "./play-button";
 
 function Doroga() {
   return (
@@ -89,7 +90,7 @@ export const SectionOne = (props: any) => {
               <Links />
               <RegularText customClass={"text-center z-[100]"} text={t("1")} />
               <CopyCa />
-              <Button txt={t("2")} />
+              <PlayButton txt={t("2")} />
             </div>
           </Wrapper>
           <div className="w-full absolute bottom-0 left-0 ">

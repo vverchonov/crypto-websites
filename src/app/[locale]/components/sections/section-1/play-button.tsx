@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "./button";
 
 export const PlayButton = (props: any) => {
@@ -5,5 +6,5 @@ export const PlayButton = (props: any) => {
     window.open(window.location.href + "/game", "_blank");
   };
 
-  return <Button txt={props.txt} onClick={play} />;
+  return <Button txt={props.txt} play={play} />;
 };
