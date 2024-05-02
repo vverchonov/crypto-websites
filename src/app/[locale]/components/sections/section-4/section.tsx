@@ -34,7 +34,7 @@ export const SectionFour = (props: any) => {
                 <BigText customClass={"text-center"} text={t("1")} />
                 <BigText customClass={"text-center"} text={t("2")} />
                 <BigText customClass={"text-center"} text={t("3")} />
-                <BigText customClass={"text-center"} text={t("4")} />
+                <BigText customClass={"text-center mb-16"} text={t("4")} />
               </div>
             </div>
           </AppearWrapper>
