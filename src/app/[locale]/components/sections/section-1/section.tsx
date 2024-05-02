@@ -80,7 +80,7 @@ export const SectionOne = (props: any) => {
   const t = useTranslations("SectionOne");
   return (
     <>
-      <AppearWrapper>
+      <AppearWrapper customClass={" w-full "}>
         <div className="min-h-screen w-full flex justify-center align-center items-center relative overflow-x-clip bg-[#d9e8f8]">
           <Clouds />
           <Wrapper>

@@ -1,9 +1,20 @@
 {
   "SectionOne": {
-    "1": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "1": "“I look at him and literally feeling that I am this bear hahaha. This is how I walk around smoking everywhere. letto (dev)"
   },
   "SectionTwo": {
-    "1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "1": "Check all of the pre-made memes and templates. Create your own!",
+    "2": "Memes",
+    "3": "Failed to get NFT information",
+    "4": "Failed to claim NFT",
+    "5": "Failed to claim NFT, try again...",
+    "6": "NFT claimed, congrats!",
+    "7": "Claim your NFT",
+    "8": "Loading...",
+    "9": "SOLD OUT",
+    "10": "Sold Out",
+    "11": "Claiming...",
+    "12": "Claim NFT"
   },
   "SectionThree": {
     "1": "Augmented Reality"
@@ -13,20 +24,27 @@
     "2": "2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "3": "3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "4": "4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "5": "4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "5": "Just a quick recap:",
+    "6": "1. LP locked forever; Dev buy is fully burned; Launched from pump.fun; Dev links at the bottom",
+    "7": "2. 150+ elements of pre-made content: memes, png, stickers, animations etc…",
+    "8": "3. Huge NFT collection pre-made before launch. All funds would be used for $SMOB’s green candles",
+    "9": "4. Enjoy playing game at the first section of the web"
   },
   "SectionFive": {
-    "1": "Lorem ipsum dolor",
-    "2": "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "1": "Burning info",
+    "2": "1. First dev buy burned fully",
+    "3": "2. Second dev buy burned fully",
+    "4": "3. Third dev buy burned fully",
+    "5": "4. Smob would be added to the dictionary"
   },
   "SectionSix": {
     "1": "Dev info",
-    "2": "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+    "2": "I am working hard daily with small sleep breaks to get the perfectly shaped meme coin delivered to the community. My projects are fully transparent. Just join the telegram channel and ask whatever you want in the comments section"
   },
-  "SectionSeven": {
-    "title": "Hello world ENG!"
+  "Footer": {
+    "1": "$SMOB is a memecoin with no intrinsic value, and is not a investment and simply a community/culture token similar to $SMOB. No Promises, No Utility, Purely For Entertainment Purposes"
   },
   "InitialPopup": {
-    "title": "Hello world ENG!"
+    "1": "Are you SMOB?"
   }
 }

@@ -65,10 +65,22 @@ export const SectionFive = (props: any) => {
             <div className="flex flex-col md:gap-16">
               <HeaderText customClass={"uppercase text-center"} text={t("1")} />
               <div className="flex flex-col gap-8 lg:flex-row content-center py-16 justify-center">
-                <div className="flex content-center items-center lg:w-5/12">
+                <div className="flex flex-col content-center justify-center items-center lg:w-5/12">
                   <BigText
-                    customClass={"mb-16 md:mb-0 md:text-left text-center"}
+                    customClass={" mb-16 md:mb-2  text-center "}
                     text={t("2")}
+                  />
+                  <BigText
+                    customClass={" mb-16 md:mb-2  text-center "}
+                    text={t("3")}
+                  />
+                  <BigText
+                    customClass={" mb-16 md:mb-2  text-center "}
+                    text={t("4")}
+                  />
+                  <BigText
+                    customClass={" mb-16 md:mb-0  text-center "}
+                    text={t("5")}
                   />
                 </div>
                 <div className="lg:w-5/12 flex flex-col gap-8 justify-center align-center items-center">

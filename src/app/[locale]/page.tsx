@@ -7,11 +7,13 @@ import { SectionSix } from "./components/sections/section-6/section";
 import { FooterSection } from "./components/footer-section";
 import { Banner } from "./components/banner";
 import { Links } from "./components/sections/section-1/links";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("InitialPopup");
   return (
     <>
-      <Banner>
+      <Banner t1={t("1")}>
         <main className="flex justtify-center align-center content-center items-center flex-col">
           <SectionOne />
           <SectionTwo />

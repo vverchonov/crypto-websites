@@ -41,7 +41,7 @@ export const Banner = (props: any) => {
       {showBanner ? (
         <div className="w-full min-h-screen bg-black flex flex-col justify-center items-center overflow-hidden relative">
           <Image
-            className="w-full md:w-1/3 absolute top-0 md:left-0 z-0 transform -translate-y-[20%]"
+            className="w-full md:w-1/3 absolute top-0 md:left-0 z-0 transform -translate-y-[20%] select-none"
             src={lamp}
             alt="lamp"
             priority
@@ -51,7 +51,7 @@ export const Banner = (props: any) => {
             <SwitchLang />
           </div>
           <Image
-            className="w-full md:w-1/2 absolute bottom-0 right-0 z-0 transform translate-y-[10%] translate-x-[12%]"
+            className="w-full md:w-1/2 absolute bottom-0 right-0 z-0 transform translate-y-[10%] translate-x-[12% select-none"
             src={bear}
             alt="bear"
             priority
@@ -59,14 +59,14 @@ export const Banner = (props: any) => {
           />
           <div className="h-full flex flex-col justify-center items-center gap-6">
             <HeaderText
-              text={"Are you SMOB?"}
+              text={props.t1}
               customClass="md:text-4xl text-white text-3xl"
             />
             <div className="flex flex-col md:flex-row justify-center items-center space-x-0 lg:space-x-4">
               <div className="lg:min-w-56 min-w-44">
                 <img
                   onClick={onClick}
-                  className={imgClass + " "}
+                  className={imgClass + " z-50 relative"}
                   src="./banner/yes.webp"
                 />
               </div>

@@ -52,9 +52,26 @@ export const SectionFour = (props: any) => {
                 className="md:absolute block -top-[6rem] left-[0%] w-[75%] md:w-[20%] select-none"
                 src="./section-4/painting.webp"
               />
-              <div className="flex items-center lg:w-5/12">
+              <div className="flex flex-col gap-4 justify-center items-center lg:w-5/12">
                 <BigText
                   customClass={"md:text-left text-center z-50 md:mt-0 mt-8"}
+                  text={t("5")}
+                />
+                <BigText
+                  customClass={"md:text-left text-center z-50 md:mt-0 mt-8"}
+                  text={t("6")}
+                />
+                <BigText
+                  customClass={"md:text-left text-center z-50 md:mt-0 mt-8"}
+                  text={t("7")}
+                />
+                <BigText
+                  customClass={"md:text-left text-center z-50 md:mt-0 mt-8"}
+                  text={t("8")}
+                />
+                <BigText
+                  customClass={"md:text-left text-center z-50 md:mt-0 mt-8"}
+                  text={t("9")}
                   extra={
                     <MovingImg
                       tz={1}
@@ -67,10 +84,9 @@ export const SectionFour = (props: any) => {
                       imgPath={"./common/dick.webp"}
                     />
                   }
-                  text={t("5")}
                 />
               </div>
-              <div className="lg:w-5/12 flex flex-col gap-8">
+              <div className="lg:w-5/12 flex flex-col justify-center gap-8">
                 <div className="h-[75vh] relative " id="dexscreener-embed">
                   <img
                     className="absolute top-0 w-32 left-[50%] mt-[-30%] md:mt-[-15%] select-none"
