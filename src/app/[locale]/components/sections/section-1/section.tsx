@@ -15,7 +15,6 @@ import city from "../../../../../../public/section-1/city.webp";
 import Marquee from "react-fast-marquee";
 import { MovingImg } from "../../moving-img";
 
-import { Button } from "./button";
 import { PlayButton } from "./play-button";
 
 function Doroga() {
@@ -90,7 +89,7 @@ export const SectionOne = (props: any) => {
               <Links />
               <RegularText customClass={"text-center z-[100]"} text={t("1")} />
               <CopyCa />
-              <PlayButton txt={t("2")} />
+              <PlayButton />
             </div>
           </Wrapper>
           <div className="w-full absolute bottom-0 left-0 ">

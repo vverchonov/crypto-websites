@@ -1,6 +1,8 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import { start } from "repl";
+import { HeaderText } from "../components/common/text/header-text";
+import { BigText } from "../components/common/text/big-text";
 
 const startingPoint = -50;
 const bearSpeed = 11;
@@ -146,7 +148,7 @@ export const Game: React.FC = () => {
       if (!context) return;
       context.beginPath();
       context.clearRect(0, 0, canvas.width, canvas.height);
-      context.fillStyle = "transparent";
+      context.fillStyle = "white";
       context.fillRect(0, 0, canvas.width, canvas.height);
       context.drawImage(images.current.start, 0, 0, 690, 690);
       canvas.addEventListener(
@@ -351,13 +353,17 @@ export const Game: React.FC = () => {
   };
 
   return (
-    <div className="z-0 min-h-screen w-full flex justify-center align-center items-center content-center">
-      <button></button>
+    <div className="z-0 min-h-screen w-full flex flex-col justify-center align-center items-center content-center bg-black">
+      <HeaderText text="Bear Game" customClass="text-white text-6xl" />
+      <BigText
+        text="Use arrows for controls"
+        customClass="text-white text-4xl"
+      />
       <canvas
         ref={canvasRef}
         width="690"
         height="690"
-        className="bg-transparent rounded-xl shadow-xl"
+        className="bg-transparent rounded-xl shadow-xl mt-2"
       />
     </div>
   );

@@ -1,4 +1,4 @@
-import { Game } from "../components/sections/section-1/game";
+import { Game } from "./game";
 
 const Page = () => {
   return (
