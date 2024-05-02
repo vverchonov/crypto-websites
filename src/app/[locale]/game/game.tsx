@@ -551,20 +551,20 @@ export const Game = (props: any) => {
       <canvas
         ref={canvasRef}
         // style={{ height: "420px", width: "420px" }}
-        className="bg-transparent rounded-xl shadow-xl mt-12 w-[99%] md:w-[60%] xl:w-[35%] h-auto aspect-square"
+        className="bg-transparent rounded-xl shadow-xl mt-12 w-[99%] md:w-[60%] xl:w-[35%] h-auto aspect-square select-none"
       />
       <div className="xl:hidden flex flex-row gap-24 justify-center items-center mt-24 mb-12">
         <img
           ref={leftRef}
           src="/game/left.webp"
           alt="Arrow Left"
-          className="w-[27%] md:w-[20%] select-none hover:scale-105"
+          className="w-[27%] md:w-[20%] select-none hover:scale-105 select-none"
         />
         <img
           ref={rightRef}
           src="/game/right.webp"
           alt="Arrow Right"
-          className="w-[27%] md:w-[20%] select-none hover:scale-105"
+          className="w-[27%] md:w-[20%] select-none hover:scale-105 select-none"
         />
       </div>
     </div>
