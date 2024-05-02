@@ -95,7 +95,7 @@ export const SectionFour = (props: any) => {
                   />
                   <iframe
                     className="w-full h-full rounded-xl shadow-2xl"
-                    src="https://dexscreener.com/solana/CSUbFtooSRsNs1HfAreVnG42fwef234gD6AUZ3Mt6deYtAcv3uQjp?embed=1&theme=dark"
+                    src="https://dexscreener.com/solana/Fh31jWcFRc7ExMd4qwoRY3jkP8kt9hwRZJZewEcKmPkx?embed=1&theme=dark"
                   ></iframe>
                 </div>
                 <img
