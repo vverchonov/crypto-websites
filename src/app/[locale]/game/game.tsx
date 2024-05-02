@@ -22,19 +22,24 @@ interface AudioRefs {
 }
 
 const STARTING_POINT = -50;
-const BEAR_SPEED = 11;
 const FRAME_RATE = 1000 / 75;
 const MAX_HEALTH = 12.5;
-const ACCELERATION = 0.1;
 const CIG_HEALTH = 0.5;
 const XAN_HEALTH = 1;
-var HIGH_SCORE = 0;
 
-var itemSpeed = 5;
-var lastFrameTime = 0;
-var health = MAX_HEALTH;
-var score = 0;
-var dead = false;
+var ITEM_SPAWN_RANGE = 600;
+var XAN_SPAWN_RANGE = 440;
+var RETURN_OFFSET = 5;
+var COLLISION_OFFSET = 100;
+var BEAR_SPEED = 11;
+var ACCELERATION = 0.1;
+var HIGH_SCORE = 0;
+var ITEM_SPEED = 5;
+var LAST_FRAME_TIME = 0;
+var HEALTH = MAX_HEALTH;
+var SCORE = 0;
+var DEAD = false;
+
 var keyPressed: Record<number, boolean> = {};
 var ctx: CanvasRenderingContext2D | null;
 
@@ -107,11 +112,7 @@ export const Game = (props: any) => {
     const canvas = canvasRef.current;
     const { width, height } = canvas.getBoundingClientRect();
     if (canvas) {
-      var dpr = window.devicePixelRatio || 1;
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
-      if (!ctx) return;
-      ctx.scale(dpr, dpr);
+      canvasInit(canvas);
       setResized(true);
     }
   };
@@ -216,14 +217,65 @@ export const Game = (props: any) => {
     };
   });
 
-  function gameLoop(timestamp: number) {
-    const delta = timestamp - lastFrameTime;
+  const canvasInit = (canvas: HTMLCanvasElement) => {
+    ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    bear.disHeight = canvas.height / 2.2;
+    bear.posY = canvas.height - bear.disHeight;
+    bear.disWidth = canvas.width * 0.28;
+
+    sig.disWidth = canvas.width * 0.12;
+    sig.disHeight = canvas.height * 0.07;
+
+    dildo.disWidth = canvas.width * 0.1;
+    dildo.disHeight = canvas.height * 0.1;
+
+    xan.disWidth = canvas.width * 0.085;
+    xan.disHeight = canvas.height * 0.05;
+
+    BEAR_SPEED = canvas.width * 0.015;
+    ITEM_SPEED = canvas.height * 0.008;
+    ACCELERATION = canvas.height * 0.00015;
+
+    COLLISION_OFFSET = bear.disHeight * 0.3;
+    RETURN_OFFSET = canvas.width * 0.008;
+    ITEM_SPAWN_RANGE = canvas.width * 0.86;
+    XAN_SPAWN_RANGE = canvas.width * 0.64;
+
+    var dpr = window.devicePixelRatio || 1;
+    var rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    //   ctx.scale(dpr, dpr);
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    const startImage = images.current.start;
+    if (startImage && !startImage.src) {
+      startImage.onload = () =>
+        ctx?.drawImage(startImage, 0, 0, canvas.width, canvas.height);
+      startImage.src = "/game/start.webp";
+    } else if (startImage && startImage.complete) {
+      ctx.drawImage(startImage, 0, 0, canvas.width, canvas.height);
+    } else {
+      if (!startImage) return;
+      startImage.onload = () =>
+        ctx?.drawImage(startImage, 0, 0, canvas.width, canvas.height);
+    }
+  };
+
+  const gameLoop = (timestamp: number) => {
+    if (DEAD) return;
+    const delta = timestamp - LAST_FRAME_TIME;
     if (delta >= FRAME_RATE) {
-      lastFrameTime = timestamp - (delta % FRAME_RATE);
+      LAST_FRAME_TIME = timestamp - (delta % FRAME_RATE);
       updateGameArea();
     }
     requestAnimationFrame(gameLoop);
-  }
+  };
 
   useEffect(() => {
     const startGame = (canvas: HTMLCanvasElement) => {
@@ -239,48 +291,21 @@ export const Game = (props: any) => {
 
     const canvas = canvasRef.current;
     canvas?.removeEventListener("mousedown", () => setReplay(!replay));
-    dead = false;
-    health = MAX_HEALTH;
-    score = 0;
+    DEAD = false;
+    HEALTH = MAX_HEALTH;
+    SCORE = 0;
     setResized(false);
     setReplay(false);
     xan.posY = STARTING_POINT;
     sig.posY = STARTING_POINT;
     dildo.posY = STARTING_POINT;
-    itemSpeed = 5;
-    lastFrameTime = 0;
-    health = MAX_HEALTH;
+    ITEM_SPEED = 5;
+    LAST_FRAME_TIME = 0;
+    HEALTH = MAX_HEALTH;
     bear.posX = 40;
 
     if (canvas) {
-      ctx = canvas.getContext("2d");
-      if (!ctx) return;
-
-      bear.disHeight = canvas.height / 2.2;
-      bear.posY = canvas.height - bear.disHeight;
-
-      var dpr = window.devicePixelRatio || 1;
-      var rect = canvas.getBoundingClientRect();
-      canvas.width = rect.width * dpr;
-      canvas.height = rect.height * dpr;
-      ctx.scale(dpr, dpr);
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "white";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      const startImage = images.current.start;
-      if (startImage && !startImage.src) {
-        startImage.onload = () =>
-          ctx?.drawImage(startImage, 0, 0, canvas.width, canvas.height);
-        startImage.src = "/game/start.webp";
-      } else if (startImage && startImage.complete) {
-        ctx.drawImage(startImage, 0, 0, canvas.width, canvas.height);
-      } else {
-        if (!startImage) return;
-        startImage.onload = () =>
-          ctx?.drawImage(startImage, 0, 0, canvas.width, canvas.height);
-      }
+      canvasInit(canvas);
       canvas.addEventListener(
         "mousedown",
         () => {
@@ -288,8 +313,18 @@ export const Game = (props: any) => {
         },
         false
       );
+
+      return () => {
+        canvas.removeEventListener(
+          "mousedown",
+          () => {
+            startGame(canvas);
+          },
+          false
+        );
+      };
     }
-  }, [replay, resized]);
+  }, [replay]);
 
   function getXan(chanse: number) {
     if (Math.floor(Math.random() * chanse) == 1) {
@@ -300,79 +335,82 @@ export const Game = (props: any) => {
 
   const CheckCollision = (canvas: HTMLCanvasElement) => {
     if (bear.posX + bear.disWidth >= canvas.width) {
-      bear.posX = bear.posX - 5;
+      bear.posX = bear.posX - RETURN_OFFSET;
     }
     if (bear.posX <= 0) {
-      bear.posX = bear.posX + 5;
+      bear.posX = bear.posX + RETURN_OFFSET;
     }
     if (
-      sig.posY + sig.disHeight >= bear.posY + 50 &&
+      sig.posY + sig.disHeight <= bear.posY + COLLISION_OFFSET &&
+      sig.posY + sig.disHeight >= bear.posY &&
       bear.posX <= sig.posX + sig.disWidth &&
       sig.posX <= bear.posX + bear.disWidth
     ) {
-      var randVegX = Math.floor(Math.random() * 600 + 1);
+      var randVegX = Math.floor(Math.random() * ITEM_SPAWN_RANGE + 1);
       sig.posX = randVegX;
       sig.posY = STARTING_POINT;
-      health += health < MAX_HEALTH ? CIG_HEALTH : 0;
-      score++;
-      itemSpeed = itemSpeed + ACCELERATION;
+      HEALTH += HEALTH < MAX_HEALTH ? CIG_HEALTH : 0;
+      SCORE++;
+      ITEM_SPEED = ITEM_SPEED + ACCELERATION;
       if (sounds.current.sig) sounds.current.sig.play();
     }
 
     if (sig.posY + sig.disHeight >= canvas.height) {
-      var randVegX = Math.floor(Math.random() * 600 + 1);
+      var randVegX = Math.floor(Math.random() * ITEM_SPAWN_RANGE + 1);
       sig.posX = randVegX;
       sig.posY = STARTING_POINT;
-      health--;
+      HEALTH--;
       getXan(3);
       if (sounds.current.fuck) sounds.current.fuck.play();
-      if (health < 0) {
-        dead = true;
-        gameOver(score);
+      if (HEALTH < 0) {
+        DEAD = true;
+        gameOver(SCORE);
       }
     }
 
     if (
-      dildo.posY + dildo.disHeight >= bear.posY + 50 &&
+      dildo.posY + dildo.disHeight <= bear.posY + COLLISION_OFFSET &&
+      dildo.posY + dildo.disHeight >= bear.posY &&
       bear.posX < dildo.posX &&
       dildo.posX + dildo.disWidth < bear.posX + bear.disWidth
     ) {
-      var randCanX = Math.floor(Math.random() * 600 + 1);
+      var randCanX = Math.floor(Math.random() * ITEM_SPAWN_RANGE + 1);
       dildo.posX = randCanX;
       dildo.posY = STARTING_POINT;
-      health--;
+      HEALTH--;
       getXan(3);
 
       if (sounds.current.puke) sounds.current.puke.play();
-      if (health < 0) {
-        dead = true;
-        gameOver(score);
+      if (HEALTH < 0) {
+        DEAD = true;
+        gameOver(SCORE);
       }
     }
 
     if (dildo.posY + dildo.disHeight >= canvas.height) {
-      var randCanX = Math.floor(Math.random() * 440 + 1);
+      var randCanX = Math.floor(Math.random() * ITEM_SPAWN_RANGE + 1);
       dildo.posX = randCanX;
       dildo.posY = STARTING_POINT;
       getXan(10);
     }
 
     if (
-      xan.posY + xan.disHeight >= bear.posY + 50 &&
+      xan.posY + xan.disHeight <= bear.posY + COLLISION_OFFSET &&
+      xan.posY + xan.disHeight >= bear.posY &&
       bear.posX < xan.posX &&
       xan.posX + xan.disWidth < bear.posX + bear.disWidth
     ) {
-      var randCanX3 = Math.floor(Math.random() * 440 + 1);
+      var randCanX3 = Math.floor(Math.random() * XAN_SPAWN_RANGE + 1);
       xan.posX = randCanX3;
       xan.posY = STARTING_POINT;
-      if (xan.isOnScreen && health <= 4) {
-        health += health < MAX_HEALTH ? XAN_HEALTH : 0;
+      if (xan.isOnScreen && HEALTH <= 4) {
+        HEALTH += HEALTH < MAX_HEALTH ? XAN_HEALTH : 0;
         if (sounds.current.xan) sounds.current.xan.play();
       }
       xan.isOnScreen = false;
     }
     if (xan.posY + xan.disHeight >= canvas.height) {
-      var randCanX3 = Math.floor(Math.random() * 440 + 1);
+      var randCanX3 = Math.floor(Math.random() * XAN_SPAWN_RANGE + 1);
       xan.posX = randCanX3;
       xan.posY = STARTING_POINT;
       if (xan.isOnScreen) {
@@ -420,7 +458,7 @@ export const Game = (props: any) => {
 
   const updateGameArea = () => {
     const canvas = canvasRef.current;
-    if (!dead && ctx && canvas) {
+    if (!DEAD && ctx && canvas) {
       if (!images.current.background) return;
       if (!images.current.bearRight) return;
       if (!images.current.bearLeft) return;
@@ -476,16 +514,16 @@ export const Game = (props: any) => {
       ctx.font = "1.5rem '__Permanent_Marker_03f989'";
       ctx.fillStyle = "red";
       ctx.beginPath();
-      ctx.fillRect(20, 20, ((canvas.width - 40) / MAX_HEALTH) * health, 20);
+      ctx.fillRect(20, 20, ((canvas.width - 40) / MAX_HEALTH) * HEALTH, 20);
       ctx.fillStyle = "red";
       ctx.rect(20, 20, canvas.width - 40, 20);
       ctx.stroke();
       ctx.fillStyle = "white";
-      ctx.fillText("Score: " + score, 20, 80);
+      ctx.fillText("Score: " + SCORE, 20, 80);
 
-      sig.posY = sig.posY + itemSpeed;
-      dildo.posY = dildo.posY + itemSpeed;
-      xan.posY = xan.posY + itemSpeed;
+      sig.posY = sig.posY + ITEM_SPEED;
+      dildo.posY = dildo.posY + ITEM_SPEED;
+      xan.posY = xan.posY + ITEM_SPEED;
 
       if (keyPressed[39]) {
         bear.state = true;
@@ -512,8 +550,7 @@ export const Game = (props: any) => {
       />
       <canvas
         ref={canvasRef}
-        // width="690"
-        // height="690"
+        // style={{ height: "420px", width: "420px" }}
         className="bg-transparent rounded-xl shadow-xl mt-12 w-[99%] md:w-[60%] xl:w-[35%] h-auto aspect-square"
       />
       <div className="xl:hidden flex flex-row gap-24 justify-center items-center mt-24 mb-12">
@@ -521,13 +558,13 @@ export const Game = (props: any) => {
           ref={leftRef}
           src="/game/left.webp"
           alt="Arrow Left"
-          className="w-[27%] md:w-[20%] select-none"
+          className="w-[27%] md:w-[20%] select-none hover:scale-105"
         />
         <img
           ref={rightRef}
           src="/game/right.webp"
           alt="Arrow Right"
-          className="w-[27%] md:w-[20%] select-none"
+          className="w-[27%] md:w-[20%] select-none hover:scale-105"
         />
       </div>
     </div>
