@@ -14,6 +14,7 @@ import { HeaderText } from "../../common/text/header-text";
 
 export const NFT = (props: any) => {
   const [metaplex, setMetaplex] = useState<Metaplex | null>(null);
+  const [soldOut, setSoldOut] = useState(false);
   const [candyState, setCandyState] = useState<CandyMachineV2 | null>();
   const [candyStateErr, setCandyStateErr] = useState<string | null>();
   const [candyStateLoading, setCandyStateLoading] = useState(true);
@@ -39,6 +40,7 @@ export const NFT = (props: any) => {
           .candyMachinesV2()
           .findByAddress({ address: CANDY_MACHINE });
         setCandyState(state);
+        setSoldOut(state.itemsRemaining.eqn(0) || false);
         // setNfts(state.items);
         setCandyStateErr(null);
       } catch (e: any) {
@@ -71,14 +73,17 @@ export const NFT = (props: any) => {
     }
   };
 
-  const soldOut: boolean = candyState?.itemsRemaining.eqn(0) || false;
+  const disabled = txLoading || !candyState || !wallet;
 
   return (
     <div className="flex flex-row justify-end items-center relative min-h-[60vh]">
       <div className="flex flex-col gap-6 w-full justify-center items-center h-full">
         <WalletMultiButton />
-        <HeaderText customClass={"text-6xl"} text={"Claim your NFT"} />
-        <div className="text-4xl text-center mb-12">
+        <HeaderText
+          customClass={"lg:text-6xl text-4xl text-center"}
+          text={"Claim your NFT"}
+        />
+        <div className="lg:text-4xl text-3xl text-center mb-12">
           {candyStateLoading ? (
             <p>Loading...</p>
           ) : candyStateErr ? (
@@ -99,15 +104,24 @@ export const NFT = (props: any) => {
             )
           )}
         </div>
-        <div className="w-full flex justify-center">
+        <div
+          className={
+            "w-full flex justify-center " +
+            (disabled
+              ? "opacity-65"
+              : "hover:scale-105 transition-transform ease-in-out duration-150")
+          }
+        >
           <button
             className={
-              "flex justify-center " + (soldOut ? "btn-red" : "btn-orange")
+              "flex justify-center " +
+              (soldOut ? "btn-red" : "btn-orange") +
+              (disabled ? " cursor-not-allowed" : "cursor-pointer")
             }
             onClick={mint}
-            disabled={txLoading || !candyState || !wallet}
+            disabled={disabled}
           >
-            <p className="text-4xl p-16 pt-6 cursor-pointer select-none">
+            <p className="text-4xl p-16 pt-6  select-none">
               {soldOut ? "Sold Out" : txLoading ? "Claiming..." : "Claim NFT"}
             </p>
           </button>

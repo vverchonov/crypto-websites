@@ -18,7 +18,7 @@ import { MovingImg } from "../../moving-img";
 function Doroga() {
   return (
     <AppearWrapper>
-      <div className="w-full relative">
+      <div className="w-full relative overflow-hidden">
         <Marquee
           className="relative bottom-[-15px]"
           speed={5}
@@ -83,13 +83,13 @@ export const SectionOne = (props: any) => {
         <div className="min-h-screen w-full flex justify-center align-center items-center relative overflow-x-clip bg-[#d9e8f8]">
           <Clouds />
           <Wrapper>
-            <div className="flex flex-col gap-8 items-center">
+            <div className="flex flex-col gap-8 items-center mt-14 md:mt-12">
               <Links />
               <RegularText customClass={"text-center z-[100]"} text={t("1")} />
               <CopyCa copyLink="" />
 
               <Image
-                className="md:w-[50%] mb-32 md:mb-16 z-50 select-none"
+                className="md:w-[50%] mb-48 md:mb-16 z-50 select-none"
                 alt="Doroga"
                 fetchPriority="high"
                 priority

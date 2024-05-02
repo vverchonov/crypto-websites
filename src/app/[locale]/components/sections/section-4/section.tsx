@@ -54,7 +54,7 @@ export const SectionFour = (props: any) => {
               />
               <div className="flex items-center lg:w-5/12">
                 <BigText
-                  customClass={"md:text-left text-center z-50"}
+                  customClass={"md:text-left text-center z-50 md:mt-0 mt-8"}
                   extra={
                     <MovingImg
                       tz={1}
@@ -82,7 +82,7 @@ export const SectionFour = (props: any) => {
                   ></iframe>
                 </div>
                 <img
-                  className="absolute -bottom-[8.5%] w-[30%] -right-[5%] select-none -z-10"
+                  className="md:absolute flex md:-bottom-[8.5%] md:w-[30%] md:-right-[5%] select-none -z-10 -translate-y-[15%] md:translate-y-0"
                   src={"./section-4/bearfire.webp"}
                 />
               </div>

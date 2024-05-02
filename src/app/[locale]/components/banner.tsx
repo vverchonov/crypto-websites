@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { SwitchLang } from "./switch-lang";
+import { HeaderText } from "./common/text/header-text";
 
 const imgClass = "cursor-pointer mb-4 w-44 md:mb-0 lg:w-56";
 
@@ -34,12 +35,24 @@ export const Banner = (props: any) => {
   return (
     <>
       {showBanner ? (
-        <div className="w-full h-[100vh] bg-black justify-center align-center overflow-hidden">
-          <div className="flex w-full p-4 justify-center align-center">
+        <div className="w-full min-h-screen bg-black flex flex-col justify-center items-center overflow-hidden relative">
+          <img
+            className="w-full md:w-1/3 absolute top-0 md:left-0 z-0 transform -translate-y-[20%]"
+            src="./banner/lamp.webp"
+          />
+          <div className="absolute top-0 flex w-full p-4 justify-center items-start place-self-start">
             <SwitchLang />
           </div>
-          <div className="div-fw h-fit w-full flex justify-center align-center">
-            <div className="flex md:flex-row flex-col justify-end md:items-center ml-0 space-x-0 lg:space-x-4 lg:mr-24">
+          <img
+            className="w-full md:w-1/2 absolute bottom-0 right-0 z-0 transform translate-y-[10%] translate-x-[12%]"
+            src="./banner/bear.webp"
+          />
+          <div className="h-full flex flex-col justify-center items-center gap-6">
+            <HeaderText
+              text={"Are you SMOB?"}
+              customClass="md:text-4xl text-white text-3xl"
+            />
+            <div className="flex flex-col md:flex-row justify-center items-center space-x-0 lg:space-x-4">
               <div className="lg:min-w-56 min-w-44">
                 <img
                   onClick={onClick}
@@ -47,12 +60,15 @@ export const Banner = (props: any) => {
                   src="./banner/yes.webp"
                 />
               </div>
-              <div className="lg:min-w-56 min-w-44 mb-16 md:mb-0">
+              <div
+                className="lg:min-w-56 min-w-44 mb-16 md:mb-0 "
+                onMouseEnter={onHover}
+              >
                 <img
                   id="noButton"
-                  onMouseEnter={onHover}
                   className={
-                    imgClass + " transition transform duration-300 ease-in-out"
+                    imgClass +
+                    " transition transform duration-300 ease-in-out md:opacity-100 opacity-20"
                   }
                   src="./banner/no.webp"
                 />

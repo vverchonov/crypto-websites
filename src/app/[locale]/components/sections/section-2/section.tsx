@@ -40,7 +40,10 @@ export const SectionTwo = (props: any) => {
             customClass={" max-w-screen-2xl text-center lg:text-4xl"}
             text={"Lorem ipsum dolor sit amet consectetur adipisicing elit"}
           />
-          <a href="https://google.com" className="text-3xl mt-6 btn-google">
+          <a
+            href="https://google.com"
+            className="text-3xl mt-6 btn-google hover:scale-105 transition-transform duration-150 ease-in-out"
+          >
             <p className="lg:text-4xl p-16 pt-6 cursor-pointer text-center select-none">
               Memes
             </p>
@@ -62,12 +65,12 @@ export const SectionTwo = (props: any) => {
                 <img
                   src="/section-2/chel.png"
                   alt="chel"
-                  className="w-[30%] bottom-1 left-[-15%] mt-28 absolute select-none"
+                  className="w-[40%] md:w-[30%] bottom-1 left-[-15%] mt-28 absolute select-none"
                 />
                 <img
                   src="/section-2/chel.png"
                   alt="chel"
-                  className="w-[30%] bottom-1 right-[-15%] mt-28 absolute mirror-y select-none"
+                  className="w-[40%] md:w-[30%] bottom-1 right-[-15%] mt-28 absolute mirror-y select-none"
                 />
                 <div className=" w-full content-center relative max-w-screen-2xl overflow-hidden m-auto">
                   <MovingImg

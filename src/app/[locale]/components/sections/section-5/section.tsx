@@ -40,7 +40,7 @@ export const SectionFive = (props: any) => {
           ty={-4}
           tx={-2}
           customClassImg={"w-3/12 md:w-5/12 h-auto"}
-          customClassWrapper={"right-52 top-24"}
+          customClassWrapper={"right-52 md:top-24 top-72"}
           imgPath={"./common/money.webp"}
         />
         <MovingImg
@@ -48,7 +48,7 @@ export const SectionFive = (props: any) => {
           ty={-4}
           tx={-2}
           customClassImg={"w-3/12 md:w-5/12 h-auto"}
-          customClassWrapper={"left-52 top-24"}
+          customClassWrapper={"left-52 top-96 md:top-24"}
           imgPath={"./common/money.webp"}
         />
         <MovingImg
@@ -56,7 +56,7 @@ export const SectionFive = (props: any) => {
           ty={-4}
           tx={-2}
           customClassImg={"w-3/12 md:w-5/12 h-auto rotate-[24deg]"}
-          customClassWrapper={"left-50 top-24"}
+          customClassWrapper={"left-50 md:top-24 top-[-5%]"}
           imgPath={"./common/bong.webp"}
         />
 
