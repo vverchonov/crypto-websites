@@ -4,9 +4,12 @@ export const CA = "7Cga2epeJMhte3j74ekEBRMBDn2nRKcgFBrEggSC99fk";
 export const TELEGRAM = "https://t.me/smobsolana";
 export const TWITTER = "https://twitter.com/smobsolana";
 export const BUY_LING = "coming";
-export const DEXSCREENER = "coming";
-export const RAYDIUM = "coming";
-export const JUPITER = "coming";
+export const DEXSCREENER =
+  "https://dexscreener.com/solana/Fh31jWcFRc7ExMd4qwoRY3jkP8kt9hwRZJZewEcKmPkx";
+export const RAYDIUM =
+  "https://raydium.io/swap/?outputCurrency=7Cga2epeJMhte3j74ekEBRMBDn2nRKcgFBrEggSC99fk";
+export const JUPITER =
+  "https://jup.ag/swap/So11111111111111111111111111111111111111112-7Cga2epeJMhte3j74ekEBRMBDn2nRKcgFBrEggSC99fk?inAmount=";
 export const DEXTOOLS = "coming";
 
 export const TELEGRAM_DEV = "https://t.me/lettodev";

@@ -29,7 +29,7 @@ export const Links = (props: any) => {
         <TgIcon iconClass={iconClass} />
       </a>
 
-      {/* <a target="_blank" href={RAYDIUM} className={buttonClass}>
+      <a target="_blank" href={RAYDIUM} className={buttonClass}>
         <RaydiumIcon iconClass={iconClass} />
       </a>
       <a target="_blank" href={JUPITER} className={buttonClass}>
@@ -38,7 +38,7 @@ export const Links = (props: any) => {
       <a target="_blank" href={DEXSCREENER} className={buttonClass}>
         <DexscreenerIcon iconClass={iconClass} />
       </a>
-      <a target="_blank" href={DEXTOOLS} className={buttonClass}>
+      {/* <a target="_blank" href={DEXTOOLS} className={buttonClass}>
         <DextoolsIcon iconClass={iconClass} />
       </a> */}
     </div>
