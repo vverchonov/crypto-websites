@@ -144,9 +144,8 @@ export const Game: React.FC = () => {
     if (canvas) {
       context = canvas.getContext("2d");
       if (!context) return;
+      context.beginPath();
       context.clearRect(0, 0, canvas.width, canvas.height);
-      var x = canvas.width / 2;
-      var y = canvas.height / 2;
       context.fillStyle = "transparent";
       context.fillRect(0, 0, canvas.width, canvas.height);
       context.drawImage(images.current.start, 0, 0, 690, 690);
@@ -261,17 +260,23 @@ export const Game: React.FC = () => {
       context.fillStyle = "transparent";
       context.fillRect(0, 0, canvas.width, canvas.height);
       context.drawImage(images.current.over, 0, 0, 690, 690);
+      var text = "Final Score: " + score;
       context.font = "40px '__Permanent_Marker_03f989'";
       context.fillStyle = "black";
-      context.fillText("Final Score: " + score, x, 400);
-      canvas.addEventListener("mousedown", () => setReplay(!replay), false);
+      var textWidth = context.measureText(text).width;
+      var x = canvas.width / 2 - textWidth / 2;
+      var y = 400;
+      context.fillText(text, x, y);
       if (score > highScore) {
         highScore = score;
         localStorage.setItem("highscore", highScore.toString());
-        context.fillText("High Score: " + highScore, x, 350);
-      } else {
-        context.fillText("High Score: " + highScore, x, 350);
       }
+      text = "High Score: " + highScore;
+      var textWidth = context.measureText(text).width;
+      var x = canvas.width / 2 - textWidth / 2;
+      var y = 350;
+      context.fillText(text, x, 350);
+      canvas.addEventListener("mousedown", () => setReplay(!replay), false);
     }
   };
 
