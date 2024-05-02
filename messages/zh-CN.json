@@ -21,10 +21,7 @@
     "1": "增强现实"
   },
   "SectionFour": {
-    "1": "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "2": "2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "3": "3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "4": "4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "1": "Just smobin",
     "5": "简单的快速回顾:",
     "6": "1. LP 永久锁定; 开发者购买的代币全部销毁; 从pump.fun启动；底部有开发者链接",
     "7": "2. 150+ 的与之内容以及更多: memes, png图库, 贴纸, 动画 && etc…",
@@ -46,6 +43,10 @@
     "1": "$SMOB 是一个没有内在价值的meme币, 这不是为了投资， 而仅仅是一个体现了$SMOB社区文化的代币. 没有实用性也没有仍和虚无的承诺,仅仅是出于娱乐的目的。"
   },
   "InitialPopup": {
-    "1": "你是SMOB吗?"
+    "1": "你是 SMOB 吗?"
+  },
+  "Game": {
+    "1": "SMOB 游戏",
+    "2": "使用箭头键移动熊"
   }
 }

@@ -21,7 +21,7 @@
     "1": "Augmented Reality"
   },
   "SectionFour": {
-    "1": "Just chillin’",
+    "1": "Just smobin",
     "5": "Just a quick recap:",
     "6": "1. LP locked forever; Dev buy is fully burned; Launched from pump.fun; Dev links at the bottom",
     "7": "2. 150+ elements of pre-made content: memes, png, stickers, animations etc…",
@@ -44,5 +44,9 @@
   },
   "InitialPopup": {
     "1": "Are you SMOB?"
+  },
+  "Game": {
+    "1": "SMOB Game",
+    "2": "Use arrow keys to move the bear"
   }
 }

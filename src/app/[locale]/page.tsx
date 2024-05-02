@@ -6,7 +6,6 @@ import { SectionFive } from "./components/sections/section-5/section";
 import { SectionSix } from "./components/sections/section-6/section";
 import { FooterSection } from "./components/footer-section";
 import { Banner } from "./components/banner";
-import { Links } from "./components/sections/section-1/links";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
