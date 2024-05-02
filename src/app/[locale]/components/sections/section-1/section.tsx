@@ -89,7 +89,7 @@ export const SectionOne = (props: any) => {
               <RegularText customClass={"text-center z-[100]"} text={t("1")} />
               <CopyCa />
 
-              <Game />
+              {/* <Game /> */}
             </div>
           </Wrapper>
           <div className="w-full absolute bottom-0 left-0">
