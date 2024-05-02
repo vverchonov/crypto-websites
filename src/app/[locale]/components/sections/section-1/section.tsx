@@ -29,7 +29,7 @@ function Doroga() {
           <Image
             src={city}
             alt="city"
-            className="w-full h-96 z-10 select-none"
+            className="w-auto h-96 z-10 select-none object-contain"
             fetchPriority="high"
             priority
           />
@@ -44,7 +44,7 @@ function Doroga() {
             <Image
               src={dorogaImg}
               alt="Doroga"
-              className="w-full h-24 md:h-36 select-none"
+              className="w-auto h-24 md:h-36 select-none object-contain"
               fetchPriority="high"
               priority
             />
@@ -66,7 +66,7 @@ function Clouds() {
                 key={index}
                 src={`/section-1/clouds/cl${index + 1}.webp`}
                 alt={`Image ${index}`}
-                className="w-full h-16 w-auto select-none"
+                className="h-16 w-auto select-none object-contain"
               />
             ))}
           </div>

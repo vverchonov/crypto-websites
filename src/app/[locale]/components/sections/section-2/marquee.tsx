@@ -12,7 +12,7 @@ export const MarqueeCustom = () => {
                 key={index}
                 src={`/section-1/marquee/pho${index + 1}.webp`}
                 alt={`Image ${index}`}
-                className="w-full h-auto rounded-2xl select-none"
+                className="w-auto h-auto rounded-2xl select-none object-contain"
               />
             ))}
           </div>
