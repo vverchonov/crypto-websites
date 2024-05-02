@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
   title: "SMOB",
-  description: "Smoking and Depressed Bear",
+  description: "SMOKING & BEARING",
 };
 
 const PermanentMarker = Permanent_Marker({
@@ -30,13 +30,13 @@ export default function RootLayout({
         <meta property="og:site_name" content="SMOB" />
         <meta property="og:url" content="https://smobsolana.com/" />
         <meta property="og:title" content="Solana Token" />
-        <meta property="og:description" content="Smoking and Depressed Bear" />
+        <meta property="og:description" content="SMOKING & BEARING" />
         <meta property="og:image" content="http://smobsolana.com/header.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@smobsolana" />
         <meta name="twitter:url" content="http://smobsolana.com/" />
         <meta name="twitter:title" content="Solana Token" />
-        <meta name="twitter:description" content="Smoking and Depressed Bear" />
+        <meta name="twitter:description" content="SMOKING & BEARING" />
         <meta
           name="twitter:image"
           content="http://smobsolana.com/header.webp"
