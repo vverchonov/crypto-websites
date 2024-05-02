@@ -66,7 +66,7 @@ function Clouds() {
                 key={index}
                 src={`/section-1/clouds/cl${index + 1}.webp`}
                 alt={`Image ${index}`}
-                className="w-full h-16 select-none"
+                className="w-full h-16 w-auto select-none"
               />
             ))}
           </div>
