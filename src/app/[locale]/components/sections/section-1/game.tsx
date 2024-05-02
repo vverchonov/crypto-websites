@@ -350,7 +350,8 @@ export const Game: React.FC = () => {
   };
 
   return (
-    <div className="z-50">
+    <div className="z-0 min-h-screen w-full flex justify-center align-center items-center content-center">
+      <button></button>
       <canvas
         ref={canvasRef}
         width="690"

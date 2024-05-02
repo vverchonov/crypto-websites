@@ -15,6 +15,7 @@ import game from "../../../../../../public/game/start.webp";
 import Marquee from "react-fast-marquee";
 import { MovingImg } from "../../moving-img";
 import { Game } from "./game";
+import { Button } from "./button";
 
 function Doroga() {
   return (
@@ -88,14 +89,7 @@ export const SectionOne = (props: any) => {
               <Links />
               <RegularText customClass={"text-center z-[100]"} text={t("1")} />
               <CopyCa />
-
-              <a href="/game" className="flex justify-center items-center">
-                <Image
-                  src={game}
-                  alt="game"
-                  className="md:w-[50%] mb-32 md:mb-16 z-50 hover:scale-[1.02] transform ease-in-out duration-300 select-none"
-                />
-              </a>
+              <Button txt={t("2")} />
             </div>
           </Wrapper>
           <div className="w-full absolute bottom-0 left-0 ">
