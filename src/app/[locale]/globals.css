@@ -55,3 +55,78 @@ body {
   color: #ff9900;
   fill: #ff9900;
 }
+
+.myButtonE {
+  background-color: #44c767;
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  display: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Verdana;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+}
+
+.myButtonE:hover {
+  background-color: #5cbf2a;
+}
+
+.myButtonE:active {
+  position: relative;
+  top: 1px;
+}
+
+.myButtonH {
+  background-color: #f02424;
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  border: 1px solid #94351e;
+  display: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Verdana;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #662828;
+}
+
+.myButtonH:hover {
+  background-color: #cc3a21;
+}
+
+.myButtonH:active {
+  position: relative;
+  top: 1px;
+}
+
+.myButtonR {
+  background-color: #a245c7;
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  border: 1px solid #9319ab;
+  display: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #5e2866;
+}
+
+.myButtonR:hover {
+  background-color: #a92abd;
+}
+
+.myButtonR:active {
+  position: relative;
+  top: 1px;
+}

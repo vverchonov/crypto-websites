@@ -14,6 +14,7 @@ import city from "../../../../../../public/section-1/city.webp";
 import game from "../../../../../../public/section-1/game.webp";
 import Marquee from "react-fast-marquee";
 import { MovingImg } from "../../moving-img";
+import { Game } from "./game";
 
 function Doroga() {
   return (
@@ -86,15 +87,9 @@ export const SectionOne = (props: any) => {
             <div className="flex flex-col gap-8 items-center mt-14 md:mt-12">
               <Links />
               <RegularText customClass={"text-center z-[100]"} text={t("1")} />
-              <CopyCa copyLink="" />
+              <CopyCa />
 
-              <Image
-                className="md:w-[50%] mb-48 md:mb-16 z-50 select-none"
-                alt="Doroga"
-                fetchPriority="high"
-                priority
-                src={game}
-              />
+              <Game />
             </div>
           </Wrapper>
           <div className="w-full absolute bottom-0 left-0">

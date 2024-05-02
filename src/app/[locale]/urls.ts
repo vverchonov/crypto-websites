@@ -1,6 +1,6 @@
 import { PublicKey } from '@solana/web3.js';
 
-export const CA = 'COMING';
+export const CA = 'Coming';
 export const TELEGRAM = 'https://t.me/mihabibi11'
 export const TWITTER = 'https://twitter.com/mihabibi_'
 export const BUY_LING = 'https://raydium.io/swap/?inputCurrency=4inoptdokTnnH5cU64CP64WQbeV6gdFUVmiokPfwzbsL&outputCurrency=sol&outputSymbol=4inopt&fixed=out'

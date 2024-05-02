@@ -3,6 +3,10 @@
 import { useState } from "react";
 import { SwitchLang } from "./switch-lang";
 import { HeaderText } from "./common/text/header-text";
+import Image from "next/image";
+
+import bear from "../../../../public/banner/bear.webp";
+import lamp from "../../../../public/banner/lamp.webp";
 
 const imgClass = "cursor-pointer mb-4 w-44 md:mb-0 lg:w-56";
 
@@ -36,16 +40,22 @@ export const Banner = (props: any) => {
     <>
       {showBanner ? (
         <div className="w-full min-h-screen bg-black flex flex-col justify-center items-center overflow-hidden relative">
-          <img
+          <Image
             className="w-full md:w-1/3 absolute top-0 md:left-0 z-0 transform -translate-y-[20%]"
-            src="./banner/lamp.webp"
+            src={lamp}
+            alt="lamp"
+            priority
+            fetchPriority="high"
           />
           <div className="absolute top-0 flex w-full p-4 justify-center items-start place-self-start">
             <SwitchLang />
           </div>
-          <img
+          <Image
             className="w-full md:w-1/2 absolute bottom-0 right-0 z-0 transform translate-y-[10%] translate-x-[12%]"
-            src="./banner/bear.webp"
+            src={bear}
+            alt="bear"
+            priority
+            fetchPriority="high"
           />
           <div className="h-full flex flex-col justify-center items-center gap-6">
             <HeaderText

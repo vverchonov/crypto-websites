@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { CopyIcon } from "./icons/copy-icon";
 import { CA } from "@/app/[locale]/urls";
 import { BigText } from "./text/big-text";
+import { useEffect, useState } from "react";
 
 export const CopyCa = (props: any) => {
   const onCopy = () => {
@@ -21,12 +22,34 @@ export const CopyCa = (props: any) => {
     });
   };
 
+  const [isNarrowScreen, setIsNarrowScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsNarrowScreen(window.innerWidth < 768);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  const clampedText = () => {
+    if (!isNarrowScreen || CA.length < 7) {
+      return CA;
+    }
+    const start = CA.substring(0, 4);
+    const end = CA.substring(CA.length - 4);
+    return `${start}...${end}`;
+  };
+
   return (
     <button
       onClick={onCopy}
-      className="text-center text-xl cursor-pointer flex flex-row gap-4 align-center justify-center items-center select-non flex z-50"
+      className="text-center text-xl cursor-pointer flex-row gap-4 align-center justify-center items-center select-non flex z-50"
     >
-      <BigText text={`CA: ${CA}`} />
+      <BigText text={`CA: ${clampedText()}`} />
       <CopyIcon />
     </button>
   );
