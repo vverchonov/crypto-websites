@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
+import { start } from "repl";
 
 const startingPoint = -50;
 const bearSpeed = 10;
@@ -7,7 +8,7 @@ const frameRate = 1000 / 75;
 
 var itemSpeed = 5;
 var lastFrameTime = 0;
-var health = 7;
+var health = 6.5;
 var score = 0;
 var dead = false;
 var keyPressed: Record<number, boolean> = {};
@@ -42,7 +43,7 @@ var xan = {
   posX: 80,
   posY: startingPoint,
   disWidth: 60,
-  disHeight: 90,
+  disHeight: 30,
   isOnScreen: false,
 };
 
@@ -57,6 +58,8 @@ export const Game: React.FC = () => {
     xan: new Image(),
     sig: new Image(),
     background: new Image(),
+    start: new Image(),
+    over: new Image(),
   });
 
   const sounds = useRef({
@@ -79,6 +82,7 @@ export const Game: React.FC = () => {
   };
 
   useEffect(() => {
+    console.log("images");
     images.current = {
       bearRight: loadImage("/game/bear-right.webp"),
       bearLeft: loadImage("/game/bear-left.webp"),
@@ -86,6 +90,8 @@ export const Game: React.FC = () => {
       xan: loadImage("/game/xan.webp"),
       sig: loadImage("/game/sig.webp"),
       background: loadImage("/game/bg.webp"),
+      start: loadImage("/game/start.webp"),
+      over: loadImage("/game/over.webp"),
     };
 
     sounds.current = {
@@ -109,7 +115,7 @@ export const Game: React.FC = () => {
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("keyup", handleKeyUp);
     };
-  }, []);
+  });
 
   function gameLoop(timestamp: number) {
     const delta = timestamp - lastFrameTime;
@@ -121,6 +127,7 @@ export const Game: React.FC = () => {
   }
 
   useEffect(() => {
+    console.log("start");
     const startGame = (canvas: HTMLCanvasElement) => {
       canvas.removeEventListener(
         "mousedown",
@@ -133,19 +140,16 @@ export const Game: React.FC = () => {
     };
 
     const canvas = canvasRef.current;
+    dead = false;
     if (canvas) {
       context = canvas.getContext("2d");
       if (!context) return;
       context.clearRect(0, 0, canvas.width, canvas.height);
       var x = canvas.width / 2;
       var y = canvas.height / 2;
-      context.font = "2rem '__Permanent_Marker_03f989'";
-      context.fillStyle = "black";
-      context.textAlign = "center";
-      context.fillText("Catch Cigarettes and Xans", x, 290);
-      context.fillText("Avoid fucking Dildos", x, 320);
-      context.fillText("Use the arrow keys to move the bear", x, 376);
-      context.fillText("Click anywhere to start.", x, 440);
+      context.fillStyle = "transparent";
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.drawImage(images.current.start, 0, 0, 690, 690);
       canvas.addEventListener(
         "mousedown",
         () => {
@@ -179,7 +183,7 @@ export const Game: React.FC = () => {
       sig.posX = randVegX;
       sig.posY = startingPoint;
       score++;
-      itemSpeed = itemSpeed + 1;
+      itemSpeed = itemSpeed + 0.5;
       sounds.current.sig.play();
     }
 
@@ -190,7 +194,7 @@ export const Game: React.FC = () => {
       health--;
       getXan(3);
       sounds.current.fuck.play();
-      if (health == -1) {
+      if (health < 0) {
         dead = true;
         gameOver(score);
       }
@@ -208,7 +212,7 @@ export const Game: React.FC = () => {
       getXan(3);
 
       sounds.current.puke.play();
-      if (health == -1) {
+      if (health < 0) {
         dead = true;
         gameOver(score);
       }
@@ -251,18 +255,16 @@ export const Game: React.FC = () => {
     if (canvas) {
       context = canvas.getContext("2d");
       if (!context) return;
+      context.clearRect(0, 0, canvas.width, canvas.height);
       var x = canvas.width / 2;
       var y = canvas.height / 2;
-      context.fillStyle = "white";
+      context.fillStyle = "transparent";
       context.fillRect(0, 0, canvas.width, canvas.height);
-      context.font = "2rem '__Permanent_Marker_03f989'";
-      context.fillStyle = "red";
-      context.fillText("GAME OVER", x, 300);
+      context.drawImage(images.current.over, 0, 0, 690, 690);
+      context.font = "40px '__Permanent_Marker_03f989'";
       context.fillStyle = "black";
       context.fillText("Final Score: " + score, x, 400);
-      context.fillText("Click anywhere to restart.", x, 450);
-      //   canvas.addEventListener("mousedown", replay, false);
-      setReplay(!replay);
+      canvas.addEventListener("mousedown", () => setReplay(!replay), false);
       if (score > highScore) {
         highScore = score;
         localStorage.setItem("highscore", highScore.toString());
@@ -318,7 +320,7 @@ export const Game: React.FC = () => {
       context.font = "1.5rem '__Permanent_Marker_03f989'";
       context.fillStyle = "red";
       context.beginPath();
-      context.fillRect(20, 20, (650 / 7) * health, 20);
+      context.fillRect(20, 20, (650 / 6.5) * health, 20);
       context.fillStyle = "red";
       context.rect(20, 20, 650, 20);
       context.stroke();
@@ -348,7 +350,7 @@ export const Game: React.FC = () => {
         ref={canvasRef}
         width="690"
         height="690"
-        className="bg-white rounded-xl shadow-xl"
+        className="bg-transparent rounded-xl shadow-xl"
       />
     </div>
   );

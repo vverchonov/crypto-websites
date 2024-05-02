@@ -18,7 +18,7 @@ export const SectionTwo = (props: any) => {
             text={t("1")}
           />
           <a
-            href="https://google.com"
+            href="https://drive.google.com/drive/folders/1dhjii-cfiKs0qkVEPun0rf8sKLcGukM3"
             className="text-3xl mt-6 btn-google hover:scale-105 transition-transform duration-150 ease-in-out"
           >
             <p className="lg:text-4xl p-16 pt-6 cursor-pointer text-center select-none">

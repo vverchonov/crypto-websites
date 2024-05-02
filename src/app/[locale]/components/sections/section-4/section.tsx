@@ -3,6 +3,7 @@ import { BigText } from "../../common/text/big-text";
 import { MovingImg } from "../../moving-img";
 import { useTranslations } from "next-intl";
 import { AppearWrapper } from "../../common/wrappers/appear-wrapper";
+import { HeaderText } from "../../common/text/header-text";
 
 export const SectionFour = (props: any) => {
   const t = useTranslations("SectionFour");
@@ -31,10 +32,10 @@ export const SectionFour = (props: any) => {
                 />
               </div>
               <div className="lg:w-5/12 flex flex-col gap-8 justify-center">
-                <BigText customClass={"text-center"} text={t("1")} />
-                <BigText customClass={"text-center"} text={t("2")} />
-                <BigText customClass={"text-center"} text={t("3")} />
-                <BigText customClass={"text-center mb-16"} text={t("4")} />
+                <HeaderText
+                  customClass={"text-center uppercase text-4xl md:text-6xl"}
+                  text={t("1")}
+                />
               </div>
             </div>
           </AppearWrapper>
@@ -49,7 +50,7 @@ export const SectionFour = (props: any) => {
                 imgPath={"./common/shrooms.webp"}
               />
               <img
-                className="md:absolute block -top-[6rem] left-[0%] w-[75%] md:w-[20%] select-none"
+                className="md:absolute block -top-[20%] left-[0%] w-[75%] md:w-[20%] select-none"
                 src="./section-4/painting.webp"
               />
               <div className="flex flex-col gap-4 justify-center items-center lg:w-5/12">
@@ -98,7 +99,7 @@ export const SectionFour = (props: any) => {
                   ></iframe>
                 </div>
                 <img
-                  className="md:absolute flex md:-bottom-[8.5%] md:w-[30%] md:-right-[5%] select-none -z-10 -translate-y-[15%] md:translate-y-0"
+                  className="md:absolute flex md:-bottom-[12%] md:w-[30%] md:-right-[5%] select-none -z-10 -translate-y-[15%] md:translate-y-0"
                   src={"./section-4/bearfire.webp"}
                 />
               </div>
