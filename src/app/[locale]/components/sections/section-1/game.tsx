@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { start } from "repl";
 
 const startingPoint = -50;
-const bearSpeed = 10;
+const bearSpeed = 11;
 const frameRate = 1000 / 75;
 
 var itemSpeed = 5;
@@ -181,6 +181,7 @@ export const Game: React.FC = () => {
       var randVegX = Math.floor(Math.random() * 600 + 1);
       sig.posX = randVegX;
       sig.posY = startingPoint;
+      health += 0.5;
       score++;
       itemSpeed = itemSpeed + 0.5;
       sounds.current.sig.play();
