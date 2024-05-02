@@ -16,6 +16,7 @@ import Marquee from "react-fast-marquee";
 import { MovingImg } from "../../moving-img";
 
 import { PlayButton } from "./play-button";
+import { BigText } from "../../common/text/big-text";
 
 function Doroga() {
   return (
@@ -87,7 +88,7 @@ export const SectionOne = (props: any) => {
           <Wrapper>
             <div className="flex flex-col gap-8 items-center mt-14 md:mt-12">
               <Links />
-              <RegularText customClass={"text-center z-[100]"} text={t("1")} />
+              <BigText customClass={"text-center z-[100]"} text={t("1")} />
               <CopyCa />
               <PlayButton />
             </div>
