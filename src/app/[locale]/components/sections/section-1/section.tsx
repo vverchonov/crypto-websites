@@ -11,7 +11,7 @@ import Image from "next/image";
 
 import dorogaImg from "../../../../../../public/section-1/doroga.webp";
 import city from "../../../../../../public/section-1/city.webp";
-import game from "../../../../../../public/section-1/game.webp";
+import game from "../../../../../../public/game/start.webp";
 import Marquee from "react-fast-marquee";
 import { MovingImg } from "../../moving-img";
 import { Game } from "./game";
@@ -89,7 +89,13 @@ export const SectionOne = (props: any) => {
               <RegularText customClass={"text-center z-[100]"} text={t("1")} />
               <CopyCa />
 
-              <Game />
+              <a href="/game" className="flex justify-center items-center">
+                <Image
+                  src={game}
+                  alt="game"
+                  className="md:w-[50%] mb-32 md:mb-16 z-50 hover:scale-[1.02] transform ease-in-out duration-300 select-none"
+                />
+              </a>
             </div>
           </Wrapper>
           <div className="w-full absolute bottom-0 left-0 ">

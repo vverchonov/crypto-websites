@@ -44,7 +44,8 @@ export const NFT = (props: any) => {
         // setNfts(state.items);
         setCandyStateErr(null);
       } catch (e: any) {
-        setCandyStateErr(props.failedTxt);
+        // setCandyStateErr(props.failedTxt);
+        setCandyStateErr("Coming soon");
       } finally {
         setCandyStateLoading(false);
       }
