@@ -48,7 +48,7 @@ export const SectionThree = (props: any) => {
             <div className="flex flex-col justify-center items-center gap-24">
               <HeaderText
                 customClass={"md:text-6xl text-4xl mt-4 text-center"}
-                text={"Augmented Reality"}
+                text={t("1")}
               />
               <a
                 className="inline-flex justify-center items-center hover:scale-105 transform ease-in-out duration-300"
