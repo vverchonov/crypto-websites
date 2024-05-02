@@ -2,13 +2,17 @@
 import React, { useRef, useEffect, useState } from "react";
 
 const startingPoint = -50;
-const itemSpeed = 3;
-const bearSpeed = 5;
+const bearSpeed = 10;
+const frameRate = 1000 / 75;
 
-let health = 7;
-let score = 0;
-let dead = false;
-let keyPressed: Record<number, boolean> = {};
+var itemSpeed = 5;
+var lastFrameTime = 0;
+var health = 7;
+var score = 0;
+var dead = false;
+var keyPressed: Record<number, boolean> = {};
+var context: CanvasRenderingContext2D | null;
+var highScore = parseInt(localStorage.getItem("highscore") || "0", 10) || 0;
 
 var bear = {
   source: null,
@@ -27,7 +31,7 @@ var sig = {
   disHeight: 50,
 };
 
-var broccoli = {
+var dildo = {
   posX: 330,
   posY: startingPoint,
   disWidth: 60,
@@ -44,12 +48,12 @@ var xan = {
 
 export const Game: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [highScore, setHighScore] = useState(0);
+  const [replay, setReplay] = useState(false);
 
   const images = useRef({
     bearRight: new Image(),
     bearLeft: new Image(),
-    broccoli: new Image(),
+    dildo: new Image(),
     xan: new Image(),
     sig: new Image(),
     background: new Image(),
@@ -70,8 +74,7 @@ export const Game: React.FC = () => {
 
   const loadSound = (src: string) => {
     const audio = new Audio();
-    audio.volume = 0.2;
-    audio.src = src;
+    audio.volume = 0.1;
     return audio;
   };
 
@@ -79,7 +82,7 @@ export const Game: React.FC = () => {
     images.current = {
       bearRight: loadImage("/game/bear-right.webp"),
       bearLeft: loadImage("/game/bear-left.webp"),
-      broccoli: loadImage("/game/broccoli.webp"),
+      dildo: loadImage("/game/dick2.webp"),
       xan: loadImage("/game/xan.webp"),
       sig: loadImage("/game/sig.webp"),
       background: loadImage("/game/bg.webp"),
@@ -108,32 +111,32 @@ export const Game: React.FC = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const storedHighScore = localStorage.getItem("highscore");
-    if (storedHighScore) {
-      setHighScore(parseInt(storedHighScore, 10));
+  function gameLoop(timestamp: number) {
+    const delta = timestamp - lastFrameTime;
+    if (delta >= frameRate) {
+      lastFrameTime = timestamp - (delta % frameRate);
+      updateGameArea();
     }
-  }, []);
+    requestAnimationFrame(gameLoop);
+  }
 
   useEffect(() => {
-    const startGame = (
-      canvas: HTMLCanvasElement,
-      context: CanvasRenderingContext2D | null
-    ) => {
+    const startGame = (canvas: HTMLCanvasElement) => {
       canvas.removeEventListener(
         "mousedown",
         () => {
-          startGame(canvas, context);
+          startGame(canvas);
         },
         false
       );
-      updateGameArea(context);
+      requestAnimationFrame(gameLoop);
     };
 
     const canvas = canvasRef.current;
     if (canvas) {
-      const context = canvas.getContext("2d");
+      context = canvas.getContext("2d");
       if (!context) return;
+      context.clearRect(0, 0, canvas.width, canvas.height);
       var x = canvas.width / 2;
       var y = canvas.height / 2;
       context.font = "2rem '__Permanent_Marker_03f989'";
@@ -146,12 +149,12 @@ export const Game: React.FC = () => {
       canvas.addEventListener(
         "mousedown",
         () => {
-          startGame(canvas, context);
+          startGame(canvas);
         },
         false
       );
     }
-  }, [dead]);
+  }, [replay]);
 
   function getXan(chanse: number) {
     if (Math.floor(Math.random() * chanse) == 1) {
@@ -161,26 +164,26 @@ export const Game: React.FC = () => {
   }
 
   const CheckCollision = (canvas: HTMLCanvasElement) => {
-    if (bear.posX + bear.disWidth == canvas.width) {
+    if (bear.posX + bear.disWidth >= canvas.width) {
       bear.posX = bear.posX - 5;
     }
-    if (bear.posX == 0) {
+    if (bear.posX <= 0) {
       bear.posX = bear.posX + 5;
     }
     if (
-      sig.posY + sig.disHeight == bear.posY + 100 &&
-      bear.posX < sig.posX + sig.disWidth &&
-      sig.posX < bear.posX + bear.disWidth
+      sig.posY + sig.disHeight >= bear.posY + 50 &&
+      bear.posX <= sig.posX + sig.disWidth &&
+      sig.posX <= bear.posX + bear.disWidth
     ) {
       var randVegX = Math.floor(Math.random() * 600 + 1);
       sig.posX = randVegX;
       sig.posY = startingPoint;
-      sounds.current.sig.play();
       score++;
-      //   movingSpeed-;
+      itemSpeed = itemSpeed + 1;
+      sounds.current.sig.play();
     }
 
-    if (sig.posY + sig.disHeight == canvas.height) {
+    if (sig.posY + sig.disHeight >= canvas.height) {
       var randVegX = Math.floor(Math.random() * 600 + 1);
       sig.posX = randVegX;
       sig.posY = startingPoint;
@@ -188,38 +191,38 @@ export const Game: React.FC = () => {
       getXan(3);
       sounds.current.fuck.play();
       if (health == -1) {
-        // dead = true;
-        // gameOver();
+        dead = true;
+        gameOver(score);
       }
     }
 
     if (
-      broccoli.posY + broccoli.disHeight == bear.posY + 100 &&
-      bear.posX < broccoli.posX &&
-      broccoli.posX + broccoli.disWidth < bear.posX + bear.disWidth
+      dildo.posY + dildo.disHeight >= bear.posY + 50 &&
+      bear.posX < dildo.posX &&
+      dildo.posX + dildo.disWidth < bear.posX + bear.disWidth
     ) {
       var randCanX = Math.floor(Math.random() * 600 + 1);
-      broccoli.posX = randCanX;
-      broccoli.posY = startingPoint;
+      dildo.posX = randCanX;
+      dildo.posY = startingPoint;
       health--;
       getXan(3);
 
       sounds.current.puke.play();
       if (health == -1) {
-        // dead = true;
-        // gameOver();
+        dead = true;
+        gameOver(score);
       }
     }
 
-    if (broccoli.posY + broccoli.disHeight == canvas.height) {
+    if (dildo.posY + dildo.disHeight >= canvas.height) {
       var randCanX = Math.floor(Math.random() * 440 + 1);
-      broccoli.posX = randCanX;
-      broccoli.posY = startingPoint;
+      dildo.posX = randCanX;
+      dildo.posY = startingPoint;
       getXan(10);
     }
 
     if (
-      xan.posY + xan.disHeight == bear.posY + 100 &&
+      xan.posY + xan.disHeight >= bear.posY + 50 &&
       bear.posX < xan.posX &&
       xan.posX + xan.disWidth < bear.posX + bear.disWidth
     ) {
@@ -232,7 +235,7 @@ export const Game: React.FC = () => {
       }
       xan.isOnScreen = false;
     }
-    if (xan.posY + xan.disHeight == canvas.height) {
+    if (xan.posY + xan.disHeight >= canvas.height) {
       var randCanX3 = Math.floor(Math.random() * 440 + 1);
       xan.posX = randCanX3;
       xan.posY = startingPoint;
@@ -243,17 +246,38 @@ export const Game: React.FC = () => {
     }
   };
 
-  const updateGameArea = (context: CanvasRenderingContext2D | null) => {
+  const gameOver = (score: number) => {
+    const canvas = canvasRef.current;
+    if (canvas) {
+      context = canvas.getContext("2d");
+      if (!context) return;
+      var x = canvas.width / 2;
+      var y = canvas.height / 2;
+      context.fillStyle = "white";
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.font = "2rem '__Permanent_Marker_03f989'";
+      context.fillStyle = "red";
+      context.fillText("GAME OVER", x, 300);
+      context.fillStyle = "black";
+      context.fillText("Final Score: " + score, x, 400);
+      context.fillText("Click anywhere to restart.", x, 450);
+      //   canvas.addEventListener("mousedown", replay, false);
+      setReplay(!replay);
+      if (score > highScore) {
+        highScore = score;
+        localStorage.setItem("highscore", highScore.toString());
+        context.fillText("High Score: " + highScore, x, 350);
+      } else {
+        context.fillText("High Score: " + highScore, x, 350);
+      }
+    }
+  };
+
+  const updateGameArea = () => {
     const canvas = canvasRef.current;
     if (!dead && context && canvas) {
       context.clearRect(0, 0, canvas.width, canvas.height);
-      context.drawImage(
-        images.current.background,
-        0,
-        0,
-        canvas.width,
-        canvas.height
-      );
+      context.drawImage(images.current.background, 0, 0, 690, 690);
 
       const bearImage = bear.state
         ? images.current.bearRight
@@ -275,11 +299,11 @@ export const Game: React.FC = () => {
       );
 
       context.drawImage(
-        images.current.broccoli,
-        broccoli.posX,
-        broccoli.posY,
-        broccoli.disWidth,
-        broccoli.disHeight
+        images.current.dildo,
+        dildo.posX,
+        dildo.posY,
+        dildo.disWidth,
+        dildo.disHeight
       );
 
       if (xan.isOnScreen) {
@@ -294,7 +318,7 @@ export const Game: React.FC = () => {
       context.font = "1.5rem '__Permanent_Marker_03f989'";
       context.fillStyle = "red";
       context.beginPath();
-      context.fillRect(20, 20, (650 / 5) * health, 20);
+      context.fillRect(20, 20, (650 / 7) * health, 20);
       context.fillStyle = "red";
       context.rect(20, 20, 650, 20);
       context.stroke();
@@ -302,7 +326,7 @@ export const Game: React.FC = () => {
       context.fillText("Score: " + score, 80, 80);
 
       sig.posY = sig.posY + itemSpeed;
-      broccoli.posY = broccoli.posY + itemSpeed;
+      dildo.posY = dildo.posY + itemSpeed;
       xan.posY = xan.posY + itemSpeed;
 
       if (keyPressed[39]) {
@@ -315,7 +339,6 @@ export const Game: React.FC = () => {
       }
 
       CheckCollision(canvas);
-      requestAnimationFrame(() => updateGameArea(context));
     }
   };
 

@@ -56,11 +56,21 @@ export const SectionThree = (props: any) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img
-                  src={"/section-3/vr/qrcode.svg"}
-                  alt="Button"
-                  className="w-7/12 rounded-2xl select-none z-50"
-                />
+                <picture className="flex justify-center items-center">
+                  <source
+                    srcSet={"/section-3/vr/qrcode.svg"}
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcSet={"/section-3/vr/button.webp"}
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src={"/section-3/vr/qrcode.svg"}
+                    alt="Button"
+                    className="w-7/12 rounded-2xl select-none z-50"
+                  />
+                </picture>
               </a>
               <Preview />
             </div>

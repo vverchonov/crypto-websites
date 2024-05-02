@@ -80,8 +80,8 @@ export const SectionOne = (props: any) => {
   const t = useTranslations("SectionOne");
   return (
     <>
-      <AppearWrapper customClass={" w-full "}>
-        <div className="min-h-screen w-full flex justify-center align-center items-center relative overflow-x-clip bg-[#d9e8f8]">
+      <AppearWrapper>
+        <div className="min-h-screen w-full flex justify-center align-center items-center overflow-x-clip relative bg-[#d9e8f8]">
           <Clouds />
           <Wrapper>
             <div className="flex flex-col gap-8 items-center mt-14 md:mt-12">
@@ -92,7 +92,7 @@ export const SectionOne = (props: any) => {
               {/* <Game /> */}
             </div>
           </Wrapper>
-          <div className="w-full absolute bottom-0 left-0">
+          <div className="w-full absolute bottom-0 left-0 ">
             <div className="flex">
               <MovingImg
                 tx={7}
