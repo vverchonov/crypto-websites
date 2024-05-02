@@ -31,7 +31,7 @@ export default function RootLayout({
         <meta name="twitter:site" content="@smobsolana" />
         <meta name="twitter:url" content="https://smobsolana.com" />
         <meta name="twitter:title" content="Solana Token" />
-        <meta name="twitter:description" content="Smoking Depressed Bear" />
+        <meta name="twitter:description" content="SMOKING & BEARING" />
         <meta
           name="twitter:image"
           content="https://ar.smobsolana.com/header.webp"
