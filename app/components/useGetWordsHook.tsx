@@ -27,7 +27,6 @@ export const useGetWordsHook = () => {
             easier for the community to create content and support our humanoid
             :3
           `;
-
         case "4":
           return `Project was purchased`;
         case "5":
