@@ -1,5 +1,5 @@
 import { XIcon } from "./icons/x-icon";
-import { TWITTER, TELEGRAM, TELEGRAM_DEV } from "../urls";
+import { TWITTER, TELEGRAM } from "../urls";
 import { TgIcon } from "./icons/tg-icon";
 import { DevIcon } from "./icons/dev-icon";
 
@@ -29,19 +29,11 @@ export const FooterSection = () => {
           >
             <TgIcon iconClass={iconClass} />
           </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={TELEGRAM_DEV}
-            className="mx-[2px] rounded p-2 font-bold"
-          >
-            <DevIcon iconClass={iconClass} />
-          </a>
         </span>
       </p>
       <p className="px-2 text-xs">
-        $ALON is a memecoin with no intrinsic value, and is not a investment and
-        simply a community/culture token similar to $ALON. No Promises, No
+        $LOLIEN is a memecoin with no intrinsic value, and is not a investment
+        and simply a community/culture token similar to $LOLIEN. No Promises, No
         Utility, Purely For Entertainment Purposes
       </p>
     </footer>

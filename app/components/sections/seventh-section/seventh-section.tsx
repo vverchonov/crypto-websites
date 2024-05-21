@@ -9,7 +9,7 @@ export const SeventhSection = (props: any) => {
   return (
     <div className="w-full min-h-screen sblock bg-[url(/block6/space.webp)] sblock flex justify-center overflow-x-clip relative bg-black">
       <AppearWrapper>
-        <div className="pt-48 px-6 w-full h-full lg:px-48 pb-36 max-w-screen-2xl relative">
+        <div className="pt-48 px-6 w-full h-full lg:px-48 pb-36 max-w-screen-2xl relative flex justify-center items-center flex-col gap-8">
           <FloatingBanana
             bananaClass={"rotate-12"}
             key={2}
@@ -29,14 +29,10 @@ export const SeventhSection = (props: any) => {
             key={5}
             customClass={"absolute right-48 w-fit bottom-[50%] z-0 select-none"}
           />
-          <p className=" text-2xl leading-loose lg:text-6xl font-bold text-center text-white lg:leading-loose relative z-50">
+          <p className=" text-4xl leading-loose lg:text-6xl font-bold text-center text-white lg:leading-loose relative z-50">
             {word("4", props.lang)}
-            <br />
-            <br /> {word("5", props.lang)}
-            <br />
-            <br />
-            {word("6", props.lang)}
           </p>
+          <img className="object-contain h-[50vh]" src={"./bought.png"} />
         </div>
       </AppearWrapper>
     </div>
