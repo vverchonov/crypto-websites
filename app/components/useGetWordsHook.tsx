@@ -12,8 +12,7 @@ export const useGetWordsHook = () => {
                 Inspired by an IKEA toy, $LOLIEN was created as a meme coin
                 capable of not only hit the moon but also venturing to the edge
                 of the universe. If the community falls in love with Lolien, we
-                will launch a series and NFTs about it. Made wif love by Letto
-                Dev Team.
+                will launch a series and NFTs about it.
                 `;
         case "2":
           return `
@@ -42,7 +41,7 @@ export const useGetWordsHook = () => {
       switch (key) {
         case "1":
           return `
-            受到了一款宜家玩具启发，$LOLIEN 被创造为一种能够不仅能触及月球，还能冒险到宇宙边缘的meme币。如果社区的大家爱上了 LOLIEN，我们将推出一系列关于它的 NFTs。由 LETTO 开发团队用爱制作。 
+            受到了一款宜家玩具启发，$LOLIEN 被创造为一种能够不仅能触及月球，还能冒险到宇宙边缘的meme币。如果社区的大家爱上了 LOLIEN，我们将推出一系列关于它的 NFTs。 
           `;
         case "2":
           return "“这个meme并没有被广泛使用，哇哇，它不是真正的meme” 真正的meme是你在为时已晚之前没有购买新时代的财富代币.";

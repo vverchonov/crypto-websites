@@ -20,30 +20,16 @@ export default function RootLayout({
       <head>
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="LOLIEN THE ALIEN" />
-        {/* <meta property="og:url" content="http://alonthealien.com/" /> */}
-        <meta property="og:title" content="Solana Token" />
+        <meta property="og:url" content="https://www.loliensolana.com/" />
+        <meta property="og:title" content="$LOLIEN$" />
         <meta
           property="og:description"
-          content="Inspired by an IKEA toy, $LOLIEN was created as a meme coin capable of not only hit the moon but also venturing to the edge of the universe. If the community falls in love with Lolien, we will launch a series and NFTs about it. 
-          Made wif love by Letto Dev Team"
+          content="Inspired by an IKEA toy, $LOLIEN was created as a meme coin capable of not only hit the moon but also venturing to the edge of the universe. If the community falls in love with Lolien, we will launch a series and NFTs about it."
         />
-        {/* <meta
-          property="og:image"
-          content="http://alonthealien.com/header.png"
-        /> */}
-        <meta name="twitter:card" content="summary_large_image" />
-        {/* <meta name="twitter:site" content="@ALONDEALIEN" />
-        <meta name="twitter:url" content="http://alonthealien.com/" /> */}
-        <meta name="twitter:title" content="Solana Token" />
         <meta
-          name="twitter:description"
-          content="Inspired by an IKEA toy, $LOLIEN was created as a meme coin capable of not only hit the moon but also venturing to the edge of the universe. If the community falls in love with Lolien, we will launch a series and NFTs about it. 
-          Made wif love by Letto Dev Team"
+          property="og:image"
+          content="https://www.loliensolana.com/header.png"
         />
-        {/* <meta
-          name="twitter:image"
-          content="http://alonthealien.com/header.png"
-        /> */}
         <link rel="preload" as="image" href="/block4/table.webp" />
         <link rel="preload" as="image" href="/block4/pc.webp" />
         <link rel="preload" as="image" href="/block4/m5.webp" />
