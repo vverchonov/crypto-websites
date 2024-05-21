@@ -26,7 +26,7 @@ export const ThirdSection = (props: any) => {
   };
 
   const arr1 = useCallback(() => {
-    return createArrayFromNtoM(1, 13);
+    return createArrayFromNtoM(1, 20);
   }, []);
 
   return (
@@ -49,7 +49,7 @@ export const ThirdSection = (props: any) => {
         <div className="flex flex-col items-center lg:flex-row gap-16 justify-center">
           <FloatingSharkgirl y={y} />
           <FloatingSharkboy y={y} />
-          <Marquee speed={40} autoFill direction={"left"}>
+          <Marquee speed={40} autoFill direction={"right"}>
             <div className="flex flex-row gap-8 h-[25vh] ms-8 w-full z-0">
               {arr1().map((val: number, index: any) => {
                 return (
@@ -57,7 +57,7 @@ export const ThirdSection = (props: any) => {
                     className={
                       "w-auto h-auto rounded-2xl select-none object-contain z-0"
                     }
-                    src="./block3/2.webp"
+                    src={`./block3/mom${val}.webp`}
                     key={index}
                   />
                 );
