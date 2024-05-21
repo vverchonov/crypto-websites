@@ -32,7 +32,7 @@ export const SeventhSection = (props: any) => {
           <p className=" text-4xl leading-loose lg:text-6xl font-bold text-center text-white lg:leading-loose relative z-50">
             {word("4", props.lang)}
           </p>
-          <img className="object-contain h-[50vh]" src={"./bought.png"} />
+          <img className="object-contain h-[50vh]" src={"./bought.webp"} />
         </div>
       </AppearWrapper>
     </div>
