@@ -16,9 +16,7 @@ export const Banner = (props: any) => {
   return (
     <div className="w-full min-h-screen bg-black flex justify-center items-center">
       <div className="flex flex-col gap-12">
-        <h1 className="text-4xl text-white font-bold capitalize">
-          Lolien the Alien
-        </h1>
+        <h1 className="text-4xl text-white font-bold capitalize">Lolien</h1>
         {/* <p className="text-4xl text-white font-bold">1. Be humble</p>
         <p className="text-4xl text-white font-bold">2. Be true</p>
         <p className="text-4xl text-white font-bold">3. APE</p>

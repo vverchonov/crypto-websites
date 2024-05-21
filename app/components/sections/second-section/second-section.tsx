@@ -15,7 +15,7 @@ export const SecondSection = (props: any) => {
   const { word } = useGetWordsHook();
 
   return (
-    <div className="flex flex-col bg-[#ccf7ff] min-h-screen w-full p-4 lg:p-28 max-w-screen-2xl">
+    <div className="flex flex-col bg-[#EBFCFF] min-h-screen w-full p-4 lg:p-28 max-w-screen-2xl">
       <AppearWrapper>
         <div className="flex flex-col justify-center align-center items-center">
           <div className="flex flex-col lg:flex-row h-full w-full border-black">

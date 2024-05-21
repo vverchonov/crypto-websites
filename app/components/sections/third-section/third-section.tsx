@@ -30,7 +30,7 @@ export const ThirdSection = (props: any) => {
   }, []);
 
   return (
-    <div className="relative flex-col bg-[#ccf7ff] min-h-screen w-full p-4 pt-28 lg:px-64 max-w-screen-2xl mb-24">
+    <div className="relative flex-col bg-[#EBFCFF] min-h-screen w-full p-4 pt-28 lg:px-64 max-w-screen-2xl mb-24">
       <AppearWrapper>
         <div className="relative flex-col flex items-center justify-center w-full pt-0 h-1/4">
           <img
