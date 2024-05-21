@@ -19,6 +19,7 @@ export const SeventhSection = (props: any) => {
             key={1}
             customClass={"absolute left-12 w-fit top-48 z-0 select-none"}
           />
+
           <FloatingBanana
             bananaClass={"rotate-90"}
             key={3}
