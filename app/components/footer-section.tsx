@@ -10,7 +10,7 @@ export const FooterSection = () => {
     <footer className="py-2 text-center text-black backdrop-blur transition-colors duration-500">
       <p className="flex flex-row items-center justify-center gap-2">
         <span className="text-sm font-bold sm:text-xl">
-          $ALOLIEN &copy; 2024
+          $LOLIEN &copy; 2024
         </span>
         <span className="inline-flex">
           <a
