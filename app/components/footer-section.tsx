@@ -31,11 +31,6 @@ export const FooterSection = () => {
           </a>
         </span>
       </p>
-      <p className="px-2 text-xs">
-        $LOLIEN is a memecoin with no intrinsic value, and is not a investment
-        and simply a community/culture token similar to $LOLIEN. No Promises, No
-        Utility, Purely For Entertainment Purposes
-      </p>
     </footer>
   );
 };
